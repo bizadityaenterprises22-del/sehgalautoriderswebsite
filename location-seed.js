@@ -21,9 +21,46 @@ const LOCATION_SEED = [
     "updatedOn": "06-11-2026",
     "active": true,
     "escalations": [
-      {"level": 1, "role": "Bavdhan Works Manager / Service Head", "name": "Bavdhan Service Desk", "phone": "8888881315", "email": "ceoservice@sehgalautoriders.com", "visible": true},
-      {"level": 2, "role": "Central Service Escalation & CCM Desk", "name": "Customer Care Manager", "phone": "7888060161", "email": "ceoservice@sehgalautoriders.com", "visible": true},
-      {"level": 3, "role": "Sales & Delivery Escalation Desk", "name": "Sales Leadership Desk", "phone": "7888012800", "email": "sehgalautoriders2011@gmail.com", "visible": true}
+      {
+        "level": 1,
+        "role": "Assistant Works Manager (AWM)",
+        "name": "Swapnil Gunjal",
+        "phone": "8999557553",
+        "email": "wmservice@sehgalautoriders.com",
+        "visible": true
+      },
+      {
+        "level": 2,
+        "role": "Customer Care Manager (CCM)",
+        "name": "Amruta Magdum",
+        "phone": "7888060161",
+        "email": "Customercare.service@sehgalautoriders.com",
+        "visible": true
+      },
+      {
+        "level": 3,
+        "role": "Works Manager (WM)",
+        "name": "Satish Mane",
+        "phone": "8888881315",
+        "email": "wmservice@sehgalautoriders.com",
+        "visible": true
+      },
+      {
+        "level": 4,
+        "role": "General Manager Service (GM)",
+        "name": "Yogesh Patil",
+        "phone": "7977793231",
+        "email": "gmservice@sehgalautoriders.com",
+        "visible": true
+      },
+      {
+        "level": 5,
+        "role": "Insurance Renewal & Cashless Claims Desk",
+        "name": "Manish Takwale & Sarika Tupere",
+        "phone": "7888039845",
+        "email": "insurance@sehgalautoriders.com",
+        "visible": true
+      }
     ]
   },
   {
@@ -47,8 +84,22 @@ const LOCATION_SEED = [
     "updatedOn": "06-11-2026",
     "active": true,
     "escalations": [
-      {"level": 1, "role": "Showroom Manager — Erandwane", "name": "Erandwane Sales Desk", "phone": "08062513562", "email": "sehgalautoriders2011@gmail.com", "visible": true},
-      {"level": 2, "role": "Central Sales Escalation", "name": "Sales Leadership Desk", "phone": "7888012800", "email": "sehgalautoriders2011@gmail.com", "visible": true}
+      {
+        "level": 1,
+        "role": "Showroom Manager — Erandwane",
+        "name": "Erandwane Sales Desk",
+        "phone": "08062513562",
+        "email": "sehgalautoriders2011@gmail.com",
+        "visible": true
+      },
+      {
+        "level": 2,
+        "role": "Central Sales Escalation",
+        "name": "Sales Leadership Desk",
+        "phone": "7888012800",
+        "email": "sehgalautoriders2011@gmail.com",
+        "visible": true
+      }
     ]
   },
   {
@@ -72,8 +123,22 @@ const LOCATION_SEED = [
     "updatedOn": "06-11-2026",
     "active": true,
     "escalations": [
-      {"level": 1, "role": "NEXA Showroom Manager — Fatima Nagar", "name": "Fatima Nagar NEXA Desk", "phone": "7888002101", "email": "sehgalautoriders2011@gmail.com", "visible": true},
-      {"level": 2, "role": "Central Sales Escalation", "name": "Sales Leadership Desk", "phone": "7888012800", "email": "sehgalautoriders2011@gmail.com", "visible": true}
+      {
+        "level": 1,
+        "role": "NEXA Showroom Manager — Fatima Nagar",
+        "name": "Fatima Nagar NEXA Desk",
+        "phone": "7888002101",
+        "email": "sehgalautoriders2011@gmail.com",
+        "visible": true
+      },
+      {
+        "level": 2,
+        "role": "Central Sales Escalation",
+        "name": "Sales Leadership Desk",
+        "phone": "7888012800",
+        "email": "sehgalautoriders2011@gmail.com",
+        "visible": true
+      }
     ]
   },
   {
@@ -99,8 +164,30 @@ const LOCATION_SEED = [
     "updatedOn": "06-11-2026",
     "active": true,
     "escalations": [
-      {"level": 1, "role": "Manjri Works Manager", "name": "Manjri Service Reception", "phone": "9158000049", "email": "ceoservice@sehgalautoriders.com", "visible": true},
-      {"level": 2, "role": "Central Service Escalation Desk", "name": "Customer Care Manager", "phone": "7888060161", "email": "ceoservice@sehgalautoriders.com", "visible": true}
+      {
+        "level": 1,
+        "role": "Manjri Works Manager",
+        "name": "Manjri Service Reception",
+        "phone": "9158000049",
+        "email": "ceoservice@sehgalautoriders.com",
+        "visible": true
+      },
+      {
+        "level": 2,
+        "role": "Central Service Escalation Desk",
+        "name": "Amruta Magdum (CCM)",
+        "phone": "7888060161",
+        "email": "Customercare.service@sehgalautoriders.com",
+        "visible": true
+      },
+      {
+        "level": 3,
+        "role": "General Manager Service (GM)",
+        "name": "Yogesh Patil",
+        "phone": "7977793231",
+        "email": "gmservice@sehgalautoriders.com",
+        "visible": true
+      }
     ]
   },
   {
@@ -123,8 +210,30 @@ const LOCATION_SEED = [
     "updatedOn": "06-11-2026",
     "active": true,
     "escalations": [
-      {"level": 1, "role": "Commercial Sales & Fleet Head", "name": "Manjri Commercial Desk", "phone": "7888012800", "email": "sehgalautoriders2011@gmail.com", "visible": true},
-      {"level": 2, "role": "Commercial Service Support", "name": "Manjri Workshop", "phone": "9158000049", "email": "ceoservice@sehgalautoriders.com", "visible": true}
+      {
+        "level": 1,
+        "role": "Commercial Sales & Fleet Head",
+        "name": "Manjri Commercial Desk",
+        "phone": "7888012800",
+        "email": "sehgalautoriders2011@gmail.com",
+        "visible": true
+      },
+      {
+        "level": 2,
+        "role": "Commercial Service Support",
+        "name": "Manjri Workshop",
+        "phone": "9158000049",
+        "email": "ceoservice@sehgalautoriders.com",
+        "visible": true
+      },
+      {
+        "level": 3,
+        "role": "General Manager Service (GM)",
+        "name": "Yogesh Patil",
+        "phone": "7977793231",
+        "email": "gmservice@sehgalautoriders.com",
+        "visible": true
+      }
     ]
   },
   {
@@ -148,7 +257,14 @@ const LOCATION_SEED = [
     "updatedOn": "06-11-2026",
     "active": true,
     "escalations": [
-      {"level": 1, "role": "True Value Manager — Bavdhan", "name": "True Value Desk", "phone": "08071649360", "email": "sehgalautoriders2011@gmail.com", "visible": true}
+      {
+        "level": 1,
+        "role": "True Value Manager — Bavdhan",
+        "name": "True Value Desk",
+        "phone": "08071649360",
+        "email": "sehgalautoriders2011@gmail.com",
+        "visible": true
+      }
     ]
   },
   {
@@ -173,8 +289,30 @@ const LOCATION_SEED = [
     "updatedOn": "06-11-2026",
     "active": true,
     "escalations": [
-      {"level": 1, "role": "Lonavala Arena Branch & Service Head", "name": "Waksai Lonavala Desk", "phone": "08037394880", "email": "ceoservice@sehgalautoriders.com", "visible": true},
-      {"level": 2, "role": "Central Service Escalation Desk", "name": "Customer Care Manager", "phone": "7888060161", "email": "ceoservice@sehgalautoriders.com", "visible": true}
+      {
+        "level": 1,
+        "role": "Lonavala Arena Branch & Service Head",
+        "name": "Waksai Lonavala Desk",
+        "phone": "08037394880",
+        "email": "ceoservice@sehgalautoriders.com",
+        "visible": true
+      },
+      {
+        "level": 2,
+        "role": "Central Service Escalation Desk",
+        "name": "Amruta Magdum (CCM)",
+        "phone": "7888060161",
+        "email": "Customercare.service@sehgalautoriders.com",
+        "visible": true
+      },
+      {
+        "level": 3,
+        "role": "General Manager Service (GM)",
+        "name": "Yogesh Patil",
+        "phone": "7977793231",
+        "email": "gmservice@sehgalautoriders.com",
+        "visible": true
+      }
     ]
   },
   {
@@ -199,8 +337,30 @@ const LOCATION_SEED = [
     "updatedOn": "06-11-2026",
     "active": true,
     "escalations": [
-      {"level": 1, "role": "Lonavala NEXA Manager", "name": "Lonavala NEXA Desk", "phone": "08071010473", "email": "ceoservice@sehgalautoriders.com", "visible": true},
-      {"level": 2, "role": "Central Service Escalation Desk", "name": "Customer Care Manager", "phone": "7888060161", "email": "ceoservice@sehgalautoriders.com", "visible": true}
+      {
+        "level": 1,
+        "role": "Lonavala NEXA Manager",
+        "name": "Lonavala NEXA Desk",
+        "phone": "08071010473",
+        "email": "ceoservice@sehgalautoriders.com",
+        "visible": true
+      },
+      {
+        "level": 2,
+        "role": "Central Service Escalation Desk",
+        "name": "Amruta Magdum (CCM)",
+        "phone": "7888060161",
+        "email": "Customercare.service@sehgalautoriders.com",
+        "visible": true
+      },
+      {
+        "level": 3,
+        "role": "General Manager Service (GM)",
+        "name": "Yogesh Patil",
+        "phone": "7977793231",
+        "email": "gmservice@sehgalautoriders.com",
+        "visible": true
+      }
     ]
   },
   {
@@ -223,8 +383,30 @@ const LOCATION_SEED = [
     "updatedOn": "06-11-2026",
     "active": true,
     "escalations": [
-      {"level": 1, "role": "Kamshet Branch & Workshop In-Charge", "name": "Kamshet Desk", "phone": "08071647368", "email": "ceoservice@sehgalautoriders.com", "visible": true},
-      {"level": 2, "role": "Central Service Escalation Desk", "name": "Customer Care Manager", "phone": "7888060161", "email": "ceoservice@sehgalautoriders.com", "visible": true}
+      {
+        "level": 1,
+        "role": "Kamshet Branch & Workshop In-Charge",
+        "name": "Kamshet Desk",
+        "phone": "08071647368",
+        "email": "ceoservice@sehgalautoriders.com",
+        "visible": true
+      },
+      {
+        "level": 2,
+        "role": "Central Service Escalation Desk",
+        "name": "Amruta Magdum (CCM)",
+        "phone": "7888060161",
+        "email": "Customercare.service@sehgalautoriders.com",
+        "visible": true
+      },
+      {
+        "level": 3,
+        "role": "General Manager Service (GM)",
+        "name": "Yogesh Patil",
+        "phone": "7977793231",
+        "email": "gmservice@sehgalautoriders.com",
+        "visible": true
+      }
     ]
   },
   {
@@ -249,8 +431,30 @@ const LOCATION_SEED = [
     "updatedOn": "06-11-2026",
     "active": true,
     "escalations": [
-      {"level": 1, "role": "Khed Shivapur Branch & Workshop In-Charge", "name": "Khed Shivapur Desk", "phone": "08071647799", "email": "ceoservice@sehgalautoriders.com", "visible": true},
-      {"level": 2, "role": "Central Service Escalation Desk", "name": "Customer Care Manager", "phone": "7888060161", "email": "ceoservice@sehgalautoriders.com", "visible": true}
+      {
+        "level": 1,
+        "role": "Khed Shivapur Branch & Workshop In-Charge",
+        "name": "Khed Shivapur Desk",
+        "phone": "08071647799",
+        "email": "ceoservice@sehgalautoriders.com",
+        "visible": true
+      },
+      {
+        "level": 2,
+        "role": "Central Service Escalation Desk",
+        "name": "Amruta Magdum (CCM)",
+        "phone": "7888060161",
+        "email": "Customercare.service@sehgalautoriders.com",
+        "visible": true
+      },
+      {
+        "level": 3,
+        "role": "General Manager Service (GM)",
+        "name": "Yogesh Patil",
+        "phone": "7977793231",
+        "email": "gmservice@sehgalautoriders.com",
+        "visible": true
+      }
     ]
   },
   {
@@ -275,8 +479,30 @@ const LOCATION_SEED = [
     "updatedOn": "06-11-2026",
     "active": true,
     "escalations": [
-      {"level": 1, "role": "Bhor Branch & Workshop In-Charge", "name": "Rambaug Bhor Desk", "phone": "08071647067", "email": "ceoservice@sehgalautoriders.com", "visible": true},
-      {"level": 2, "role": "Central Service Escalation Desk", "name": "Customer Care Manager", "phone": "7888060161", "email": "ceoservice@sehgalautoriders.com", "visible": true}
+      {
+        "level": 1,
+        "role": "Bhor Branch & Workshop In-Charge",
+        "name": "Rambaug Bhor Desk",
+        "phone": "08071647067",
+        "email": "ceoservice@sehgalautoriders.com",
+        "visible": true
+      },
+      {
+        "level": 2,
+        "role": "Central Service Escalation Desk",
+        "name": "Amruta Magdum (CCM)",
+        "phone": "7888060161",
+        "email": "Customercare.service@sehgalautoriders.com",
+        "visible": true
+      },
+      {
+        "level": 3,
+        "role": "General Manager Service (GM)",
+        "name": "Yogesh Patil",
+        "phone": "7977793231",
+        "email": "gmservice@sehgalautoriders.com",
+        "visible": true
+      }
     ]
   },
   {
@@ -299,7 +525,14 @@ const LOCATION_SEED = [
     "updatedOn": "06-11-2026",
     "active": true,
     "escalations": [
-      {"level": 1, "role": "Hero Chinchwad Service & CRM Desk", "name": "Hero Service Team", "phone": "9011601819", "email": "sehgalautoriders2011@gmail.com", "visible": true}
+      {
+        "level": 1,
+        "role": "Hero Chinchwad Service & CRM Desk",
+        "name": "Hero Service Team",
+        "phone": "9011601819",
+        "email": "sehgalautoriders2011@gmail.com",
+        "visible": true
+      }
     ]
   },
   {

@@ -1,6 +1,6 @@
 'use strict';
 /* Facts from official sources (lenders, Maruti Suzuki, IRDAI, Government of India, Global NCAP, Bharat NCAP)
-   plus verified Sehgal Autoriders operational, Vahan, Retail Finance, Wholesale Inventory & Insurance portfolio data, updated 06-11-2026. */
+   plus verified Sehgal Autoriders operational, Vahan, Retail Finance, Wholesale Inventory, Insurance & W2 Gate-Entry Road-Care Guidebooks, updated 06-11-2026. */
 const FACTS_DATA = {
  "checkedOn": "06-11-2026",
  "sehgalSummary": {
@@ -437,9 +437,22 @@ const FACTS_DATA = {
    "strategicArrangement": "Backed by Sehgal Autoriders’ ₹1 Crore strategic advance & green-channel cashless settlement arrangement with Bajaj Allianz General Insurance — ensuring instant policy issuance for new Arena & NEXA deliveries and priority surveyor approval across all Sehgal bodyshops.",
    "deskEmail": "insurance@sehgalautoriders.com",
    "deskContacts": [
-    {"name": "Sarika (MI Renewal & Claims Desk)", "phone": "8888881399"},
-    {"name": "Manish (Insurance Advisor)", "phone": "9552525980"},
-    {"name": "Suraj (Insurance Support)", "phone": "7888008987"}
+    {
+     "name": "Sarika Tupere (MI Renewal & Claims Desk)",
+     "phone": "8888881399"
+    },
+    {
+     "name": "Manish Takwale (Car Insurance Renewal Desk)",
+     "phone": "7888039845"
+    },
+    {
+     "name": "Manish Takwale (Alternate Desk)",
+     "phone": "9552525980"
+    },
+    {
+     "name": "Suraj (Insurance Support)",
+     "phone": "7888008987"
+    }
    ],
    "insurers": [
     {
@@ -750,5 +763,250 @@ const FACTS_DATA = {
    }
   ]
  },
- "csr": {}
+ "csr": {},
+ "roadCareGuide": {
+  "headline": "Sehgal Customer Vehicle Guidebooks — English, मराठी, Insurance, Two-Wheeler & EV Care",
+  "subheadline": "Sent automatically with every W2 Gate Entry & Workshop Reception email at Sehgal Autoriders — now available online with Hero MotoCorp Two-Wheeler, Scooter & Electric Vehicle (e VITARA & VIDA) safety guidelines as part of our Corporate Social Responsibility.",
+  "w2MailInfo": {
+   "subjectExample": "Greetings From Maruti Suzuki - Sehgal Autoriders Pvt Ltd - <RegNo> - <Model>",
+   "sender": "sehgalautoriders2011@gmail.com",
+   "trigger": "Automated on every incoming vehicle Gate Entry & Reception Entry across Sehgal Autoriders workshops",
+   "feedbackFormUrl": "https://forms.gle/TXwLzt3U5G2y5E659"
+  },
+  "gateEntryPdfs": [
+   {
+    "id": "english-guide",
+    "badge": "W2 GATE ENTRY PDF #1 · ENGLISH",
+    "title": "Customer Vehicle Guidebook — English",
+    "subtitle": "7-Page Official Maruti Suzuki Road-Care, Daily Do’s & Don’ts, Overheating FAQ, Preventive Maintenance, Fuel Efficiency & Road-Trip Guide.",
+    "pages": "7 Pages · 129 KB",
+    "file": "assets/guidebooks/Customer-Vehicle-Guidebook-English.pdf"
+   },
+   {
+    "id": "marathi-guide",
+    "badge": "W2 GATE ENTRY PDF #2 · मराठी",
+    "title": "ग्राहक वाहन मार्गदर्शिका — मराठी (Marathi Guidebook)",
+    "subtitle": "७-पानी अधिकृत मारुती सुझुकी वाहन काळजी पुस्तिका: रोजच्या करावयाच्या गोष्टी, दैनिक करू नका, प्रतिबंधात्मक देखभाल, इंधन कार्यक्षमता आणि रोड ट्रिपसाठी टिप्स.",
+    "pages": "7 Pages · 246 KB",
+    "file": "assets/guidebooks/Customer-Vehicle-Guidebook-Marathi.pdf"
+   },
+   {
+    "id": "insurance-ppt",
+    "badge": "W2 GATE ENTRY PDF #3 · INSURANCE",
+    "title": "Motor Insurance Guide, Myths & 5-Step Claims PPT",
+    "subtitle": "22-Slide Sehgal Autoriders & Maruti Suzuki Insurance Broking Presentation: 6 Insurance Myths vs Facts, Add-ons (Zero-Dep, Engine Protect, RTI, HEV Secure), Endorsements & NCB Slabs.",
+    "pages": "22 Slides · 2.1 MB",
+    "file": "assets/guidebooks/Sehgal-Maruti-Insurance-Guide-PPT.pdf"
+   },
+   {
+    "id": "reception-bilingual",
+    "badge": "RECEPTION DESK EDITION · BILINGUAL",
+    "title": "Combined Reception Guidebook (English + मराठी)",
+    "subtitle": "Complete 14-Page Combined Bilingual Edition (Pages 1–7 English + Pages 8–14 मराठी) shared at Sehgal Workshop Reception Desks.",
+    "pages": "14 Pages · 346 KB",
+    "file": "assets/guidebooks/Customer-Guidebook-Bilingual-Reception.pdf"
+   },
+   {
+    "id": "ev-driving-charging",
+    "badge": "MARUTI SERVICE · EV & DRIVING TIPS",
+    "title": "Suggested Driving & EV Charging Tips (13B)",
+    "subtitle": "Official Maruti Suzuki Service checklist covering Safe Driving, Hill & Wet-Road Techniques, Regenerative Braking and EV Battery Charging Best Practices.",
+    "pages": "1 Page · 383 KB",
+    "file": "assets/guidebooks/Suggested-Driving-and-EV-Charging-Tips.pdf"
+   }
+  ],
+  "workshopEscalationMatrix": [
+   {
+    "level": "Level 1 · Assistant Works Manager (AWM)",
+    "name": "Swapnil Gunjal",
+    "phone": "8999557553",
+    "email": "wmservice@sehgalautoriders.com"
+   },
+   {
+    "level": "Level 2 · Customer Care Manager (CCM)",
+    "name": "Amruta Magdum",
+    "phone": "7888060161",
+    "email": "Customercare.service@sehgalautoriders.com"
+   },
+   {
+    "level": "Level 3 · Works Manager (WM)",
+    "name": "Satish Mane",
+    "phone": "8888881315",
+    "email": "wmservice@sehgalautoriders.com"
+   },
+   {
+    "level": "Level 4 · General Manager Service (GM)",
+    "name": "Yogesh Patil",
+    "phone": "7977793231",
+    "email": "gmservice@sehgalautoriders.com"
+   },
+   {
+    "level": "Level 5 · CEO — Service",
+    "name": "Ravi Pimperkar",
+    "phone": "7888060161",
+    "email": "ceoservice@sehgalautoriders.com"
+   },
+   {
+    "level": "Insurance Renewal & Claim Desk",
+    "name": "Manish Takwale & Sarika Tupere",
+    "phone": "7888039845",
+    "altPhone": "8888881399",
+    "email": "insurance@sehgalautoriders.com"
+   }
+  ],
+  "marutiEnglish": {
+   "dailyDos": [
+    "Walk around your car every morning before starting and inspect tyre pressure & tread condition.",
+    "Check beneath the vehicle for any engine oil, brake fluid or transmission oil leaks.",
+    "Check for any coolant leaks around the radiator hose and reservoir tank.",
+    "Inspect front and rear wiper blade rubber condition — critical before Pune & Lonavala monsoons.",
+    "Check body panels for deep scratches that could expose bare metal and cause rusting.",
+    "Ensure all rear-view mirrors (ORVMs and IRVM) are clean, unbroken and properly aligned.",
+    "Perform a gentle top wash and remove dry leaves, twigs and dust from the bonnet cowl and wiper tray."
+   ],
+   "dailyDonts": [
+    "NEVER touch or open the radiator cap when the engine is hot — pressurized steam can cause severe burns.",
+    "Do not fit non-genuine electrical accessories or splice factory wiring harnesses — it harms performance and voids warranty.",
+    "Do not use non-genuine spare parts; insist on Maruti Suzuki Genuine Parts (MSGP).",
+    "Avoid parking in direct scorching sunlight for prolonged periods; park under shade whenever possible.",
+    "If the vehicle is parked unused for a long period, start and run it periodically to keep the battery charged and fluids circulated.",
+    "Do not keep the engine idling unnecessarily — 1 hour of idling wastes nearly 1 litre of petrol."
+   ],
+   "emergencyFaqs": [
+    {
+     "q": "What should I do if the car overheats (Red Coolant Temp Warning Light / ‘H’ mark)?",
+     "a": "1) Turn off the AC immediately, switch on hazard lights, pull over safely and let the engine idle for a few minutes. 2) If the temperature does not drop or steam is escaping, switch off the engine immediately and DO NOT open the bonnet until steam subsides. 3) NEVER open the radiator cap while hot. 4) Once cooled, check the water pump belt and coolant reservoir level; top up only in the reservoir (never pour cold water into a hot engine)."
+    },
+    {
+     "q": "How do I distinguish battery acid/electrolyte leakage from normal water rust?",
+     "a": "Battery electrolyte leakage creates a distinct radial splatter pattern spreading outward from the battery tray onto adjacent engine-bay components, whereas normal water spillage causes localized surface rust."
+    },
+    {
+     "q": "Why do water drops come out of the exhaust pipe?",
+     "a": "Clean water droplets from the tailpipe on a cold start are normal condensation produced by complete combustion and the catalytic converter. Only thick white/blue smoke or soot requires workshop inspection."
+    },
+    {
+     "q": "When is an engine overhaul needed & why balance wheels after every puncture?",
+     "a": "Watch for excessive oil consumption over 5,000–10,000 km, bearing/piston-slap noise or sudden mileage drop. Always perform wheel balancing after every tyre puncture repair and periodic service to suit Indian road conditions."
+    }
+   ],
+   "preventiveAndFuel": [
+    "Air Filter Care: Clean every 5,000 km and replace every 40,000 km (Petrol) / 20,000 km (Diesel) — more often in dusty conditions.",
+    "Pre-Summer AC Servicing (February–March): Get cooling coil, condenser fins, cabin filter, blower and O-ring joints inspected before summer peaks.",
+    "Drive Steadily at 45–55 km/h: Driving at 40–50 km/h yields up to 40% better fuel economy than racing at 80+ km/h.",
+    "Right Gear & Clutch Habit: Wrong gear shifting wastes up to 20% fuel; keep your foot off the clutch pedal and use the handbrake on inclines.",
+    "Tyre Pressure & Load: 25% low tyre pressure increases rolling resistance by 20%, wastes 5–10% fuel and cuts tyre life by 25%. Removing 50 kg of unnecessary boot load saves 2% city fuel.",
+    "Ghat & Fog Driving: On Lonavala, Khandala, Varandha or Bhor ghats, NEVER switch off the engine downhill — engage a lower gear for engine braking. In fog, always use low beam + fog lamps (never high beam)."
+   ]
+  },
+  "marutiMarathi": {
+   "dailyDosTitle": "रोजच्या करावयाच्या गोष्टी (Daily Do’s — वाहन सुरू करण्यापूर्वी)",
+   "dailyDos": [
+    "वाहन सुरू करण्यापूर्वी गाडीभोवती एक फेरी मारा आणि टायरचा दाब (Tyre Pressure) व स्थिती तपासा.",
+    "गाडीखाली कोणत्याही प्रकारची ऑईल गळती (Oil Leak) किंवा कूलंट गळती (Coolant Leak) नाही ना याची खात्री करा.",
+    "वायपर ब्लेडची (Wiper Blade) स्थिती आणि मागील आरशांची (Rear-View Mirrors) स्थिती तपासा.",
+    "गाडीवर गंज (Rust) लागू शकेल असे खोल ओरखडे आहेत का ते पहा.",
+    "गाडीवर साचलेली पाने, कचरा व धूळ साफ करा आणि नियमित टॉप वॉश करा."
+   ],
+   "dailyDontsTitle": "दैनिक करू नका (Daily Don’ts)",
+   "dailyDonts": [
+    "इंजिन गरम असताना रेडिएटरचे झाकण (Radiator Cap) कधीही उघडू नका किंवा त्याला हात लावू नका.",
+    "गाडीच्या कार्यक्षमतेवर परिणाम करतील अशा बिगर-अधिकृत (Non-Genuine) ॲक्सेसरीज बसवू नका.",
+    "बनावट किंवा नॉन-जेन्युइन स्पेअर पार्ट्स वापरू नका — नेहमी मारुती सुझुकी जेन्युइन पार्ट्स (MSGP) वापरा.",
+    "गाडी जास्त वेळ कडक उन्हात पार्क करू नका; शक्यतो सावलीत पार्क करा.",
+    "गाडी जास्त दिवस उभी राहणार असेल तर बॅटरी व इंजिन सुस्थितीत ठेवण्यासाठी ती अधूनमधून सुरू करा.",
+    "इंजिन विनाकारण आयडलिंगवर (Idling) चालू ठेवू नका (२ मिनिटांपेक्षा जास्त थांबल्यास इंजिन बंद करा)."
+   ],
+   "preventiveTitle": "प्रतिबंधात्मक देखभाल, इंधन कार्यक्षमता आणि रोड ट्रिप टिप्स",
+   "preventivePoints": [
+    "एअर फिल्टर आणि फ्यूएल फिल्टर: पेट्रोल गाड्यांचे एअर फिल्टर दर ५,००० किमीला साफ करा व ४०,००० किमीला बदला.",
+    "उन्हाळ्यापूर्वी एसी (AC) सर्व्हिसिंग: दरवर्षी फेब्रुवारी-मार्च महिन्यात एसी कुलिंग कॉईल, कंडेन्सर आणि गॅस जॉइंट्सची तपासणी करून घ्या.",
+    "इंधन कार्यक्षमता (Fuel Efficiency): ४५–५५ किमी/तास या स्थिर वेगाने गाडी चालवा (८० किमी/तास पेक्षा ४० किमी/तास वेगाने ४०% पर्यंत जास्त मायलेज मिळते). क्लचवर पाय ठेवून गाडी चालवू नका.",
+    "घाटातील आणि धुक्यातील प्रवास (Ghat & Fog Tips): घाटातून खाली उतरताना इंजिन कधीही बंद करू नका — इंजिन ब्रेकिंगसाठी खालचा गिअर (Low Gear) वापरा. धुक्यात नेहमी लो-बीम (Low Beam) आणि फॉग लाईट्स वापरा, हाय-बीम वापरू नका."
+   ]
+  },
+  "insuranceGuide": {
+   "dos": [
+    "Always opt for Comprehensive (Package) Policy with Zero Depreciation, Engine Protect (Hydrostatic Lock), Return to Invoice (RTI) and Consumables cover — especially for Pune & Maval monsoons.",
+    "Get every factory or external CNG/LPG kit endorsed on both RC and Insurance Policy (IMT-25) and ensure Ownership Transfer endorsement (IMT-3) within 14 days of buying/selling a used vehicle.",
+    "Renew your policy before expiry (or within 90 days max) to protect your accumulated No Claim Bonus (20% to 50% discount on OD premium).",
+    "When exchanging your old car at Sehgal True Value Bavdhan, obtain your NCB Retention Certificate to transfer up to 50% NCB discount to your new Maruti Suzuki.",
+    "In case of an accident, bring your vehicle directly to any of our 7 Sehgal Authorised Bodyshops for Near-Cashless repair under our ₹1 Cr Bajaj Allianz & Maruti Insurance corridor."
+   ],
+   "donts": [
+    "NEVER crank or restart a car that has stalled in waterlogged/flooded roads — cranking causes hydrostatic lock (consequential engine damage), which standard policies exclude unless Engine Protect is active.",
+    "Never drive without a valid Driving Licence, under the influence of alcohol/drugs, or use a private white-plate car for commercial hire.",
+    "Do not authorise unapproved roadside repairs before Claim Intimation & Surveyor Assessment.",
+    "Do not assume Third-Party (Act Only) insurance covers damage to your own vehicle or theft — it covers only third-party liability."
+   ],
+   "mythsVsFacts": [
+    {
+     "myth": "Myth 1: Comprehensive insurance is unnecessary if I drive carefully.",
+     "fact": "Fact: Third-Party cover is mandatory under the Motor Vehicles Act 1988, but only a Comprehensive Package policy protects your own vehicle against accidents, fire, theft, riots, floods, storms and landslides."
+    },
+    {
+     "myth": "Myth 2: Only the person driving is liable in an accident.",
+     "fact": "Fact: The registered owner of the vehicle is primarily responsible under law for third-party and occupant liabilities arising from an accident."
+    },
+    {
+     "myth": "Myth 3: Standard comprehensive insurance covers 100% of every repair cost.",
+     "fact": "Fact: Standard policies deduct age-wise plastic/metal depreciation and exclude consumables & hydrostatic engine lock unless you add Zero Depreciation, Engine Protect and Consumables covers."
+    },
+    {
+     "myth": "Myth 4: Older cars are not targeted by thieves.",
+     "fact": "Fact: Older vehicles lacking modern engine immobilizers and connected GPS security are often higher theft targets than new models."
+    },
+    {
+     "myth": "Myth 5: Fitting a CNG / LPG kit reduces the insurance premium.",
+     "fact": "Fact: CNG/LPG vehicles are classified as higher-usage vehicles and require mandatory IMT-25 endorsement with an additional premium to keep claims valid."
+    },
+    {
+     "myth": "Myth 6: You must pay repair bills from your pocket first and wait for reimbursement.",
+     "fact": "Fact: At Sehgal Autoriders, all 20+ Maruti Insurance partner companies (led by #1 Bajaj Allianz) provide Near-Cashless settlement directly with our workshop — with No Salvage Deductions and No Extra Charges for Tyre/Battery."
+    }
+   ],
+   "claimSteps": [
+    "Step 1 · Claim Intimation & Estimation: Call our Sehgal Bodyshop / MI Desk (+91 88888 81399 / +91 78880 39845) or MSIBPL Support (011/022/033/044-3377 4477) and bring your car to any Sehgal workshop.",
+    "Step 2 · Surveyor Appointment & Loss Assessment: Automated digital surveyor allocation and transparent OEM-standard loss assessment.",
+    "Step 3 · Commencement of Repairs Post Approvals: Genuine MSGP sheet-metal and mechanical restoration using OEM jigs and paint booths.",
+    "Step 4 · Vehicle Re-Inspection & Quality Check: Final safety and road-test verification.",
+    "Step 5 · Near-Cashless Delivery & Settlement: Insurer settles the approved bill directly with Sehgal Autoriders; you pay only compulsory policy excess and any non-covered items."
+   ]
+  },
+  "heroTwoWheelerCare": {
+   "headline": "Hero MotoCorp Two-Wheeler & Scooter Road-Care Guide (English & मराठी)",
+   "subtitle": "Serving 1,01,505+ Hero riders across Chinchwad MIDC (10307), Hero Premia (17057), PCMC SSP (23490) and Chakan (61299).",
+   "motorcycleDosDonts": [
+    "Daily T-CLOCS Pre-Ride Check: Before riding your Splendor+ XTEC, HF Deluxe, Glamour, Xtreme or Mavrick 440, check Tyre pressure, Clutch/Brake free-play (10–20 mm), Lights/Indicators, Engine Oil level, Drive Chain slack, and Side-Stand Engine Cut-Off switch.",
+    "Drive Chain Care (Every 500–700 km): Clean and lubricate the drive chain every 500–700 km (and every 300 km during Pune/PCMC monsoons) to prevent sprocket wear and jerky gear shifts.",
+    "Use i3S Smartly: Keep Hero’s i3S (Idle Stop-Start System) enabled in city traffic signals to save 5–8% fuel; press the clutch to restart effortlessly.",
+    "DON’T Ride the Clutch: Never rest your fingers on a half-pressed clutch lever while riding — it burns clutch plates and drops mileage.",
+    "ISI Helmet & Defensive Braking: Both rider and pillion must wear strapped ISI-certified helmets. Apply both front and rear brakes progressively (IBS/ABS); avoid sudden front-brake locking on gravel or wet roads."
+   ],
+   "scooterDosDonts": [
+    "Morning Cold-Start Routine (Destini 125, Pleasure+ XTEC, Xoom): Let the scooter engine idle for 20–30 seconds after the first morning start so oil reaches the cylinder head before accelerating.",
+    "NEVER Throttle & Brake Together: In slow Chinchwad/Pune traffic, never hold the rear brake lever while keeping the throttle twisted — this overheats the CVT centrifugal clutch bell, causes juddering and wastes fuel.",
+    "CVT Belt & Air Filter Inspection: Have the viscous air filter and CVT variator belt/rollers inspected every 6,000 km at our authorised Hero workshops (+91 90116 01819).",
+    "Tyre Pressure for Pillion Loads: Scooters have smaller wheels (10–12 inch); maintain 22–25 PSI (Front) and 33–36 PSI (Rear with pillion) to prevent rim bends and sidewall punctures.",
+    "मराठी टीप (Marathi Rider Tip): स्कूटर चालवताना ब्रेक दाबून धरून अ‍ॅक्सिलेटर (Throttle) फिरवू नका — यामुळे क्लच लायनर गरम होऊन मायलेज कमी होते. चालक आणि पाठीमागे बसणाऱ्या व्यक्तीने नेहमी ISI प्रमाणित हेल्मेट वापरावे."
+   ]
+  },
+  "evCareGuide": {
+   "headline": "Electric Vehicle (EV) Care, Driving & Charging Guide — Maruti e VITARA & Hero VIDA V1",
+   "subtitle": "Combining official Maruti Suzuki Service Suggested Driving & Charging Tips (13B) and Hero VIDA EV battery care.",
+   "chargingDos": [
+    "Daily 20%–80% SOC Habit + Periodic 100% Top-Up: Keep daily state-of-charge between 20% and 80% for longevity, and charge to 100% once every 1–2 weeks so the Battery Management System (BMS) balances all LFP cells.",
+    "Prefer AC Home / Wall-Box Charging: Use a dedicated 15A earthed socket or authorised NEXA / VIDA wall-box charger with proper MCB & earthing for routine charging.",
+    "Precondition Before Long Trips: Pre-cool the cabin and precondition the battery while plugged into shore power before highway journeys (Pune–Mumbai Expressway or Lonavala/Mahabaleshwar).",
+    "Thermal Pause After Highway Runs: Allow 15–20 minutes after a brisk summer highway drive before starting high-power DC fast charging."
+   ],
+   "chargingAndSafetyDonts": [
+    "Avoid Frequent DC Fast Charging: As highlighted in Maruti Suzuki Service Guide 13B, avoid using DC fast charging too frequently when AC charging is available — frequent high-C fast charging accelerates battery wear.",
+    "No Extension Cords or Multi-Plugs: Never plug a portable EV charger into household multi-plug adapters or unrated coiled extension cables (fire & overheating hazard).",
+    "High-Voltage & Water-Wading Safety: Never touch orange high-voltage cables or direct a high-pressure water jet at the charging port, motor bay or underbody battery pack. Avoid deep standing water; if the underbody scrapes a speed-breaker or rock, get the battery shield inspected immediately at Sehgal NEXA / Hero VIDA service.",
+    "Long-Term Parking Rule: Never leave an EV parked below 10% charge or at 100% in hot sun for weeks; store in shade at 50%–60% SOC.",
+    "मराठी ईव्ही टीप (Marathi EV Tip): इलेक्ट्रिक वाहन (e VITARA / VIDA) चार्ज करताना नेहमी अर्थिंग असलेल्या अधिकृत सॉकेटचा वापर करा; साध्या एक्सटेंशन कॉर्डचा वापर कधीही करू नका आणि वारंवार फक्त फास्ट चार्जिंग करणे टाळा."
+   ]
+  }
+ }
 };
