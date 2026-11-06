@@ -1,8 +1,40 @@
-/* Dealer additions, 24-09-2026: compare, lenders, insurance, spares, safety, CSR. Uses the tokens in styles.css. */
+/* Dealer additions, updated 06-11-2026: compare, preferred lenders & wholesale finance, Bajaj Allianz insurance, spares, safety, CSR & digital hub. */
 @media(max-width:1280px){.menu-toggle{display:flex;align-items:center;gap:12px;border:1px solid var(--line);padding:10px 14px;min-height:44px;background:white;border-radius:5px;margin-left:auto}.header-actions .icon-button{display:none}nav{display:none;position:absolute;top:100%;left:0;right:0;padding:20px 5%;background:white;border-bottom:1px solid var(--line);box-shadow:0 20px 30px #081f3510;flex-direction:column;align-items:start}nav.open{display:flex}nav a{font-size:1rem;width:100%}}
 .not-published{color:var(--muted);font-style:italic;font-size:.85em}
 .stars{color:#c98a00;letter-spacing:.08em;font-size:1.05rem;white-space:nowrap}
 .best{background:#e6f8f3;box-shadow:inset 3px 0 0 #1a9c84}
+.preferred-row{background:#fffdf6}
+.preferred-row th[scope=row]{background:#fffaf0;border-left:4px solid #c98a00}
+.partner-badge{display:inline-block;font-size:.68rem;font-weight:700;letter-spacing:.06em;padding:4px 9px;border-radius:4px;margin-bottom:6px;text-transform:uppercase}
+.partner-badge.gold{background:#fef3c7;color:#92400e;border:1px solid #f59e0b}
+.partner-badge.teal-badge{background:#e6f8f3;color:#0f5f50;border:1px solid #99e2d0}
+.partner-spotlight{display:grid;grid-template-columns:1.35fr 1fr;gap:28px;align-items:center;background:linear-gradient(135deg,#081f35 0%,#10375c 100%);color:white;padding:34px 36px;border-radius:14px;margin-bottom:32px;box-shadow:0 16px 36px rgba(8,31,53,.14)}
+.partner-spotlight h2{color:white;margin:8px 0 12px;font-size:clamp(1.45rem,2.4vw,2rem)}
+.partner-spotlight p{color:#e2e8f0;line-height:1.65;margin:0 0 14px}
+.partner-spotlight .muted{color:#cbd5e1}
+.partner-spotlight .button.outline{border-color:rgba(255,255,255,.35);color:white}
+.partner-spotlight .button.outline:hover{background:rgba(255,255,255,.12)}
+.partner-metrics{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.metric-box{background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.16);border-radius:10px;padding:18px 16px;display:flex;flex-direction:column;gap:4px}
+.metric-box strong{font-family:Manrope,sans-serif;font-size:1.65rem;color:#fbbf24;line-height:1.15}
+.metric-box span{font-size:.82rem;color:#e2e8f0;line-height:1.4}
+.power-metrics-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:18px;margin-top:20px}
+.power-card{background:white;border:1px solid var(--line);border-radius:12px;padding:24px 22px;display:flex;flex-direction:column;gap:8px;box-shadow:0 6px 18px rgba(8,31,53,.04)}
+.power-card.highlight-card{border-top:4px solid #1a9c84;background:linear-gradient(180deg,#f7fcfa 0%,#ffffff 100%)}
+.power-card strong{font-family:Manrope,sans-serif;font-size:2rem;color:var(--navy);line-height:1.1}
+.power-card b{font-size:1rem;color:var(--navy);line-height:1.35}
+.power-card p{font-size:.88rem;line-height:1.55;margin:0 0 auto}
+.social-cards-grid{display:grid;grid-template-columns:repeat(5,1fr);gap:16px}
+.social-tile{display:flex;flex-direction:column;justify-content:space-between;background:white}
+.social-handle{color:var(--navy);font-size:.92rem;margin:4px 0 8px}
+.hyperlocal-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin-top:18px}
+.hyperlocal-card{background:var(--wash);border:1px solid var(--line);border-radius:10px;padding:16px;display:flex;flex-direction:column;gap:6px}
+.hyperlocal-card h4{margin:0;font-size:.98rem;color:var(--navy)}
+.hyperlocal-domain{margin:2px 0 6px;font-weight:700;font-size:.92rem}
+.hyperlocal-domain a{color:#0f5f50;text-decoration:none}
+.hyperlocal-domain a:hover{text-decoration:underline}
+.hyperlocal-links{display:flex;flex-wrap:wrap;gap:12px;font-size:.82rem;margin-top:auto}
+.top-bar-links a,.footer-bottom a{color:inherit;text-decoration:underline;text-underline-offset:3px}
 .spec-table-wrap{border:1px solid var(--line);border-radius:12px;margin-top:26px}
 .spec-table th[scope=row]{position:sticky;left:0;background:var(--wash);z-index:1;min-width:150px;font-weight:600}
 .spec-table thead th{vertical-align:bottom;min-width:210px}
@@ -25,6 +57,7 @@
 .tiles.four{grid-template-columns:repeat(4,1fr)}
 .status-pill{display:inline-block;font-size:.72rem;letter-spacing:.04em;padding:5px 10px;border-radius:20px;font-weight:600}
 .status-pill.pending{background:#fff1dc;color:#8a4b00}
+.status-pill.active-pill{background:#e6f8f3;color:#0f5f50}
 .essentials-grid{display:grid;grid-template-columns:repeat(7,1fr);gap:14px}
 .essentials-grid a{display:grid;gap:8px;align-content:start;border:1px solid var(--line);border-radius:12px;padding:20px 18px;min-height:130px;position:relative;transition:border-color .2s,transform .2s}
 .essentials-grid a:hover{border-color:var(--navy);transform:translateY(-2px)}
@@ -32,6 +65,6 @@
 .essentials-grid small{color:var(--muted);line-height:1.45}
 .essentials-grid span{position:absolute;right:16px;bottom:14px}
 #ncb-result{grid-column:1/-1}
-@media(max-width:1100px){.essentials-grid{grid-template-columns:repeat(4,1fr)}.tiles.four{grid-template-columns:1fr 1fr}}
-@media(max-width:750px){.form-grid.three{grid-template-columns:1fr}.essentials-grid{grid-template-columns:1fr 1fr}.key-specs{grid-template-columns:1fr 1fr}.tiles.four{grid-template-columns:1fr}.spec-table thead th{min-width:170px}.spec-table th[scope=row]{min-width:110px}}
+@media(max-width:1100px){.essentials-grid{grid-template-columns:repeat(4,1fr)}.tiles.four,.power-metrics-grid,.hyperlocal-grid{grid-template-columns:1fr 1fr}.social-cards-grid{grid-template-columns:repeat(2,1fr)}.partner-spotlight{grid-template-columns:1fr}}
+@media(max-width:750px){.form-grid.three{grid-template-columns:1fr}.essentials-grid{grid-template-columns:1fr 1fr}.key-specs{grid-template-columns:1fr 1fr}.tiles.four,.power-metrics-grid,.hyperlocal-grid,.social-cards-grid,.partner-metrics{grid-template-columns:1fr}.spec-table thead th{min-width:170px}.spec-table th[scope=row]{min-width:110px}.partner-spotlight{padding:24px 20px}}
 @media(prefers-reduced-motion:reduce){.essentials-grid a{transition:none}.essentials-grid a:hover{transform:none}}
