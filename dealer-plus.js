@@ -301,6 +301,331 @@ function sehgalPowerStrip() {
 </section>`;
 }
 
+let activeReviewTag = 'all';
+let activeMapFilter = 'all';
+let selectedMapPinId = 'bavdhan-arena';
+
+function renderReviewAndVideoGrid(tagId) {
+  const dp = FACTS.digitalPresence || {};
+  const rev = dp.googleReviewsSummary || {};
+  const reviews = (rev.featuredReviews || []).filter(r => tagId === 'all' || (r.tags || []).includes(tagId));
+  const videos = (dp.brandedVideos || []).filter(v => tagId === 'all' || (v.tags || []).includes(tagId));
+
+  return `
+    ${videos.length ? `<div class="section-tight">
+      <div class="section-heading">
+        <div>
+          <p class="eyebrow">BRANDED SEHGAL AUTORIDERS VIDEO STUDIO · WATERMARKED & READY FOR 1-GO PUBLISHING</p>
+          <h3>Watch Customer Deliveries, Showroom Walkarounds, Road Care & Careers Reels</h3>
+        </div>
+        <a class="button small outline" href="https://www.youtube.com/@sehgalautoriders5087" target="_blank" rel="noopener noreferrer">Open YouTube Channel ↗</a>
+      </div>
+      <div class="video-reel-grid">
+        ${videos.map(v => `<article class="tile video-reel-card">
+          <span class="partner-badge teal-badge">${esc(v.queue)}</span>
+          <div class="video-frame ${v.aspect === 'vertical' ? 'vertical-video' : 'landscape-video'}">
+            <video controls preload="metadata" poster="${esc(v.poster)}">
+              <source src="${esc(v.src)}" type="video/mp4">
+            </video>
+          </div>
+          <h4>${esc(v.title)}</h4>
+          <p class="muted">${esc(v.subtitle)}</p>
+          <div class="actions">
+            <a class="button small outline" href="${esc(v.src)}" download>Download Branded MP4 ↗</a>
+          </div>
+        </article>`).join('')}
+      </div>
+    </div>` : ''}
+    <div class="section-tight">
+      <div class="section-heading">
+        <div>
+          <p class="eyebrow">VERIFIED GOOGLE MAPS CUSTOMER DELIVERY PHOTOS & 5-STAR SHOUTOUTS</p>
+          <h3>Real Families & Staff Spotlights Across Sehgal Autoriders (${reviews.length} Shown)</h3>
+        </div>
+        <a class="button small teal" href="${esc(rev.bavdhanMapsUrl || 'https://www.google.com/maps')}" target="_blank" rel="noopener noreferrer">View 3,968+ Bavdhan Reviews on Google Maps ↗</a>
+      </div>
+      <div class="tiles three">
+        ${reviews.map(r => `<article class="tile review-proof-card">
+          <div class="review-photo-wrap">
+            <img src="${esc(r.photo)}" alt="${esc(r.customer)} at Sehgal Autoriders" loading="lazy">
+          </div>
+          <div class="review-card-body">
+            <span class="partner-badge gold">★★★★★ · ${esc(r.badge)}</span>
+            <h4>${esc(r.customer)}</h4>
+            <p class="eyebrow">${esc(r.branch)} · ${esc(r.timeAgo)}</p>
+            <p><b>${esc(r.headline)}</b></p>
+            <p class="muted">“${esc(r.quote)}”</p>
+            <div class="actions">
+              <a class="text-link" href="${esc(r.fullCard)}" target="_blank" rel="noopener noreferrer">View Verified Google Review Screenshot ↗</a>
+            </div>
+          </div>
+        </article>`).join('')}
+      </div>
+    </div>`;
+}
+
+function googleReviewsAndVideosHub() {
+  const dp = FACTS.digitalPresence || {};
+  const rev = dp.googleReviewsSummary || {};
+  const tags = rev.reviewTags || [];
+  return `<section class="section" id="google-reviews-hub">
+    <div class="container">
+      <div class="partner-spotlight">
+        <div>
+          <span class="partner-badge gold">10,000+ GOOGLE MAPS REVIEWS · 4.6★ NETWORK RATING</span>
+          <h2>4.6★ Across 3,968 Reviews at Bavdhan Arena Alone — Over 10,000+ Network-Wide.</h2>
+          <p>${esc(rev.aiSummaryQuote || '')}</p>
+          <p class="muted">Filter by real Google Maps review topics below to watch branded customer delivery reels, showroom walkarounds, repeat-buyer family stories (Deepti Mangesh’s 2nd car), and “Stars of Sehgal” staff shoutouts (Vikram S & Rohan).</p>
+          <div class="actions">
+            <a class="button teal" href="${esc(rev.bavdhanMapsUrl || '#')}" target="_blank" rel="noopener noreferrer">Verify on Google Maps (4.6★ · 3,968 Reviews) ↗</a>
+            <a class="button outline" href="https://wa.me/918380038244?text=Hello%20Sehgal%20Autoriders%2C%20I%20saw%20your%204.6-star%20Google%20reviews%20and%20would%20like%20to%20enquire." target="_blank" rel="noopener noreferrer">Share Feedback / Enquire on WhatsApp ↗</a>
+          </div>
+        </div>
+        <div class="partner-metrics">
+          <div class="metric-box"><strong>4.6 ★</strong><span>Bavdhan Arena 3S Flagship (3,968 Verified Reviews)</span></div>
+          <div class="metric-box"><strong>10,000+</strong><span>Total Google Maps Reviews & Followers Across 15 Locations</span></div>
+          <div class="metric-box"><strong>2.83 Lakh+</strong><span>Maruti Suzuki Service Job Cards & 1.01L+ Hero Riders</span></div>
+          <div class="metric-box"><strong>ceoservice@</strong><span>Unified Master Digital Command (ceoservice@sehgalautoriders.com)</span></div>
+        </div>
+      </div>
+      <div class="chips care-tabs" role="tablist" aria-label="Filter Google Reviews & Videos by Topic">
+        ${tags.map(t => `<button type="button" class="chip ${activeReviewTag === t.id ? 'active' : ''}" data-review-tag="${esc(t.id)}" aria-pressed="${activeReviewTag === t.id}">${esc(t.label)} <b>(${esc(t.count)})</b></button>`).join('')}
+      </div>
+      <div id="review-video-output">${renderReviewAndVideoGrid(activeReviewTag)}</div>
+    </div>
+  </section>`;
+}
+
+function renderSelectedPinDetail(pinId) {
+  const mp = (FACTS.digitalPresence || {}).interactiveMapPins || {};
+  const allCurr = mp.currentLocations || [];
+  const allUp = mp.upcomingLocations || [];
+  const curr = allCurr.find(p => p.id === pinId);
+  const up = allUp.find(p => p.id === pinId);
+  if (up) {
+    return `<div class="map-detail-card upcoming-detail">
+      <span class="partner-badge gold">🚀 LAUNCHING SOON · UPCOMING EXPANSION CORRIDOR</span>
+      <h3>${esc(up.name)}</h3>
+      <p class="eyebrow">${esc(up.corridor)} · ${esc(up.eta)}</p>
+      <p>${esc(up.highlights)}</p>
+      <div class="actions">
+        <a class="button small teal" href="https://wa.me/918380038244?text=${encodeURIComponent('Hello Sehgal Autoriders, I would like VIP pre-opening priority for ' + up.name)}" target="_blank" rel="noopener noreferrer">Pre-Book VIP Priority on WhatsApp ↗</a>
+        <a class="button small outline" href="mailto:ceoservice@sehgalautoriders.com?subject=${encodeURIComponent('Upcoming Location Inquiry / Careers: ' + up.name)}">Apply for New Branch Team (ceoservice@) ↗</a>
+      </div>
+    </div>`;
+  }
+  const p = curr || allCurr[0] || {};
+  return `<div class="map-detail-card">
+    <span class="partner-badge teal-badge">LIVE VERIFIED LOCATION · ${esc(p.rating || '4.6★')} (${esc(p.reviews || 'Verified')})</span>
+    <h3>${esc(p.name || 'Sehgal Autoriders')}</h3>
+    <p class="eyebrow">${esc(p.corridor || 'Pune & Maval')} · ${esc(p.metric || '')}</p>
+    <p class="muted">Direct Telephone: <a class="text-link" href="tel:${esc(p.phone || '8380038244')}">${esc(p.phone || '+91 83800 38244')}</a> · Central Digital Desk: <a class="text-link" href="tel:8380038244">+91 83800 38244</a></p>
+    <div class="actions">
+      <a class="button small teal" href="${esc(p.mapUrl || '#')}" target="_blank" rel="noopener noreferrer">Navigate on Google Maps ↗</a>
+      <a class="button small outline" href="https://wa.me/918380038244?text=${encodeURIComponent('Hello Sehgal Autoriders, I would like to book a visit/service at ' + (p.name || 'your branch'))}" target="_blank" rel="noopener noreferrer">Book Test Drive / Service on WhatsApp ↗</a>
+    </div>
+  </div>`;
+}
+
+function interactiveNetworkMapSection() {
+  const mp = (FACTS.digitalPresence || {}).interactiveMapPins || {};
+  const curr = mp.currentLocations || [];
+  const up = mp.upcomingLocations || [];
+  const showCurr = activeMapFilter === 'all' || activeMapFilter === 'current';
+  const showUp = activeMapFilter === 'all' || activeMapFilter === 'upcoming';
+
+  return `<section class="section wash" id="interactive-network-map">
+    <div class="container">
+      <div class="section-heading">
+        <div>
+          <p class="eyebrow">INTERACTIVE NETWORK MAP · 15 LIVE LOCATIONS + 4 UPCOMING EXPANSION CORRIDORS</p>
+          <h2>Explore Our Pune, PCMC, Lonavala & Bhor Footprint — Plus Upcoming Locations.</h2>
+        </div>
+        <div class="chips" role="tablist" aria-label="Filter Map Pins">
+          <button type="button" class="chip ${activeMapFilter === 'all' ? 'active' : ''}" data-map-filter="all">All Pins (${curr.length + up.length})</button>
+          <button type="button" class="chip ${activeMapFilter === 'current' ? 'active' : ''}" data-map-filter="current">🟢 Live Showrooms & Workshops (15)</button>
+          <button type="button" class="chip ${activeMapFilter === 'upcoming' ? 'active' : ''}" data-map-filter="upcoming">🟠 Upcoming / Launching Soon (${up.length})</button>
+        </div>
+      </div>
+      <div class="interactive-map-layout">
+        <div class="corridor-map-canvas" aria-label="Interactive Pune Maval Bhor Corridor Map">
+          <div class="map-legend">
+            <span><i class="pin-dot live-dot"></i> Live Showroom / Workshop (4.6★ Rated)</span>
+            <span><i class="pin-dot upcoming-dot"></i> Launching Soon (Upcoming Expansion)</span>
+          </div>
+          <div class="map-Corridor-Lines">
+            <span class="corridor-label" style="left:8%;top:10%">MUMBAI–PUNE EXPRESSWAY / LONAVALA</span>
+            <span class="corridor-label" style="left:48%;top:8%">CHAKAN & PCMC INDUSTRIAL BELT</span>
+            <span class="corridor-label" style="left:32%;top:44%">BAVDHAN · ERANDWANE · CENTRAL PUNE</span>
+            <span class="corridor-label" style="left:60%;top:46%">FATIMA NAGAR · MANJRI EAST</span>
+            <span class="corridor-label" style="left:40%;top:92%">KHED SHIVAPUR (NH-48) & BHOR SOUTH</span>
+          </div>
+          ${showCurr ? curr.map(p => `<button type="button" class="map-pin live-pin ${selectedMapPinId === p.id ? 'selected-pin' : ''}" style="left:${p.x}%;top:${p.y}%" data-map-pin="${esc(p.id)}" title="${esc(p.name)} (${esc(p.rating)} · ${esc(p.reviews)})">
+            <span class="pin-badge">${esc(p.rating)}</span>
+            <span class="pin-title">${esc(p.name.split('(')[0].trim())}</span>
+          </button>`).join('') : ''}
+          ${showUp ? up.map(u => `<button type="button" class="map-pin upcoming-pin ${selectedMapPinId === u.id ? 'selected-pin' : ''}" style="left:${u.x}%;top:${u.y}%" data-map-pin="${esc(u.id)}" title="UPCOMING: ${esc(u.name)}">
+            <span class="pin-badge pulse-badge">SOON</span>
+            <span class="pin-title">${esc(u.name.split('Express')[0].split('Customer')[0].split('Integrated')[0].split('Highway')[0].trim())}</span>
+          </button>`).join('') : ''}
+        </div>
+        <div class="map-sidebar">
+          <div id="selected-pin-box">${renderSelectedPinDetail(selectedMapPinId)}</div>
+          <div class="panel map-list-scroll">
+            <h4>Quick Select Branch or Upcoming Hub</h4>
+            <div class="pin-quick-list">
+              ${curr.map(p => `<button type="button" class="pin-list-btn ${selectedMapPinId === p.id ? 'active' : ''}" data-map-pin="${esc(p.id)}">🟢 <b>${esc(p.name.split('(')[0])}</b> <small>${esc(p.rating)} · ${esc(p.reviews)}</small></button>`).join('')}
+              ${up.map(u => `<button type="button" class="pin-list-btn upcoming-btn ${selectedMapPinId === u.id ? 'active' : ''}" data-map-pin="${esc(u.id)}">🟠 <b>UPCOMING: ${esc(u.name)}</b> <small>${esc(u.corridor)}</small></button>`).join('')}
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>`;
+}
+
+function linkedinEmployerBrandSection() {
+  const li = (FACTS.digitalPresence || {}).linkedinEmployerBrand || {};
+  const stars = li.starsOfSehgal || [];
+  const roles = li.openRoles || [];
+  return `<section class="section" id="linkedin-careers-hub">
+    <div class="container">
+      <div class="section-heading">
+        <div>
+          <p class="eyebrow">MAGNET LINKEDIN EMPLOYER PROFILE · SEHGAL AUTORIDERS PVT. LTD.</p>
+          <h2>A Dealership Everyone Wishes to Join — 2,400+ Strong Team & “Stars of Sehgal” Culture.</h2>
+        </div>
+        <div class="actions">
+          <a class="button small teal" href="https://www.linkedin.com/company/sehgal-autoriders-pvt-ltd/" target="_blank" rel="noopener noreferrer">Open Official LinkedIn Page ↗</a>
+          <a class="button small outline" href="mailto:ceoservice@sehgalautoriders.com?subject=Career%20Application%20-%20Sehgal%20Autoriders%20Pvt%20Ltd">Apply to ceoservice@sehgalautoriders.com ↗</a>
+        </div>
+      </div>
+      <div class="linkedin-banner-preview">
+        <img src="assets/social-kit/linkedin-cover-2256x382.png" alt="Sehgal Autoriders Pvt. Ltd. Official LinkedIn Employer Cover Banner" loading="lazy">
+      </div>
+      <div class="panel section-tight">
+        <p class="eyebrow">OFFICIAL LINKEDIN “ABOUT US” EMPLOYER POSITIONING (OWNED BY CEOSERVICE@SEHGALAUTORIDERS.COM)</p>
+        <h3>${esc(li.tagline || '')}</h3>
+        <p class="muted">${esc(li.aboutCopy || '')}</p>
+      </div>
+      <div class="section-tight">
+        <h3>🌟 “Stars of Sehgal” — Customer Review Recognition Wall</h3>
+        <p class="muted">When customers praise our team members by name on Google Maps, we celebrate them across LinkedIn, Instagram and our showrooms.</p>
+        <div class="tiles four">
+          ${stars.map(s => `<article class="tile star-tile">
+            <span class="partner-badge gold">★ STAR OF SEHGAL</span>
+            <h4>${esc(s.name)}</h4>
+            <p class="eyebrow">${esc(s.role)}</p>
+            <p class="muted">${esc(s.recognition)}</p>
+          </article>`).join('')}
+        </div>
+      </div>
+      <div class="panel section-tight">
+        <div class="section-heading">
+          <div>
+            <p class="eyebrow">EVERGREEN CAREERS · DIRECT APPLICATION TO CEOSERVICE@SEHGALAUTORIDERS.COM</p>
+            <h3>Join Our 2,400+ Team Across 15 Current & 4 Upcoming Locations</h3>
+          </div>
+          <a class="button small teal" href="https://wa.me/918380038244?text=Hello%20Sehgal%20Autoriders%2C%20I%20would%20like%20to%20apply%20for%20a%20career%20opportunity%20with%20your%20team." target="_blank" rel="noopener noreferrer">Apply via WhatsApp (+91 83800 38244) ↗</a>
+        </div>
+        <div class="table-wrap">
+          <table>
+            <thead>
+              <tr>
+                <th scope="col">Role / Career Track</th>
+                <th scope="col">Locations</th>
+                <th scope="col">Why Join Sehgal Autoriders</th>
+                <th scope="col">Instant Apply</th>
+              </tr>
+            </thead>
+            <tbody>
+              ${roles.map(r => `<tr>
+                <th scope="row">${esc(r.title)}</th>
+                <td>${esc(r.locations)}</td>
+                <td>${esc(r.perks)}</td>
+                <td>
+                  <a class="text-link" href="mailto:ceoservice@sehgalautoriders.com?subject=${encodeURIComponent('Application: ' + r.title)}">Email CV ↗</a> ·
+                  <a class="text-link" href="https://wa.me/918380038244?text=${encodeURIComponent('Hello Sehgal Autoriders, I am applying for: ' + r.title)}" target="_blank" rel="noopener">WhatsApp ↗</a>
+                </td>
+              </tr>`).join('')}
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </section>`;
+}
+
+function whatsappBusinessCatalogSection() {
+  const cats = (FACTS.digitalPresence || {}).whatsappCatalog || [];
+  if (!cats.length) return '';
+  return `<section class="section wash" id="whatsapp-business-catalog">
+    <div class="container">
+      <div class="section-heading">
+        <div>
+          <p class="eyebrow">VERIFIED WHATSAPP BUSINESS ACCOUNT & CATALOG · +91 83800 38244</p>
+          <h2>One-Click WhatsApp Business Catalog for Sales, Service, Insurance, Finance & Careers.</h2>
+        </div>
+        <a class="button small teal" href="https://wa.me/918380038244?text=Hello%20Sehgal%20Autoriders%2C%20please%20share%20your%20WhatsApp%20Business%20Catalog." target="_blank" rel="noopener noreferrer">Open WhatsApp Desk (+91 83800 38244) ↗</a>
+      </div>
+      <div class="tiles three">
+        ${cats.map(c => `<article class="tile wa-catalog-card">
+          <img src="${esc(c.image)}" alt="${esc(c.title)}" loading="lazy" class="wa-catalog-img">
+          <span class="partner-badge teal-badge">${esc(c.badge)}</span>
+          <h3>${esc(c.title)}</h3>
+          <p class="muted">${esc(c.subtitle)}</p>
+          <div class="actions">
+            <a class="button small teal" href="https://wa.me/918380038244?text=${encodeURIComponent(c.waText)}" target="_blank" rel="noopener noreferrer">Launch on WhatsApp ↗</a>
+            <a class="button small outline" href="${esc(c.image)}" download>Download Catalog Card ↗</a>
+          </div>
+        </article>`).join('')}
+      </div>
+    </div>
+  </section>`;
+}
+
+function socialBrandKitSection() {
+  const assets = [
+    ['True Vector Master Logo (SVG)', 'Infinite-resolution vector SVG redrawn from master emblem', 'assets/brand/sehgal-autoriders-logo.svg'],
+    ['YouTube Profile (800×800 PNG)', 'Padded high-res square badge for @SehgalAutoriders', 'assets/social-kit/youtube-profile-800x800.png'],
+    ['YouTube Channel Banner (2560×1440 PNG)', 'Safe-zone calibrated 2560×1440 banner with 4.6★ & 15 locations', 'assets/social-kit/youtube-banner-2560x1440.png'],
+    ['Instagram Profile (1080×1080 & 320×320 PNG)', 'High-clarity badge for @sehgalautoriders.official', 'assets/social-kit/instagram-profile-1080x1080.png'],
+    ['Facebook Profile & Retina Cover (1640×624 PNG)', 'For unified Sehgal Autoriders Official corporate page', 'assets/social-kit/facebook-cover-1640x624.png'],
+    ['LinkedIn Logo (400×400) & Cover (2256×382 PNG)', 'Employer-of-Choice banner for Sehgal Autoriders Pvt. Ltd.', 'assets/social-kit/linkedin-cover-2256x382.png'],
+    ['WhatsApp Business Profile (640×640 PNG)', 'Official badge for Central Digital Desk +91 83800 38244', 'assets/social-kit/whatsapp-business-profile-640x640.png']
+  ];
+  return `<section class="section" id="social-media-kit">
+    <div class="container">
+      <div class="panel">
+        <div class="section-heading">
+          <div>
+            <p class="eyebrow">UNIFIED SOCIAL MEDIA ASSET PACK · HIGH-RESOLUTION VECTOR & PNG EXPORTS</p>
+            <h3>Ready-to-Upload Profile Logos & Cover Banners (Master Account: ceoservice@sehgalautoriders.com)</h3>
+          </div>
+        </div>
+        <div class="table-wrap">
+          <table>
+            <thead>
+              <tr>
+                <th scope="col">Asset Name</th>
+                <th scope="col">Specification & Target Platform</th>
+                <th scope="col">Direct Download</th>
+              </tr>
+            </thead>
+            <tbody>
+              ${assets.map(([name, spec, url]) => `<tr>
+                <th scope="row">${esc(name)}</th>
+                <td>${esc(spec)}</td>
+                <td><a class="text-link" href="${esc(url)}" download>Download High-Res File ↗</a></td>
+              </tr>`).join('')}
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </section>`;
+}
+
 function digitalEcosystemStrip() {
   const dp = FACTS.digitalPresence || {};
   const socials = dp.socialChannels || [];
@@ -308,22 +633,26 @@ function digitalEcosystemStrip() {
   return `<section class="section wash" id="digital-ecosystem">
   <div class="container">
     <div class="section-heading">
-      <div><p class="eyebrow">COMPLETE ONLINE IDENTITY · YOUTUBE · INSTAGRAM · FACEBOOK · LINKEDIN · HYPERLOCAL</p><h2>Connect with Sehgal Autoriders everywhere.</h2></div>
-      <a class="button small outline" href="#/digital-presence">View full digital directory ↗</a>
+      <div><p class="eyebrow">UNIFIED MASTER SOCIAL IDENTITY · OWNED BY CEOSERVICE@SEHGALAUTORIDERS.COM</p><h2>One Master Identity Across YouTube, Instagram, Facebook, LinkedIn & WhatsApp.</h2></div>
+      <a class="button small outline" href="#/digital-presence">Open Full Digital, Reviews & Map Hub ↗</a>
     </div>
     <div class="social-cards-grid">
       ${socials.map(s => `<article class="tile social-tile">
-        <span class="partner-badge teal-badge">${esc(s.badge)}</span>
-        <h3>${esc(s.platform)}</h3>
-        <p class="social-handle"><b>${esc(s.handle)}</b></p>
-        <p class="muted">${esc(s.description)}</p>
-        <a class="button small outline" href="${esc(s.url)}" target="_blank" rel="noopener noreferrer">Open ${esc(s.platform)} ↗</a>
+        <div>
+          <span class="partner-badge teal-badge">${esc(s.badge)}</span>
+          <h3>${esc(s.platform)}</h3>
+          <p class="social-handle"><b>${esc(s.handle)}</b></p>
+          <p class="muted">${esc(s.description)}</p>
+        </div>
+        <div class="actions">
+          <a class="button small teal" href="${esc(s.url)}" target="_blank" rel="noopener noreferrer">Open ${esc(s.platform)} ↗</a>
+        </div>
       </article>`).join('')}
     </div>
     <div class="panel section-tight">
       <div class="section-heading">
-        <div><p class="eyebrow">8 OFFICIAL MARUTI SUZUKI HYPERLOCAL PORTALS · PARENT GROUP: SEHGL</p><h3>Official Branch Websites & Facebook Pages</h3></div>
-        <p class="muted">Managed by our in-house Digital Marketing & Hyperlocal Hub at Law College Road & Bavdhan (+91 83800 38244).</p>
+        <div><p class="eyebrow">8 OFFICIAL MARUTI SUZUKI HYPERLOCAL PORTALS · PARENT GROUP: SEHGL</p><h3>Official Branch Websites & Hyperlocal Network</h3></div>
+        <p class="muted">Consolidated under our Central Digital & Hyperlocal Hub at Law College Road & Bavdhan (+91 83800 38244 · ceoservice@sehgalautoriders.com).</p>
       </div>
       <div class="hyperlocal-grid">
         ${portals.map(p => `<article class="hyperlocal-card">
@@ -332,7 +661,7 @@ function digitalEcosystemStrip() {
           <p class="hyperlocal-domain"><a href="${esc(p.url)}" target="_blank" rel="noopener noreferrer">${esc(p.domain)} ↗</a></p>
           <div class="hyperlocal-links">
             <a class="text-link" href="tel:${esc(p.phone)}">Call: ${esc(p.phone)}</a>
-            <a class="text-link" href="${esc(p.fbUrl)}" target="_blank" rel="noopener noreferrer">Facebook Page ↗</a>
+            <a class="text-link" href="${esc(p.fbUrl)}" target="_blank" rel="noopener noreferrer">Branch FB ↗</a>
           </div>
         </article>`).join('')}
       </div>
@@ -342,17 +671,27 @@ function digitalEcosystemStrip() {
 }
 
 function digitalPresencePage() {
-  return page('Sehgal Autoriders — Online Presence & Digital Network', 'Official YouTube (@sehgalautoriders5087), Instagram, LinkedIn, WhatsApp Central Desk, 8 Branch Facebook Pages and 8 Official Maruti Suzuki Hyperlocal Portals.', 'DIGITAL IDENTITY & SOCIAL ECOSYSTEM') +
+  return page(
+    'Sehgal Autoriders — Unified Online Presence, 10,000+ Google Reviews & Interactive Map',
+    'Centralized under ceoservice@sehgalautoriders.com & WhatsApp Business (+91 83800 38244) — featuring our 4.6★ (10,000+ Google Maps Reviews) Video Studio, Interactive Current & Upcoming Locations Map, Employer-of-Choice LinkedIn Hub, and 8 Maruti Suzuki Hyperlocal Portals.',
+    'UNIFIED DIGITAL IDENTITY · 4.6★ (10,000+ REVIEWS) · CAREERS & MAP'
+  ) +
     sehgalPowerStrip() +
     digitalEcosystemStrip() +
+    googleReviewsAndVideosHub() +
+    interactiveNetworkMapSection() +
+    linkedinEmployerBrandSection() +
+    whatsappBusinessCatalogSection() +
+    socialBrandKitSection() +
     `<section class="page-content"><div class="container">
       <div class="duo">
         <div class="panel">
-          <p class="eyebrow">IN-HOUSE DIGITAL & HYPERLOCAL COMMAND</p>
-          <h2>Direct Digital Response Team</h2>
-          <p class="muted">Every enquiry across YouTube, Instagram, Facebook, Google Business Profiles and our 8 Maruti Suzuki Hyperlocal websites is routed in real time by our dedicated Digital & CRM team at Law College Road and Bavdhan.</p>
+          <p class="eyebrow">UNIFIED MASTER ACCOUNT & DIGITAL COMMAND</p>
+          <h2>Single-Window Governance (ceoservice@sehgalautoriders.com)</h2>
+          <p class="muted">All official social channels, Google Business Profiles, LinkedIn Career applications and our 8 Maruti Suzuki Hyperlocal websites are governed centrally under <b>ceoservice@sehgalautoriders.com</b> and our Central Digital Desk (+91 83800 38244).</p>
           <ul class="check-list">
-            <li><b>Central Digital & Hyperlocal Desk:</b> <a class="text-link" href="tel:8380038244">+91 83800 38244</a> / <a class="text-link" href="https://wa.me/918380038244" target="_blank" rel="noopener">WhatsApp Direct ↗</a></li>
+            <li><b>Master Corporate & Careers Email:</b> <a class="text-link" href="mailto:ceoservice@sehgalautoriders.com">ceoservice@sehgalautoriders.com</a></li>
+            <li><b>Central Digital & WhatsApp Business Desk:</b> <a class="text-link" href="tel:8380038244">+91 83800 38244</a> / <a class="text-link" href="https://wa.me/918380038244" target="_blank" rel="noopener">WhatsApp Direct ↗</a></li>
             <li><b>Sales Escalation & Priority Delivery Desk:</b> <a class="text-link" href="tel:7888012800">+91 78880 12800</a></li>
             <li><b>Service & Bodyshop Escalation Desk:</b> <a class="text-link" href="tel:7888060161">+91 78880 60161</a></li>
             <li><b>Bajaj Allianz & MI Insurance Desk:</b> <a class="text-link" href="tel:8888881399">+91 88888 81399</a> (<a class="text-link" href="mailto:insurance@sehgalautoriders.com">insurance@sehgalautoriders.com</a>)</li>
@@ -363,11 +702,11 @@ function digitalPresencePage() {
         <div class="panel">
           <p class="eyebrow">LEADERSHIP & MEDIA SPOTLIGHT</p>
           <h2>Autocar Dialogues & 27-Year Legacy</h2>
-          <p class="muted">Watch MD <b>Nicky Sehgal</b> discuss Pune’s evolving mobility landscape, customer trust and dealership scale, and follow our daily delivery celebrations on YouTube and Instagram.</p>
+          <p class="muted">Watch MD <b>Nicky Sehgal</b> discuss Pune’s evolving mobility landscape, customer trust and dealership scale, and follow our daily 5-star delivery celebrations across YouTube, Instagram, Facebook and LinkedIn.</p>
           <div class="actions">
-            <a class="button teal small" href="https://www.youtube.com/@sehgalautoriders5087" target="_blank" rel="noopener noreferrer">Watch on YouTube (@sehgalautoriders5087) ↗</a>
-            <a class="button outline small" href="https://www.instagram.com/sehgalautoridersindia/" target="_blank" rel="noopener noreferrer">Follow on Instagram ↗</a>
-            <a class="button outline small" href="https://www.linkedin.com/company/sehgal-autoriders-pvt-ltd/" target="_blank" rel="noopener noreferrer">Follow on LinkedIn ↗</a>
+            <a class="button teal small" href="https://www.youtube.com/@sehgalautoriders5087" target="_blank" rel="noopener noreferrer">Watch on YouTube ↗</a>
+            <a class="button outline small" href="https://www.instagram.com/sehgalautoridersindia/" target="_blank" rel="noopener noreferrer">Follow on Instagram (291+ Posts) ↗</a>
+            <a class="button outline small" href="https://www.linkedin.com/company/sehgal-autoriders-pvt-ltd/" target="_blank" rel="noopener noreferrer">Join Us on LinkedIn ↗</a>
           </div>
         </div>
       </div>
