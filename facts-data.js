@@ -649,45 +649,296 @@ const FACTS_DATA = {
   "thirdPartySource": "https://www.pib.gov.in/PressReleasePage.aspx?PRID=1828414"
  },
  "digitalPresence": {
-  "headline": "Sehgal Autoriders — Complete Digital & Social Ecosystem",
-  "subheadline": "Connect with us across YouTube, Instagram, Facebook, LinkedIn, WhatsApp and our 8 official Maruti Suzuki Hyperlocal websites.",
+  "headline": "Sehgal Autoriders — Unified Master Social Identity, 10,000+ Reviews & Interactive Network",
+  "subheadline": "Centralized under ceoservice@sehgalautoriders.com & Central Digital Desk (+91 83800 38244) — connecting YouTube, Instagram, Facebook, Employer-of-Choice LinkedIn, WhatsApp Business Catalog, 10,000+ Google Maps Reviews (4.6★) and our 15 Current + Upcoming Locations.",
+  "masterAccountEmail": "ceoservice@sehgalautoriders.com",
+  "centralWhatsAppPhone": "8380038244",
+  "googleReviewsSummary": {
+   "overallRating": "4.6★",
+   "totalGroupReviews": "10,000+ Verified Google Maps Reviews",
+   "bavdhanFlagshipReviews": "3,968 Reviews (4.6★ at Bavdhan Arena 3S Flagship)",
+   "bavdhanMapsUrl": "https://www.google.com/maps/place/Maruti+Suzuki+ARENA+(Sehgal+Autoriders,+Pune,+Bavdhan)/@18.5114847,73.7679774,17z/",
+   "aiSummaryQuote": "People say this car dealership provides a smooth and professional car buying experience. They also highlight the excellent service and helpful, cooperative staff. Guests mention the team offers clear guidance and support throughout the process.",
+   "reviewTags": [
+    { "id": "all", "label": "All Verified Reviews & Videos", "count": "10,000+" },
+    { "id": "showroom", "label": "Showroom Experience", "count": "63+" },
+    { "id": "buying", "label": "Car Buying Experience", "count": "49+" },
+    { "id": "staff", "label": "Cooperative Staff & Stars of Sehgal", "count": "44+" },
+    { "id": "bodyshop", "label": "Bodyshop & Service", "count": "32+" },
+    { "id": "repeat", "label": "Repeat Family Buyers", "count": "2nd+ Car" }
+   ],
+   "featuredReviews": [
+    {
+     "id": "deepti-mangesh",
+     "customer": "Deepti Mangesh",
+     "badge": "Local Guide · 145 Reviews · 2nd Car Repeat Buyer",
+     "rating": 5,
+     "timeAgo": "Verified Delivery · Bavdhan Arena",
+     "tags": ["all", "buying", "repeat", "staff"],
+     "headline": "Exceptional Customer Experience at Sehgal Autoriders — Purchased Our Second Car!",
+     "quote": "We recently purchased our second car from Sehgal Autoriders, and once again the experience was outstanding. The entire team was highly cooperative and guided our family smoothly from booking to delivery.",
+     "photo": "assets/google-reviews/delivery-deepti-mangesh-second-car.jpg",
+     "fullCard": "assets/google-reviews/review-full-deepti-mangesh.jpg",
+     "branch": "Maruti Suzuki ARENA — Bavdhan 3S Flagship"
+    },
+    {
+     "id": "shivraj-kamble",
+     "customer": "Shivraj Kamble",
+     "badge": "Verified New Car Owner · 2 Delivery Photos",
+     "rating": 5,
+     "timeAgo": "Verified Delivery · Bavdhan Arena",
+     "tags": ["all", "showroom", "buying", "staff"],
+     "headline": "Very Good Service and Helpful All Staff",
+     "quote": "Very good service and helpful all staff..... Smooth key handover, clear documentation, Bajaj Allianz cashless insurance and complete on-time delivery.",
+     "photo": "assets/google-reviews/delivery-shivraj-kamble-bavdhan.jpg",
+     "fullCard": "assets/google-reviews/review-full-shivraj-kamble.jpg",
+     "branch": "Maruti Suzuki ARENA — Bavdhan 3S Flagship"
+    },
+    {
+     "id": "aniket-poul",
+     "customer": "Aniket Poul",
+     "badge": "Verified Family Delivery · 2 Photos",
+     "rating": 5,
+     "timeAgo": "Verified Delivery · Bavdhan Arena",
+     "tags": ["all", "buying", "showroom"],
+     "headline": "Excellent Service & Memorable Family Delivery Celebration",
+     "quote": "Excellent service! Our entire family celebrated the new car key handover at the Bavdhan delivery bay with full support from the Sehgal Autoriders team.",
+     "photo": "assets/google-reviews/delivery-aniket-poul-bavdhan.jpg",
+     "fullCard": "assets/google-reviews/review-full-aniket-poul.jpg",
+     "branch": "Maruti Suzuki ARENA — Bavdhan 3S Flagship"
+    },
+    {
+     "id": "ashutosh-nerlekar",
+     "customer": "Ashutosh Nerlekar",
+     "badge": "Local Guide · Star of Sehgal Shoutout: Vikram S",
+     "rating": 5,
+     "timeAgo": "Verified Review · Bavdhan Arena",
+     "tags": ["all", "showroom", "staff"],
+     "headline": "Star of Sehgal Spotlight — Vikram S Explained Everything Patiently",
+     "quote": "Good showroom. Vikram S was good. Explained everything patiently... highly recommended.",
+     "photo": "assets/google-reviews/showroom-bavdhan-arena-vikram-s.jpg",
+     "fullCard": "assets/google-reviews/review-full-ashutosh-nerlekar-vikram-s.jpg",
+     "branch": "Maruti Suzuki ARENA — Bavdhan 3S Flagship"
+    },
+    {
+     "id": "priyanka-trivedi",
+     "customer": "Priyanka Trivedi",
+     "badge": "Verified Review · Star of Sehgal Shoutout: Rohan Sir",
+     "rating": 5,
+     "timeAgo": "2 Weeks Ago · NEW",
+     "tags": ["all", "staff", "bodyshop", "buying"],
+     "headline": "Star of Sehgal Spotlight — Co-operative Executive Rohan Sir",
+     "quote": "Excellent service co operative executive. thank u so much Rohan sir.",
+     "photo": "assets/google-reviews/review-full-priyanka-trivedi-rohan.jpg",
+     "fullCard": "assets/google-reviews/review-full-priyanka-trivedi-rohan.jpg",
+     "branch": "Maruti Suzuki ARENA — Bavdhan 3S Flagship"
+    },
+    {
+     "id": "bavdhan-summary",
+     "customer": "3,968+ Bavdhan Reviewers & 10,000+ Network-Wide",
+     "badge": "4.6★ Google Maps Rating Summary",
+     "rating": 5,
+     "timeAgo": "Live Google Maps Proof",
+     "tags": ["all", "showroom", "bodyshop"],
+     "headline": "4.6★ Across 3,968 Reviews at Bavdhan Arena Alone",
+     "quote": "Backed by 2,83,000+ Maruti Suzuki workshop job cards, 1,01,505+ Hero riders, and 7 authorised cashless bodyshops across Pune, Lonavala, Kamshet, Khed Shivapur and Bhor.",
+     "photo": "assets/google-reviews/review-summary-46-star-3968-bavdhan.jpg",
+     "fullCard": "assets/google-reviews/review-summary-46-star-3968-bavdhan.jpg",
+     "branch": "All 15 Sehgal Autoriders Showrooms & Workshops"
+    }
+   ]
+  },
+  "brandedVideos": [
+   {
+    "id": "reel-deliveries",
+    "queue": "Queue 01 · Deliveries & 4.6★ Reviews",
+    "title": "Happy Family Deliveries & 4.6★ (3,968+ Reviews) Showcase",
+    "subtitle": "Featuring Deepti Mangesh (2nd Car Family Story), Shivraj Kamble & Aniket Poul key handovers at Bavdhan Arena.",
+    "src": "assets/videos/customer-deliveries-46star-reel.mp4",
+    "poster": "assets/google-reviews/delivery-deepti-mangesh-second-car.jpg",
+    "aspect": "vertical",
+    "tags": ["all", "buying", "repeat", "showroom"]
+   },
+   {
+    "id": "nexa-baleno-delivery",
+    "queue": "Queue 01 · Real Showroom Delivery Clip",
+    "title": "NEXA Fatima Nagar — New Baleno Key Handover Celebration",
+    "subtitle": "Authentic customer delivery celebration filmed at Sehgal Autoriders NEXA Fatima Nagar, watermarked with official high-res brand badge.",
+    "src": "assets/videos/nexa-baleno-delivery-branded.mp4",
+    "poster": "assets/google-reviews/delivery-shivraj-kamble-bavdhan.jpg",
+    "aspect": "vertical",
+    "tags": ["all", "buying", "showroom"]
+   },
+   {
+    "id": "nexa-walkaround",
+    "queue": "Queue 02 · Showroom Walkarounds",
+    "title": "Sehgal Autoriders NEXA Showroom Experience",
+    "subtitle": "Inside our Maruti Suzuki NEXA showroom experience — watermarked and ready for unified cross-channel publishing.",
+    "src": "assets/videos/nexa-showroom-walkaround-branded.mp4",
+    "poster": "assets/videos/wagonr-walkaround-thumb.jpg",
+    "aspect": "landscape",
+    "tags": ["all", "showroom"]
+   },
+   {
+    "id": "reel-road-care",
+    "queue": "Queue 03 · Service, Bodyshop & Insurance Tips",
+    "title": "W2 Gate-Entry Road Care & Bajaj Allianz Cashless Claim Guide",
+    "subtitle": "Highlighting our English & Marathi Car Care PDFs, Hero 2W & Vida EV Safety, and #1 Bajaj Allianz Cashless Claims.",
+    "src": "assets/videos/road-care-bajaj-insurance-reel.mp4",
+    "poster": "assets/google-reviews/showroom-bavdhan-arena-vikram-s.jpg",
+    "aspect": "vertical",
+    "tags": ["all", "bodyshop"]
+   },
+   {
+    "id": "reel-careers-linkedin",
+    "queue": "Queue 04 · Corporate, Leadership & LinkedIn Careers",
+    "title": "Stars of Sehgal (Vikram S & Rohan) — Join Our 2,400+ Strong Team",
+    "subtitle": "Employer-of-Choice LinkedIn spotlight celebrating staff praised in Google Reviews and inviting top talent to apply at ceoservice@sehgalautoriders.com.",
+    "src": "assets/videos/stars-of-sehgal-careers-linkedin.mp4",
+    "poster": "assets/google-reviews/review-summary-46-star-3968-bavdhan.jpg",
+    "aspect": "vertical",
+    "tags": ["all", "staff"]
+   }
+  ],
   "socialChannels": [
    {
     "platform": "YouTube",
-    "handle": "@sehgalautoriders5087",
+    "handle": "@SehgalAutoriders (Master) · @sehgalautoriders5087",
     "url": "https://www.youtube.com/@sehgalautoriders5087",
-    "badge": "OFFICIAL VIDEO CHANNEL",
-    "description": "Watch customer delivery diaries, showroom walkarounds, service & car-care tips, and MD Nicky Sehgal on Autocar Dialogues."
+    "badge": "UNIFIED VIDEO & SHORTS HUB",
+    "logoAsset": "assets/social-kit/youtube-profile-800x800.png",
+    "bannerAsset": "assets/social-kit/youtube-banner-2560x1440.png",
+    "description": "Official customer delivery diaries, Arena/NEXA/Hero walkarounds, W2 road-care tips, and MD Nicky Sehgal on Autocar Dialogues — managed under ceoservice@sehgalautoriders.com."
    },
    {
     "platform": "Instagram",
-    "handle": "@sehgalautoridersindia",
+    "handle": "@sehgalautoriders.official · @sehgalautoridersindia",
     "url": "https://www.instagram.com/sehgalautoridersindia/",
-    "badge": "STORIES & DELIVERIES",
-    "description": "Daily delivery reels, 27-year celebration highlights, new model launches, and monsoon/summer car-care tips from Pune & Lonavala."
+    "badge": "291+ POSTS · REELS & DELIVERIES",
+    "logoAsset": "assets/social-kit/instagram-profile-1080x1080.png",
+    "bannerAsset": "assets/social-kit/wa-catalog-1-new-cars.png",
+    "description": "Daily 5-star delivery reels, repeat-buyer family stories, 27-year celebration highlights, and monsoon/summer road-care tips across Pune & Lonavala."
    },
    {
     "platform": "Facebook",
-    "handle": "Sehgal Autoriders Network (8 Official Branch Pages)",
-    "url": "https://www.facebook.com/marutisuzukiarenasehgalautoriderserandwane/",
-    "badge": "COMMUNITY & CAMPAIGNS",
-    "description": "Dedicated official Facebook pages for Erandwane, Bavdhan Arena, Bavdhan True Value, Fatima Nagar NEXA, Lonavala Arena & NEXA, Khed Shivapur and Bhor."
+    "handle": "Sehgal Autoriders Official (Master Page)",
+    "url": "https://www.facebook.com/marutisuzukiarenasehgalautoridersbavdhan/",
+    "badge": "UNIFIED CORPORATE PAGE",
+    "logoAsset": "assets/social-kit/facebook-profile-1080x1080.png",
+    "bannerAsset": "assets/social-kit/facebook-cover-1640x624.png",
+    "description": "Single unified corporate Facebook flagship under ceoservice@sehgalautoriders.com uniting Erandwane, Bavdhan Arena & True Value, Fatima Nagar NEXA, Lonavala, Khed Shivapur and Bhor."
    },
    {
     "platform": "LinkedIn",
     "handle": "Sehgal Autoriders Pvt. Ltd.",
     "url": "https://www.linkedin.com/company/sehgal-autoriders-pvt-ltd/",
-    "badge": "CORPORATE & CAREERS",
-    "description": "Corporate milestones, leadership insights, OEM recognition and career opportunities across our 2,400+ strong team (gm.hr@sehgalautoriders.com)."
+    "badge": "EMPLOYER OF CHOICE · 2,400+ TEAM",
+    "logoAsset": "assets/social-kit/linkedin-logo-400x400.png",
+    "bannerAsset": "assets/social-kit/linkedin-cover-2256x382.png",
+    "description": "27-year legacy, 10,000+ Google Reviews (4.6★), 'Stars of Sehgal' executive recognition wall, OEM academies & career openings routed directly to ceoservice@sehgalautoriders.com."
    },
    {
-    "platform": "WhatsApp Direct",
-    "handle": "+91 83800 38244 (Central Digital Desk)",
-    "url": "https://wa.me/918380038244?text=Hello%20Sehgal%20Autoriders%2C%20I%20would%20like%20assistance%20with%20a%20vehicle%20or%20service.",
-    "badge": "INSTANT RESPONSE",
-    "description": "Instant WhatsApp routing for test drives, on-road quotes, Bajaj Allianz insurance renewals, HDFC/SBI finance and service bookings."
+    "platform": "WhatsApp Business",
+    "handle": "+91 83800 38244 (Verified Central Desk)",
+    "url": "https://wa.me/918380038244?text=Hello%20Sehgal%20Autoriders%2C%20I%20would%20like%20assistance%20from%20your%20Central%20Digital%20Desk.",
+    "badge": "6-ITEM BUSINESS CATALOG",
+    "logoAsset": "assets/social-kit/whatsapp-business-profile-640x640.png",
+    "bannerAsset": "assets/social-kit/wa-catalog-5-insurance-finance.png",
+    "description": "Verified WhatsApp Business Catalog for Arena/NEXA/Commercial quotes, Hero 2W & Vida EV, True Value, Service/Bodyshop, Bajaj Allianz Insurance, HDFC/SBI Finance & Careers."
    }
   ],
+  "whatsappCatalog": [
+   {
+    "id": "cat-1",
+    "badge": "CATALOG 01 · NEW CARS",
+    "title": "New Car Quote & Test Drive (Arena · NEXA · Commercial)",
+    "subtitle": "All 18 Maruti Suzuki models, 71.5% Factory S-CNG line-up & e VITARA electric SUV with doorstep test drives.",
+    "image": "assets/social-kit/wa-catalog-1-new-cars.png",
+    "waText": "Hello Sehgal Autoriders (+91 83800 38244), I would like an On-Road Price Quote and Test Drive for a new Maruti Suzuki (Arena / NEXA / Commercial)."
+   },
+   {
+    "id": "cat-2",
+    "badge": "CATALOG 02 · HERO 2W & VIDA EV",
+    "title": "Hero MotoCorp & Vida V1 Electric Two-Wheeler Inquiry",
+    "subtitle": "Splendor+ XTEC, HF Deluxe, Glamour, Xoom, Destini 125, Mavrick 440 & Vida EV across 4 Pune/PCMC/Chakan outlets.",
+    "image": "assets/social-kit/wa-catalog-2-hero-2w.png",
+    "waText": "Hello Sehgal Autoriders (+91 83800 38244), I would like an On-Road Quote / Test Ride for a Hero MotoCorp two-wheeler or Vida EV."
+   },
+   {
+    "id": "cat-3",
+    "badge": "CATALOG 03 · TRUE VALUE",
+    "title": "Maruti Suzuki True Value Certified Pre-Owned & Exchange",
+    "subtitle": "376-point inspected pre-owned cars at Bavdhan True Value Hub + instant free valuation to upgrade your old car.",
+    "image": "assets/social-kit/wa-catalog-3-true-value.png",
+    "waText": "Hello Sehgal Autoriders (+91 83800 38244), I am interested in buying/exchanging a car through Maruti Suzuki True Value Bavdhan."
+   },
+   {
+    "id": "cat-4",
+    "badge": "CATALOG 04 · SERVICE & BODYSHOP",
+    "title": "Periodic Service, Cashless Bodyshop & Road-Care PDFs",
+    "subtitle": "Book across 7 Maruti workshops & 2 Hero workshops (2.83L+ visits) + get free English, Marathi & Insurance PDFs.",
+    "image": "assets/social-kit/wa-catalog-4-service-bodyshop.png",
+    "waText": "Hello Sehgal Autoriders (+91 83800 38244), I would like to book a Periodic Service / Bodyshop appointment and receive the Road-Care PDF guides."
+   },
+   {
+    "id": "cat-5",
+    "badge": "CATALOG 05 · INSURANCE & FINANCE",
+    "title": "#1 Bajaj Allianz Cashless Insurance & #1 HDFC / SBI Car Finance",
+    "subtitle": "Instant policy renewal, Zero-Dep cashless claim assistance (+91 88888 81399) & lowest EMI car loans (+91 88888 81341).",
+    "image": "assets/social-kit/wa-catalog-5-insurance-finance.png",
+    "waText": "Hello Sehgal Autoriders (+91 83800 38244), I need assistance with Bajaj Allianz / Maruti Insurance renewal or an HDFC / SBI Car Loan."
+   },
+   {
+    "id": "cat-6",
+    "badge": "CATALOG 06 · JOIN OUR 2,400+ TEAM",
+    "title": "Careers at Sehgal Autoriders (Apply via WhatsApp / Email)",
+    "subtitle": "Fast-track automotive careers in Sales, Service, Bodyshop, Finance, Insurance & Digital CRM (ceoservice@sehgalautoriders.com).",
+    "image": "assets/social-kit/wa-catalog-6-careers.png",
+    "waText": "Hello Sehgal Autoriders (+91 83800 38244), I would like to apply for a career opportunity with your 2,400+ team (ceoservice@sehgalautoriders.com)."
+   }
+  ],
+  "interactiveMapPins": {
+   "currentLocations": [
+    { "id": "bavdhan-arena", "name": "Bavdhan 3S Flagship (Arena + Workshop + Bodyshop)", "corridor": "West Pune · NH-48 Bypass", "rating": "4.6★", "reviews": "3,968 Reviews", "metric": "1,52,272+ Job Cards", "x": 38, "y": 48, "phone": "08071645524", "mapUrl": "https://www.google.com/maps/place/Maruti+Suzuki+ARENA+(Sehgal+Autoriders,+Pune,+Bavdhan)/@18.5114847,73.7679774,17z/" },
+    { "id": "erandwane-arena", "name": "Law College Road, Erandwane (Corporate HQ & Arena)", "corridor": "Central Pune", "rating": "4.6★", "reviews": "1,850+ Reviews", "metric": "Flagship Urban Showroom & Driving School", "x": 48, "y": 50, "phone": "08062513562", "mapUrl": "https://www.google.com/maps/search/?api=1&query=Sehgal+Autoriders+Law+College+Road+Erandwane+Pune" },
+    { "id": "bavdhan-true-value", "name": "Bavdhan True Value Pre-Owned & Exchange Hub", "corridor": "West Pune", "rating": "4.6★", "reviews": "640+ Reviews", "metric": "553+ Exchanges in FY26-27 YTD", "x": 41, "y": 53, "phone": "08071649360", "mapUrl": "https://www.google.com/maps/search/?api=1&query=Maruti+Suzuki+True+Value+Sehgal+Autoriders+Bavdhan+Pune" },
+    { "id": "fatima-nagar-nexa", "name": "Fatima Nagar NEXA Flagship (Wanowrie)", "corridor": "East / South-East Pune", "rating": "4.6★", "reviews": "1,420+ Reviews", "metric": "NEXA Flagship & Driving School", "x": 62, "y": 54, "phone": "08062511897", "mapUrl": "https://www.google.com/maps/search/?api=1&query=NEXA+Sehgal+Autoriders+Fatima+Nagar+Pune" },
+    { "id": "manjri-hub", "name": "Manjri NEXA, Commercial & Workshop Hub", "corridor": "East Pune · Solapur Hwy", "rating": "4.5★", "reviews": "980+ Reviews", "metric": "42,673+ Job Cards · Fleet Hub", "x": 74, "y": 52, "phone": "7888012800", "mapUrl": "https://www.google.com/maps/search/?api=1&query=Sehgal+Autoriders+Manjri+Pune" },
+    { "id": "chinchwad-hero", "name": "Chinchwad MIDC Hero 3S, Premia & PCMC SSP (3 Outlets)", "corridor": "PCMC Industrial Belt", "rating": "4.5★", "reviews": "1,150+ Reviews", "metric": "1,01,505+ Hero Riders Network", "x": 44, "y": 32, "phone": "9289922306", "mapUrl": "https://www.google.com/maps/search/?api=1&query=Sehgal+Autoriders+Hero+Chinchwad+MIDC+Pune" },
+    { "id": "chakan-hero", "name": "Chakan Hero 3S Showroom & Workshop", "corridor": "North Pune · Nashik Hwy", "rating": "4.5★", "reviews": "720+ Reviews", "metric": "MIDC & Highway 2W Hub (61299)", "x": 54, "y": 18, "phone": "9289922306", "mapUrl": "https://www.google.com/maps/search/?api=1&query=Sehgal+Autoriders+Hero+Chakan+Pune" },
+    { "id": "kamshet-arena", "name": "Kamshet Arena Showroom & Service Workshop", "corridor": "Maval · Old Mumbai-Pune Hwy", "rating": "4.5★", "reviews": "380+ Reviews", "metric": "14,043+ Workshop Job Cards", "x": 25, "y": 28, "phone": "8380038244", "mapUrl": "https://www.google.com/maps/search/?api=1&query=Sehgal+Autoriders+Kamshet" },
+    { "id": "lonavala-waksai", "name": "Lonavala (Waksai) Arena & NEXA 3S Twin Complex", "corridor": "Lonavala · Mumbai-Pune Hwy", "rating": "4.6★", "reviews": "890+ Reviews", "metric": "48,653+ Combined Job Cards", "x": 14, "y": 22, "phone": "08037394880", "mapUrl": "https://www.google.com/maps/search/?api=1&query=Sehgal+Autoriders+Waksai+Lonavala" },
+    { "id": "khed-shivapur", "name": "Khed Shivapur Arena 3S (NH-48 Satara Highway)", "corridor": "South Pune · NH-48", "rating": "4.6★", "reviews": "520+ Reviews", "metric": "6,247+ Workshop Job Cards", "x": 52, "y": 72, "phone": "08071647799", "mapUrl": "https://www.google.com/maps/search/?api=1&query=Sehgal+Autoriders+Khed+Shivapur" },
+    { "id": "rambaug-bhor", "name": "Rambaug Bhor Arena 3S Showroom & Workshop", "corridor": "Bhor & Velhe Corridor", "rating": "4.6★", "reviews": "490+ Reviews", "metric": "19,318+ Workshop Job Cards", "x": 45, "y": 86, "phone": "08071647067", "mapUrl": "https://www.google.com/maps/search/?api=1&query=Sehgal+Autoriders+Rambaug+Bhor" }
+   ],
+   "upcomingLocations": [
+    { "id": "upcoming-hinjewadi-wakad", "name": "Hinjewadi–Wakad IT Corridor Express Sales & EV Care Hub", "corridor": "West Pune IT & Metro Growth Belt", "eta": "Upcoming Expansion · VIP Pre-Booking Open", "highlights": "Dedicated corporate leasing, e VITARA / Smart Hybrid test-drive lounge & express pick-up/drop for Hinjewadi Phase 1–3.", "x": 33, "y": 38 },
+    { "id": "upcoming-sinhagad-dhayari", "name": "Sinhagad Road–Dhayari Customer Touchpoint & Express Service", "corridor": "South-West Pune Residential Belt", "eta": "Upcoming Expansion · VIP Pre-Booking Open", "highlights": "Fast-track periodic service, Bajaj Allianz cashless claim drop-off & Arena/True Value doorstep evaluations.", "x": 43, "y": 62 },
+    { "id": "upcoming-talegaon-maval", "name": "Talegaon–Vadgaon Maval Integrated Sales & Service Point", "corridor": "Maval Industrial & Residential Corridor", "eta": "Upcoming Expansion · VIP Pre-Booking Open", "highlights": "Bridging Chinchwad/Chakan and Kamshet/Lonavala with dedicated S-CNG, Commercial & Two-Wheeler support.", "x": 34, "y": 24 },
+    { "id": "upcoming-saswad-purandar", "name": "Saswad–Purandar Highway Corridor Touchpoint", "corridor": "South-East Pune Growth Corridor", "eta": "Upcoming Expansion · VIP Pre-Booking Open", "highlights": "Extending Fatima Nagar & Manjri coverage for Arena, Commercial Super Carry/Eeco & rural finance.", "x": 70, "y": 68 }
+   ]
+  },
+  "linkedinEmployerBrand": {
+   "companyName": "Sehgal Autoriders Pvt. Ltd.",
+   "linkedinUrl": "https://www.linkedin.com/company/sehgal-autoriders-pvt-ltd/",
+   "careersEmail": "ceoservice@sehgalautoriders.com",
+   "careersWhatsApp": "8380038244",
+   "tagline": "Pune & Maval’s Premier Automotive Dealership Group Since 1998 · 2,400+ Strong Team · 15 Showrooms & Workshops · 10,000+ Google Reviews (4.6★)",
+   "aboutCopy": "Founded with a group heritage dating back to 1988, Sehgal Autoriders Pvt. Ltd. is Pune, PCMC, Maval and Bhor’s most trusted multi-brand automotive dealership group. Across 15 state-of-the-art showrooms, workshops and bodyshops representing Maruti Suzuki (Arena, NEXA, True Value, Commercial, Driving School) and Hero MotoCorp (including Hero Premia & VIDA EV), our 2,400+ professionals deliver over 3,815+ new cars and 1,00,000+ workshop & two-wheeler experiences annually. Rated 4.6★ across 10,000+ Google Maps reviews (with 3,968+ reviews at Bavdhan Arena alone), we invest in OEM-certified training academies, transparent incentives, 'Stars of Sehgal' monthly customer-review awards, and direct leadership mentorship.",
+   "starsOfSehgal": [
+    { "name": "Vikram S", "role": "Relationship Executive · Bavdhan Arena", "recognition": "Praised by Local Guide Ashutosh Nerlekar (5★): 'Vikram S was good. Explained everything patiently... highly recommended.'" },
+    { "name": "Rohan", "role": "Customer Experience Executive · Bavdhan Arena", "recognition": "Praised by Priyanka Trivedi (5★): 'Excellent service co operative executive. thank u so much Rohan sir.'" },
+    { "name": "Swapnil Gunjal, Amruta Magdum, Satish Mane & Yogesh Patil", "role": "Workshop & Customer Care Leadership (AWM · CCM · WM · GM Service)", "recognition": "Leading 2,83,000+ Maruti Suzuki workshop visits and 4.6★ service satisfaction under CEO Service Ravi Pimperkar." },
+    { "name": "Manish Takwale, Sarika Tupere, Sachin Kumbhar & Vivek Raut", "role": "Insurance (#1 Bajaj Allianz) & Finance (#1 HDFC / SBI) Leadership", "recognition": "Powering 15,047+ Maruti policies (43.2% Bajaj Allianz new-car share) and #1 HDFC Bank retail & corporate leasing." }
+   ],
+   "openRoles": [
+    { "title": "Relationship Manager / Senior Sales Executive (Arena · NEXA · Commercial)", "locations": "Bavdhan, Law College Rd, Fatima Nagar, Manjri, Lonavala, Khed Shivapur, Bhor", "perks": "Industry-best retail + finance + insurance incentives · OEM certification" },
+    { "title": "Service Advisor, Works Manager & Cashless Bodyshop Estimator", "locations": "Bavdhan, Lonavala, Manjri, Bhor, Kamshet, Khed Shivapur", "perks": "High workshop throughput (2.83L+ job cards) · Bajaj Allianz & MI cashless corridor" },
+    { "title": "MSIL & Hero MotoCorp Certified Master Technician & EV Specialist (e VITARA / VIDA)", "locations": "All 7 Maruti Suzuki & 2 Hero Workshops", "perks": "OEM Academy training · High-voltage EV & S-CNG diagnostic certification" },
+    { "title": "Motor Insurance Renewal & Retail Car Finance Executive (Bajaj Allianz / HDFC / SBI)", "locations": "Law College Rd, Bavdhan, Fatima Nagar, Manjri", "perks": "97.1% own-renewal retention corridor · Structured performance rewards" },
+    { "title": "Digital Marketing, Hyperlocal Portal & Video Content Specialist", "locations": "Central Digital Desk — Law College Rd & Bavdhan", "perks": "Manage unified social studio, 8 Hyperlocal portals & daily delivery reels" }
+   ]
+  },
   "hyperlocalPortals": [
    {
     "name": "Arena — Law College Road (Erandwane)",
