@@ -202,6 +202,20 @@ ${insurers.length ? `<div class="section">
 <form id="ncb-form" class="form-grid section-tight"><label class="field">Own-damage premium before discount (₹)<input name="od" type="number" min="0" max="10000000" step="1" value="12000" required></label><label class="field">Claim-free years<select name="years">${ncab.map(r => `<option value="${esc(r.percent)}">${esc(r.years)}</option>`).join('')}</select></label><div class="energy-result" id="ncb-result" aria-live="polite"></div></form>${ins.ncbSource ? `<p class="fine-print">Slabs as published at ${external(esc(ins.ncbSource), 'IRDAI tariff')}, checked ${esc(FACTS.checkedOn)}.</p>` : ''}</div>
 <div class="panel"><p class="eyebrow">INSURED DECLARED VALUE (IDV)</p><h2>What your car is insured for.</h2><p class="muted">IDV is the maximum sum assured if the car is stolen or damaged beyond repair. It is calculated as manufacturer ex-showroom price less IRDAI standard depreciation.</p>${idv.length ? `<div class="table-wrap"><table><thead><tr><th scope="col">Age of vehicle</th><th scope="col">Depreciation</th></tr></thead><tbody>${idv.map(r => `<tr><td>${esc(r.age)}</td><td>${esc(r.percent)}${String(r.percent).match(/\d$/) ? '%' : ''}</td></tr>`).join('')}</tbody></table></div>${ins.idvSource ? `<p class="fine-print">Schedule as published at ${external(esc(ins.idvSource), 'IRDAI source')}. Cars over five years old are valued by mutual agreement across our MI panel.</p>` : ''}` : `<p>${NP}</p>`}</div></div>
 ${tp.length ? `<div class="panel section-tight"><p class="eyebrow">THIRD-PARTY COVER · COMPULSORY BY LAW</p><h3>Annual third-party premium for private cars</h3><div class="table-wrap"><table><thead><tr><th scope="col">Engine size</th><th scope="col">Premium (₹, before GST)</th></tr></thead><tbody>${tp.map(r => `<tr><td>${esc(r.band)}</td><td>${esc(r.premium)}</td></tr>`).join('')}</tbody></table></div><p class="fine-print">${esc(ins.thirdPartyNote || '')} ${ins.thirdPartySource ? external(esc(ins.thirdPartySource), 'MoRTH / PIB Notification') : ''}</p></div>` : ''}
+<div class="panel section">
+  <div class="section-heading">
+    <div>
+      <p class="eyebrow">W2 GATE ENTRY & RECEPTION INSURANCE PPT · 22 OFFICIAL SLIDES</p>
+      <h2>Motor Insurance Myths vs Facts, Endorsements & 5-Step Claims</h2>
+    </div>
+    <div class="actions">
+      <a class="button small teal" href="assets/guidebooks/Sehgal-Maruti-Insurance-Guide-PPT.pdf" target="_blank" rel="noopener noreferrer">Download Official 22-Slide Insurance PPT (PDF) ↗</a>
+      <a class="button small outline" href="tel:7888039845">Manish Takwale: +91 78880 39845 ↗</a>
+      <a class="button small outline" href="tel:8888881399">Sarika Tupere: +91 88888 81399 ↗</a>
+    </div>
+  </div>
+  ${renderCareTabContent('insurance')}
+</div>
 <div class="callout"><h3>Policy due for renewal?</h3><p class="muted">Share your registration number and our Bajaj Allianz & Maruti Insurance desk (+91 88888 81399) will send an instant Zero-Dep renewal quote on WhatsApp.</p><button class="button teal" data-book="insurance">Request an instant quote ↗</button></div></div></section>`;
 }
 function updateNcb() { const f = $('#ncb-form'); if (!f) return; const out = $('#ncb-result'); if (!f.checkValidity()) { out.textContent = 'Enter a valid premium.'; return; } const d = new FormData(f), od = Number(d.get('od')), pct = Number(d.get('years')); out.innerHTML = `<span class="meta">Estimated NCB saving</span><strong>${money(od * pct / 100)}</strong><span>${pct}% of ${money(od)} · net own-damage premium ${money(od * (1 - pct / 100))}</span>`; }
@@ -212,7 +226,7 @@ function serviceExtras() {
   const sched = s.schedule || [];
   return `<div class="section"><div class="duo"><div class="panel"><p class="eyebrow">MARUTI SUZUKI SERVICE SCHEDULE</p><h2>When is my service due?</h2>${sched.length ? `<div class="table-wrap"><table><thead><tr><th scope="col">Service</th><th scope="col">Due at</th><th scope="col">Details</th></tr></thead><tbody>${sched.map(r => `<tr><td><b>${esc(r.name)}</b></td><td>${esc(r.due)}</td><td>${esc(r.type || '')}</td></tr>`).join('')}</tbody></table></div><p class="fine-print">Whichever comes first. ${esc(s.scheduleNote || '')}</p>` : `<p>Your owner’s manual lists the schedule for your model. ${link('owners', 'Find your manual', 'small outline')}</p>`}</div>
 <div class="panel"><p class="eyebrow">WARRANTY & ROADSIDE HELP</p><h2>Covered for the road ahead.</h2><dl class="addon-list">${s.standardWarranty ? `<div><dt>Standard warranty</dt><dd>${esc(s.standardWarranty)}</dd></div>` : ''}${(s.extendedWarranty || []).map(w => `<div><dt>${esc(w.name)}</dt><dd>${esc(w.detail || '')}</dd></div>`).join('')}${s.roadside ? `<div><dt>Roadside assistance & Service Escalation</dt><dd>${esc(s.roadside)}</dd></div>` : ''}</dl>${s.warrantySource ? `<p class="fine-print">${external(esc(s.warrantySource), 'Official warranty terms')}</p>` : ''}<p class="muted">29.1% of Sehgal new car buyers in FY 2026-27 opted for Extended Warranty at delivery for up to 6 years / 1,60,000 km protection.</p></div></div>
-<div class="tiles section"><article class="tile"><p class="eyebrow">GENUINE PARTS</p><h3>Spares & accessories</h3><p class="muted">Genuine MSGP parts, official price lookup and MSGA accessories fitted by certified technicians.</p>${link('spares', 'Spares & accessories', 'small outline')}</article><article class="tile"><p class="eyebrow">BAJAJ ALLIANZ & MI CASHLESS</p><h3>Accident repair & claims</h3><p class="muted">Priority ₹1 Cr Bajaj Allianz & Maruti Insurance cashless bodyshop corridor across Bavdhan, Manjri, Lonavala, Kamshet, Khed Shivapur & Bhor.</p>${link('insurance', 'Cashless insurance help', 'small outline')}</article><article class="tile"><p class="eyebrow">BEFORE YOU COME</p><h3>What to bring</h3><ul class="check-list"><li>Registration certificate (RC)</li><li>Service booklet or last invoice</li><li>Bajaj Allianz / MI policy copy for any claim</li><li>Spare key if a key/immobiliser issue is reported</li></ul></article></div></div>`;
+<div class="tiles section"><article class="tile"><p class="eyebrow">GENUINE PARTS</p><h3>Spares & accessories</h3><p class="muted">Genuine MSGP parts, official price lookup and MSGA accessories fitted by certified technicians.</p>${link('spares', 'Spares & accessories', 'small outline')}</article><article class="tile"><p class="eyebrow">BAJAJ ALLIANZ & MI CASHLESS</p><h3>Accident repair & claims</h3><p class="muted">Priority ₹1 Cr Bajaj Allianz & Maruti Insurance cashless bodyshop corridor across Bavdhan, Manjri, Lonavala, Kamshet, Khed Shivapur & Bhor.</p>${link('insurance', 'Cashless insurance help', 'small outline')}</article><article class="tile"><p class="eyebrow">BEFORE YOU COME</p><h3>What to bring</h3><ul class="check-list"><li>Registration certificate (RC)</li><li>Service booklet or last invoice</li><li>Bajaj Allianz / MI policy copy for any claim</li><li>Spare key if a key/immobiliser issue is reported</li></ul></article></div>${w2GateEntryPdfPackSection()}${workshopNamedEscalationPanel()}</div>${roadCareInteractiveHub()}`;
 }
 function sparesPage() {
   const s = FACTS.service || {};
@@ -231,7 +245,7 @@ function safetyPage() {
 ${rated.length ? `<div class="table-wrap"><table class="ncap-table"><thead><tr><th scope="col">Model</th><th scope="col">Programme</th><th scope="col">Adult occupant</th><th scope="col">Child occupant</th><th scope="col">Tested</th><th scope="col">Source</th></tr></thead><tbody>${rated.map(r => `<tr><th scope="row">${esc(r.model)}</th><td>${esc(r.programme)}${r.protocol ? `<br><span class="meta">${esc(r.protocol)} protocol</span>` : ''}</td><td>${stars(r.adultStars)}</td><td>${stars(r.childStars)}</td><td>${esc(r.testDate || '')}</td><td>${r.source ? `<a class="text-link" href="${esc(r.source)}" target="_blank" rel="noopener noreferrer">Result ↗</a>` : ''}</td></tr>`).join('')}</tbody></table></div><p class="fine-print">${esc(FACTS.ncapNote || '')} ${external('https://www.globalncap.org/indiaresults', 'Global NCAP India results')} ${external('https://www.bncap.in/vehicle-safety-ratings/', 'Bharat NCAP ratings')}</p>` : `<p class="notice">Crash-test results have not been loaded yet.</p>`}
 <div class="section"><div class="section-heading"><div><p class="eyebrow">SAFETY EQUIPMENT</p><h2>Airbags and more, model by model.</h2></div></div><div class="table-wrap"><table><thead><tr><th scope="col">Model</th><th scope="col">Airbags</th><th scope="col">Safety highlights</th></tr></thead><tbody>${SEHGAL.models.map(m => { const s = SPECS[m.id] || {}; return `<tr><th scope="row"><a href="#/cars/${m.id}">${esc(m.name)}</a></th><td>${esc(s.airbags || '') || NP}</td><td>${list(s.safetyHighlights) || NP}</td></tr>`; }).join('')}</tbody></table></div><p class="fine-print">From the official model pages, checked ${esc(SPECS_CHECKED)}. Equipment varies by variant.</p></div>
 <div class="tiles section"><article class="tile"><p class="eyebrow">EVERY TRIP</p><h3>Belt up, every seat</h3><p class="muted">Airbags are designed to work with seat belts. Rear passengers need belts too.</p></article><article class="tile"><p class="eyebrow">CHILDREN</p><h3>Right seat, right place</h3><p class="muted">Use a child seat suited to your child’s age and weight, fitted to ISOFIX points where your car has them. Never place a rear-facing child seat in front of an active airbag.</p></article><article class="tile"><p class="eyebrow">YOUR CAR</p><h3>Check before long trips</h3><p class="muted">Tyre pressure and tread, brakes, wipers, lights and warning lamps. Our workshop offers a pre-trip check.</p><button class="button small outline" data-book="service">Book a check-up ↗</button></article></div>
-<div class="callout"><h3>Learn to drive safely</h3><p class="muted">Maruti Suzuki Driving School at Bavdhan, Law College Road & Fatima Nagar trains new and returning drivers in road rules and defensive driving.</p>${link('driving-school', 'Driving school', 'outline')}</div></div></section>`;
+${w2GateEntryPdfPackSection()}</div></section>${roadCareInteractiveHub()}<section class="page-content"><div class="container"><div class="callout"><h3>Learn to drive safely</h3><p class="muted">Maruti Suzuki Driving School at Bavdhan, Law College Road & Fatima Nagar trains new and returning drivers in road rules and defensive driving.</p>${link('driving-school', 'Driving school', 'outline')}</div></div></section>`;
 }
 
 /* ---------- Corporate Social Responsibility ---------- */
@@ -241,7 +255,7 @@ function csrPage() {
   return page('Corporate Social Responsibility', 'Driving change beyond the showroom — for safer roads, skilled young people and the communities we serve across Pune and Maval.', 'CSR · SEHGAL AUTORIDERS') + `<section class="page-content"><div class="container">
 <div class="location-feature">${suppliedFigure('driving-school', 'branch-feature-photo')}<div><p class="eyebrow">OUR COMMITMENT</p><h2>Part of the community<br>for over 27 years.</h2><p>Our customers, colleagues and neighbours live along the roads we serve — from Pune city (Erandwane, Bavdhan, Fatima Nagar, Manjri, Chinchwad) to Lonavala, Kamshet, Khed Shivapur, Bhor and Chakan. We want those roads to be safer and those communities stronger.</p><p class="muted">With 71.5% of our FY 2026-27 deliveries powered by cleaner Factory S-CNG and green mobility, environmental stewardship and road-safety education are part of our daily work.</p></div></div>
 <div class="section"><div class="section-heading"><div><p class="eyebrow">FOCUS AREAS</p><h2>Where we make a difference.</h2></div></div><div class="tiles four">${[['Road safety & Driving School', 'Structured driver training at Bavdhan, Law College Rd & Fatima Nagar, plus helmet and seat-belt awareness across Pune & Maval.'], ['Skills & 2,400+ Livelihoods', 'Automotive technician training, ITI apprenticeships and career growth across 15 Pune-region dealerships and workshops.'], ['Green Mobility (71.5% S-CNG)', 'Leading Pune’s transition to factory S-CNG, Strong Hybrid and Electric (e VITARA & VIDA) vehicles alongside eco-friendly dry-wash workshops.'], ['Health & Community', 'Blood donation drives, technician eye-check camps and local community support across Pune, Lonavala and Bhor.']].map(([h, p], i) => `<article class="tile"><p class="eyebrow">0${i + 1}</p><h3>${h}</h3><p class="muted">${p}</p><span class="status-pill active-pill">Active Community Focus</span></article>`).join('')}</div></div>
-<div class="panel section-tight"><p class="eyebrow">STATUTORY DISCLOSURES</p><h2>CSR disclosures</h2><p class="muted">${esc(c.websiteRule || 'Companies covered by Section 135 of the Companies Act, 2013 display their CSR Committee, CSR Policy and Board-approved projects on their corporate website.')}</p><div class="table-wrap"><table><thead><tr><th scope="col">Document</th><th scope="col">What it contains</th><th scope="col">Status</th></tr></thead><tbody>${disclosures.map(([d, w]) => { const doc = (c.documents || {})[d]; return `<tr><th scope="row">${d}</th><td>${w}</td><td>${doc ? `<a class="text-link" href="${esc(doc)}" target="_blank" rel="noopener">Download ↗</a>` : '<span class="status-pill pending">Published via Corporate Office (Law College Rd)</span>'}</td></tr>`; }).join('')}</tbody></table></div></div>
+${w2GateEntryPdfPackSection()}</div></section>${roadCareInteractiveHub()}<section class="page-content"><div class="container"><div class="panel section-tight"><p class="eyebrow">STATUTORY DISCLOSURES</p><h2>CSR disclosures</h2><p class="muted">${esc(c.websiteRule || 'Companies covered by Section 135 of the Companies Act, 2013 display their CSR Committee, CSR Policy and Board-approved projects on their corporate website.')}</p><div class="table-wrap"><table><thead><tr><th scope="col">Document</th><th scope="col">What it contains</th><th scope="col">Status</th></tr></thead><tbody>${disclosures.map(([d, w]) => { const doc = (c.documents || {})[d]; return `<tr><th scope="row">${d}</th><td>${w}</td><td>${doc ? `<a class="text-link" href="${esc(doc)}" target="_blank" rel="noopener">Download ↗</a>` : '<span class="status-pill pending">Published via Corporate Office (Law College Rd)</span>'}</td></tr>`; }).join('')}</tbody></table></div></div>
 <div class="section"><div class="section-heading"><div><p class="eyebrow">FROM OUR COMMUNITY</p><h2>Moments we are proud of.</h2></div>${link('gallery', 'View the gallery', 'outline')}</div><div class="duo">${suppliedFigure('maharashtra-day', 'campaign-feature')}${suppliedFigure('car-tips-campaign', 'campaign-feature')}</div></div>
 <div class="callout"><h3>Partner with us</h3><p class="muted">Schools, colleges, corporates and community groups working on road safety, driver training or green mobility can connect with our team.</p><button class="button teal" data-book="support">Propose a partnership ↗</button></div></div></section>`;
 }
@@ -365,7 +379,329 @@ function essentials() {
   return `<section class="section"><div class="container"><div class="section-heading"><div><p class="eyebrow">EVERYTHING FOR YOUR MARUTI SUZUKI & HERO</p><h2>Buy. Finance. Insure.<br>Service. Stay connected.</h2></div></div><div class="essentials-grid">${[['compare', 'Compare cars', 'Official specs side by side'], ['finance', 'HDFC & Bank Finance', '#1 HDFC retail & wholesale lines'], ['insurance', 'Bajaj Allianz & MI', '43.2% new car share · ₹1 Cr cashless'], ['service', '7 Service Hubs', '2.83L+ visits · Bavdhan to Bhor'], ['spares', 'Genuine Spares', 'MSGP parts, accessories & True Value'], ['safety', '5-Star Safety', 'Bharat NCAP & Global NCAP ratings'], ['digital-presence', 'Online & Social Hub', 'YouTube, Instagram & 8 Portals']].map(([r, h, p]) => `<a href="#/${r}"><b>${h}</b><small>${p}</small><span aria-hidden="true">↗</span></a>`).join('')}</div></div></section>`;
 }
 
-const EXTRA_ROUTES = {compare: comparePage, insurance: insurancePage, spares: sparesPage, safety: safetyPage, csr: csrPage, 'digital-presence': digitalPresencePage, digital: digitalPresencePage};
+
+/* ---------- W2 Gate-Entry & Reception PDFs + Bilingual Road-Care, Insurance, Hero 2W & EV CSR Hub ---------- */
+let activeCareTab = 'english';
+
+function w2GateEntryPdfPackSection() {
+  const rc = FACTS.roadCareGuide || {};
+  const pdfs = rc.gateEntryPdfs || [];
+  if (!pdfs.length) return '';
+  return `<div class="panel section w2-pdf-pack">
+    <div class="section-heading">
+      <div>
+        <p class="eyebrow">W2 PORTAL GATE ENTRY & RECEPTION KNOWLEDGE PACK · ENGLISH · मराठी · INSURANCE · EV</p>
+        <h2>Official Customer Vehicle & Insurance Guidebooks (PDF Downloads)</h2>
+      </div>
+      <p class="muted">Automatically sent with every incoming vehicle’s Gate Entry and Workshop Reception welcome mail from <b>sehgalautoriders2011@gmail.com</b> — now available for instant download anytime.</p>
+    </div>
+    <div class="pdf-pack-grid">
+      ${pdfs.map(p => `<article class="tile pdf-card">
+        <span class="partner-badge ${p.id === 'insurance-ppt' ? 'gold' : 'teal-badge'}">${esc(p.badge)}</span>
+        <h3>${esc(p.title)}</h3>
+        <p class="muted">${esc(p.subtitle)}</p>
+        <p class="meta"><b>Format:</b> Official PDF · ${esc(p.pages)}</p>
+        <div class="actions">
+          <a class="button small teal" href="${esc(p.file)}" target="_blank" rel="noopener noreferrer">Open / Download PDF ↗</a>
+        </div>
+      </article>`).join('')}
+    </div>
+  </div>`;
+}
+
+function renderCareTabContent(tabId) {
+  const rc = FACTS.roadCareGuide || {};
+  const en = rc.marutiEnglish || {};
+  const mr = rc.marutiMarathi || {};
+  const ins = rc.insuranceGuide || {};
+  const hero = rc.heroTwoWheelerCare || {};
+  const ev = rc.evCareGuide || {};
+
+  if (tabId === 'marathi') {
+    return `<div class="care-tab-pane">
+      <div class="section-heading">
+        <div>
+          <p class="eyebrow">ग्राहक वाहन मार्गदर्शिका · MARATHI EDITION (W2 GATE & RECEPTION PDF #2)</p>
+          <h3>मारुती सुझुकी वाहन काळजी — रोजच्या करावयाच्या गोष्टी व टिप्स</h3>
+        </div>
+        <div class="actions">
+          <a class="button small teal" href="assets/guidebooks/Customer-Vehicle-Guidebook-Marathi.pdf" target="_blank" rel="noopener noreferrer">मराठी PDF डाउनलोड करा (7 Pages) ↗</a>
+          <a class="button small outline" href="assets/guidebooks/Customer-Guidebook-Bilingual-Reception.pdf" target="_blank" rel="noopener noreferrer">द्विभाषिक रिसेप्शन PDF (14 Pages) ↗</a>
+        </div>
+      </div>
+      <div class="duo">
+        <div class="panel">
+          <h4>✅ ${esc(mr.dailyDosTitle || 'रोजच्या करावयाच्या गोष्टी (Daily Do’s)')}</h4>
+          <ul class="check-list">${(mr.dailyDos || []).map(x => `<li>${esc(x)}</li>`).join('')}</ul>
+        </div>
+        <div class="panel">
+          <h4>⚠️ ${esc(mr.dailyDontsTitle || 'दैनिक करू नका (Daily Don’ts)')}</h4>
+          <ul class="check-list">${(mr.dailyDonts || []).map(x => `<li>${esc(x)}</li>`).join('')}</ul>
+        </div>
+      </div>
+      <div class="panel section-tight">
+        <h4>🛠️ ${esc(mr.preventiveTitle || 'प्रतिबंधात्मक देखभाल, इंधन कार्यक्षमता आणि रोड ट्रिप टिप्स')}</h4>
+        <ul class="check-list">${(mr.preventivePoints || []).map(x => `<li>${esc(x)}</li>`).join('')}</ul>
+      </div>
+    </div>`;
+  }
+
+  if (tabId === 'insurance') {
+    return `<div class="care-tab-pane">
+      <div class="section-heading">
+        <div>
+          <p class="eyebrow">MOTOR INSURANCE DO’S, DON’TS & MYTHS · W2 GATE ENTRY PDF #3</p>
+          <h3>Maruti Suzuki Insurance Broking & #1 Bajaj Allianz Cashless Guide</h3>
+        </div>
+        <div class="actions">
+          <a class="button small teal" href="assets/guidebooks/Sehgal-Maruti-Insurance-Guide-PPT.pdf" target="_blank" rel="noopener noreferrer">Download 22-Slide Insurance PPT (PDF) ↗</a>
+          <a class="button small outline" href="tel:7888039845">Call Manish Takwale (+91 78880 39845) ↗</a>
+          <a class="button small outline" href="tel:8888881399">Call Sarika Tupere (+91 88888 81399) ↗</a>
+        </div>
+      </div>
+      <div class="duo">
+        <div class="panel">
+          <h4>✅ Motor Insurance Do’s (To Keep Claims 100% Valid)</h4>
+          <ul class="check-list">${(ins.dos || []).map(x => `<li>${esc(x)}</li>`).join('')}</ul>
+        </div>
+        <div class="panel">
+          <h4>⚠️ Motor Insurance Don’ts (Avoid Claim Rejection)</h4>
+          <ul class="check-list">${(ins.donts || []).map(x => `<li>${esc(x)}</li>`).join('')}</ul>
+        </div>
+      </div>
+      <div class="section-tight">
+        <h4>6 Common Motor Insurance Myths vs Facts (From Our Gate-Entry Insurance PPT)</h4>
+        <div class="tiles three">
+          ${(ins.mythsVsFacts || []).map(m => `<article class="tile">
+            <p class="eyebrow">MYTH VS FACT</p>
+            <h4>${esc(m.myth)}</h4>
+            <p class="muted">${esc(m.fact)}</p>
+          </article>`).join('')}
+        </div>
+      </div>
+      <div class="panel section-tight">
+        <h4>5 Easy Steps for Near-Cashless Claim Settlement at Sehgal Bodyshops</h4>
+        <ol class="check-list numbered">${(ins.claimSteps || []).map(x => `<li>${esc(x)}</li>`).join('')}</ol>
+      </div>
+    </div>`;
+  }
+
+  if (tabId === 'hero2w') {
+    return `<div class="care-tab-pane">
+      <div class="section-heading">
+        <div>
+          <p class="eyebrow">CORPORATE SOCIAL RESPONSIBILITY · TWO-WHEELER & SCOOTER SAFETY</p>
+          <h3>${esc(hero.headline || 'Hero MotoCorp Two-Wheeler & Scooter Road-Care Guide')}</h3>
+          <p class="muted">${esc(hero.subtitle || '')}</p>
+        </div>
+        <div class="actions">
+          <a class="button small teal" href="#/two-wheelers">Explore 4 Sehgal Hero Dealerships ↗</a>
+          <a class="button small outline" href="tel:9011601819">Call Hero Service (+91 90116 01819) ↗</a>
+        </div>
+      </div>
+      <div class="duo">
+        <div class="panel">
+          <h4>🏍️ Motorcycle Care & Safety Do’s & Don’ts (Splendor+, HF Deluxe, Glamour, Xtreme, Mavrick)</h4>
+          <ul class="check-list">${(hero.motorcycleDosDonts || []).map(x => `<li>${esc(x)}</li>`).join('')}</ul>
+        </div>
+        <div class="panel">
+          <h4>🛵 Scooter Care & CVT Protection (Destini 125, Pleasure+ XTEC, Xoom)</h4>
+          <ul class="check-list">${(hero.scooterDosDonts || []).map(x => `<li>${esc(x)}</li>`).join('')}</ul>
+        </div>
+      </div>
+    </div>`;
+  }
+
+  if (tabId === 'ev') {
+    return `<div class="care-tab-pane">
+      <div class="section-heading">
+        <div>
+          <p class="eyebrow">ELECTRIC MOBILITY CARE · MARUTI e VITARA & HERO VIDA V1</p>
+          <h3>${esc(ev.headline || 'Electric Vehicle (EV) Care, Driving & Charging Guide')}</h3>
+          <p class="muted">${esc(ev.subtitle || '')}</p>
+        </div>
+        <div class="actions">
+          <a class="button small teal" href="assets/guidebooks/Suggested-Driving-and-EV-Charging-Tips.pdf" target="_blank" rel="noopener noreferrer">Download Official EV & Driving Tips PDF (13B) ↗</a>
+          <a class="button small outline" href="#/electric">Visit Sehgal Electric Centre ↗</a>
+        </div>
+      </div>
+      <div class="duo">
+        <div class="panel">
+          <h4>⚡ EV Charging & Driving Do’s (Best Battery Life & Range)</h4>
+          <ul class="check-list">${(ev.chargingDos || []).map(x => `<li>${esc(x)}</li>`).join('')}</ul>
+        </div>
+        <div class="panel">
+          <h4>⚠️ EV High-Voltage, Fast-Charging & Monsoon Don’ts</h4>
+          <ul class="check-list">${(ev.chargingAndSafetyDonts || []).map(x => `<li>${esc(x)}</li>`).join('')}</ul>
+        </div>
+      </div>
+    </div>`;
+  }
+
+  // Default: 'english'
+  return `<div class="care-tab-pane">
+    <div class="section-heading">
+      <div>
+        <p class="eyebrow">CUSTOMER VEHICLE GUIDEBOOK · ENGLISH EDITION (W2 GATE & RECEPTION PDF #1)</p>
+        <h3>Maruti Suzuki On-Road Care: Daily Do’s & Don’ts, Overheating FAQs & Fuel Saving</h3>
+      </div>
+      <div class="actions">
+        <a class="button small teal" href="assets/guidebooks/Customer-Vehicle-Guidebook-English.pdf" target="_blank" rel="noopener noreferrer">Download English PDF (7 Pages) ↗</a>
+        <a class="button small outline" href="assets/guidebooks/Customer-Guidebook-Bilingual-Reception.pdf" target="_blank" rel="noopener noreferrer">Bilingual Reception PDF (14 Pages) ↗</a>
+      </div>
+    </div>
+    <div class="duo">
+      <div class="panel">
+        <h4>✅ Daily Do’s (Walk-Around Before Starting Your Car)</h4>
+        <ul class="check-list">${(en.dailyDos || []).map(x => `<li>${esc(x)}</li>`).join('')}</ul>
+      </div>
+      <div class="panel">
+        <h4>⚠️ Daily Don’ts (Protect Your Engine & Warranty)</h4>
+        <ul class="check-list">${(en.dailyDonts || []).map(x => `<li>${esc(x)}</li>`).join('')}</ul>
+      </div>
+    </div>
+    <div class="section-tight">
+      <h4>Emergency On-Road FAQs (Overheating, Battery, Exhaust & Wheel Balancing)</h4>
+      <div class="tiles two">
+        ${(en.emergencyFaqs || []).map(f => `<article class="tile">
+          <h4>${esc(f.q)}</h4>
+          <p class="muted">${esc(f.a)}</p>
+        </article>`).join('')}
+      </div>
+    </div>
+    <div class="panel section-tight">
+      <h4>⛽ Preventive Maintenance, Pre-Summer AC Care (Feb–March), Fuel Efficiency & Ghat/Fog Tips</h4>
+      <ul class="check-list">${(en.preventiveAndFuel || []).map(x => `<li>${esc(x)}</li>`).join('')}</ul>
+    </div>
+  </div>`;
+}
+
+function roadCareInteractiveHub(initialTab) {
+  if (initialTab) activeCareTab = initialTab;
+  const tabs = [
+    ['english', '1. Maruti Car Guide (English)'],
+    ['marathi', '2. मारुती कार मार्गदर्शिका (मराठी)'],
+    ['insurance', '3. Insurance Do’s, Don’ts & Myths'],
+    ['hero2w', '4. Hero 2W & Scooter Care'],
+    ['ev', '5. Electric Vehicle (e VITARA & VIDA) Care']
+  ];
+  return `<section class="section" id="road-care-explorer">
+    <div class="container">
+      <div class="section-heading">
+        <div>
+          <p class="eyebrow">SEHGAL CORPORATE RESPONSIBILITY & CUSTOMER ROAD-CARE INITIATIVE</p>
+          <h2>Interactive Vehicle Care, Insurance & Road-Safety Handbook.</h2>
+        </div>
+        <p class="muted">Switch between our English, मराठी, Motor Insurance, Hero Two-Wheeler/Scooter, and Electric Vehicle (EV) care guides below.</p>
+      </div>
+      <div class="chips care-tabs" role="tablist" aria-label="Vehicle Care Guides">
+        ${tabs.map(([id, label]) => `<button type="button" class="chip ${activeCareTab === id ? 'active' : ''}" data-care-tab="${id}" aria-pressed="${activeCareTab === id}">${label}</button>`).join('')}
+      </div>
+      <div id="care-tab-output" class="care-tab-container">${renderCareTabContent(activeCareTab)}</div>
+    </div>
+  </section>`;
+}
+
+function workshopNamedEscalationPanel() {
+  const rc = FACTS.roadCareGuide || {};
+  const matrix = rc.workshopEscalationMatrix || [];
+  const feedbackUrl = rc.w2MailInfo?.feedbackFormUrl || 'https://forms.gle/TXwLzt3U5G2y5E659';
+  if (!matrix.length) return '';
+  return `<div class="panel section">
+    <div class="section-heading">
+      <div>
+        <p class="eyebrow">VERIFIED W2 GATE ENTRY & RECEPTION ESCALATION MATRIX</p>
+        <h2>Direct Workshop Leadership & Insurance Renewal Contacts</h2>
+      </div>
+      <a class="button small outline" href="${esc(feedbackUrl)}" target="_blank" rel="noopener noreferrer">Submit Workshop Feedback Form ↗</a>
+    </div>
+    <div class="tiles three">
+      ${matrix.map(m => `<article class="tile">
+        <p class="eyebrow">${esc(m.level)}</p>
+        <h3>${esc(m.name)}</h3>
+        <p><a class="text-link" href="tel:${esc(m.phone)}">Call: +91 ${esc(m.phone)}</a>${m.altPhone ? ` · <a class="text-link" href="tel:${esc(m.altPhone)}">+91 ${esc(m.altPhone)}</a>` : ''}</p>
+        <p class="meta"><a class="text-link" href="mailto:${esc(m.email)}">${esc(m.email)}</a></p>
+      </article>`).join('')}
+    </div>
+  </div>`;
+}
+
+function heroRoadCareSection() {
+  const hero = (FACTS.roadCareGuide || {}).heroTwoWheelerCare || {};
+  const ev = (FACTS.roadCareGuide || {}).evCareGuide || {};
+  return `<div class="section">
+    <div class="section-heading">
+      <div>
+        <p class="eyebrow">SEHGAL CORPORATE RESPONSIBILITY · SAFER PUNE & MAVAL ROADS</p>
+        <h2>Hero Motorcycle, Scooter & VIDA EV Care (Do’s & Don’ts)</h2>
+      </div>
+      <a class="button small outline" href="#/csr">View All Customer Guidebooks (English & मराठी) ↗</a>
+    </div>
+    <div class="tiles three">
+      <article class="tile">
+        <span class="partner-badge teal-badge">MOTORCYCLE CARE</span>
+        <h3>Splendor+, HF Deluxe, Glamour, Xtreme & Mavrick</h3>
+        <ul class="check-list">${(hero.motorcycleDosDonts || []).map(x => `<li>${esc(x)}</li>`).join('')}</ul>
+      </article>
+      <article class="tile">
+        <span class="partner-badge gold">SCOOTER & CVT CARE</span>
+        <h3>Destini 125, Pleasure+ XTEC & Xoom</h3>
+        <ul class="check-list">${(hero.scooterDosDonts || []).map(x => `<li>${esc(x)}</li>`).join('')}</ul>
+      </article>
+      <article class="tile">
+        <span class="partner-badge teal-badge">VIDA V1 ELECTRIC SCOOTER</span>
+        <h3>EV Charging & Battery Safety</h3>
+        <ul class="check-list">${(ev.chargingDos || []).slice(0, 2).concat((ev.chargingAndSafetyDonts || []).slice(0, 3)).map(x => `<li>${esc(x)}</li>`).join('')}</ul>
+        <a class="text-link" href="assets/guidebooks/Suggested-Driving-and-EV-Charging-Tips.pdf" target="_blank" rel="noopener noreferrer">Download EV Driving & Charging Tips PDF ↗</a>
+      </article>
+    </div>
+  </div>`;
+}
+
+function evRoadCareSection() {
+  const ev = (FACTS.roadCareGuide || {}).evCareGuide || {};
+  return `<div class="section">
+    <div class="section-heading">
+      <div>
+        <p class="eyebrow">OFFICIAL MARUTI SUZUKI SERVICE GUIDE (13B) & SEHGAL EV CARE</p>
+        <h2>${esc(ev.headline || 'Electric Vehicle (e VITARA & VIDA) Driving & Charging Do’s & Don’ts')}</h2>
+      </div>
+      <a class="button small teal" href="assets/guidebooks/Suggested-Driving-and-EV-Charging-Tips.pdf" target="_blank" rel="noopener noreferrer">Download Official EV & Driving Tips PDF (13B) ↗</a>
+    </div>
+    <div class="duo">
+      <div class="panel">
+        <h3>⚡ EV Driving, Regenerative Braking & Charging Do’s</h3>
+        <ul class="check-list">${(ev.chargingDos || []).map(x => `<li>${esc(x)}</li>`).join('')}</ul>
+      </div>
+      <div class="panel">
+        <h3>⚠️ EV Battery, Fast-Charging & High-Voltage Don’ts</h3>
+        <ul class="check-list">${(ev.chargingAndSafetyDonts || []).map(x => `<li>${esc(x)}</li>`).join('')}</ul>
+      </div>
+    </div>
+  </div>`;
+}
+
+function roadCarePage() {
+  return page('Customer Vehicle Guidebooks & Road-Safety Responsibility', 'Official English, मराठी & Motor Insurance Guidebooks sent on every W2 Gate Entry & Reception Entry — plus Hero Two-Wheeler, Scooter & Electric Vehicle (e VITARA & VIDA) Care.', 'ROAD CARE · ENGLISH · मराठी · INSURANCE · 2W · EV') +
+    `<section class="page-content"><div class="container">${w2GateEntryPdfPackSection()}</div></section>` +
+    roadCareInteractiveHub(activeCareTab) +
+    `<section class="page-content"><div class="container">${workshopNamedEscalationPanel()}</div></section>`;
+}
+
+document.addEventListener('click', e => {
+  const btn = e.target.closest('[data-care-tab]');
+  if (!btn) return;
+  activeCareTab = btn.dataset.careTab;
+  document.querySelectorAll('[data-care-tab]').forEach(b => {
+    const active = b.dataset.careTab === activeCareTab;
+    b.classList.toggle('active', active);
+    b.setAttribute('aria-pressed', String(active));
+  });
+  const out = document.querySelector('#care-tab-output');
+  if (out) out.innerHTML = renderCareTabContent(activeCareTab);
+});
+
+const EXTRA_ROUTES = {compare: comparePage, insurance: insurancePage, spares: sparesPage, safety: safetyPage, csr: csrPage, 'road-care': roadCarePage, guidebooks: roadCarePage, 'digital-presence': digitalPresencePage, digital: digitalPresencePage};
 document.addEventListener('input', e => { if (e.target.closest('#finance-form')) updateLenders(); if (e.target.closest('#ncb-form')) updateNcb(); });
 document.addEventListener('change', e => { if (e.target.closest('#finance-form')) updateLenders(); if (e.target.closest('#ncb-form')) updateNcb(); });
 const AFTER_RENDER = [updateLenders, updateNcb];
