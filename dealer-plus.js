@@ -342,7 +342,7 @@ function digitalEcosystemStrip() {
 }
 
 function digitalPresencePage() {
-  return page('Sehgal Autoriders — Online Presence & Digital Network', 'Official YouTube (@sehgalautoriders), Instagram, LinkedIn, WhatsApp Central Desk, 8 Branch Facebook Pages and 8 Official Maruti Suzuki Hyperlocal Portals.', 'DIGITAL IDENTITY & SOCIAL ECOSYSTEM') +
+  return page('Sehgal Autoriders — Online Presence & Digital Network', 'Official YouTube (@sehgalautoriders5087), Instagram, LinkedIn, WhatsApp Central Desk, 8 Branch Facebook Pages and 8 Official Maruti Suzuki Hyperlocal Portals.', 'DIGITAL IDENTITY & SOCIAL ECOSYSTEM') +
     sehgalPowerStrip() +
     digitalEcosystemStrip() +
     `<section class="page-content"><div class="container">
@@ -365,8 +365,8 @@ function digitalPresencePage() {
           <h2>Autocar Dialogues & 27-Year Legacy</h2>
           <p class="muted">Watch MD <b>Nicky Sehgal</b> discuss Pune’s evolving mobility landscape, customer trust and dealership scale, and follow our daily delivery celebrations on YouTube and Instagram.</p>
           <div class="actions">
-            <a class="button teal small" href="https://www.youtube.com/@sehgalautoriders" target="_blank" rel="noopener noreferrer">Watch on YouTube (@sehgalautoriders) ↗</a>
-            <a class="button outline small" href="https://www.instagram.com/sehgalautoriders/" target="_blank" rel="noopener noreferrer">Follow on Instagram ↗</a>
+            <a class="button teal small" href="https://www.youtube.com/@sehgalautoriders5087" target="_blank" rel="noopener noreferrer">Watch on YouTube (@sehgalautoriders5087) ↗</a>
+            <a class="button outline small" href="https://www.instagram.com/sehgalautoridersindia/" target="_blank" rel="noopener noreferrer">Follow on Instagram ↗</a>
             <a class="button outline small" href="https://www.linkedin.com/company/sehgal-autoriders-pvt-ltd/" target="_blank" rel="noopener noreferrer">Follow on LinkedIn ↗</a>
           </div>
         </div>
