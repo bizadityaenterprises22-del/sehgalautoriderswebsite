@@ -654,15 +654,15 @@ const FACTS_DATA = {
   "socialChannels": [
    {
     "platform": "YouTube",
-    "handle": "@sehgalautoriders",
-    "url": "https://www.youtube.com/@sehgalautoriders",
+    "handle": "@sehgalautoriders5087",
+    "url": "https://www.youtube.com/@sehgalautoriders5087",
     "badge": "OFFICIAL VIDEO CHANNEL",
     "description": "Watch customer delivery diaries, showroom walkarounds, service & car-care tips, and MD Nicky Sehgal on Autocar Dialogues."
    },
    {
     "platform": "Instagram",
-    "handle": "@sehgalautoriders",
-    "url": "https://www.instagram.com/sehgalautoriders/",
+    "handle": "@sehgalautoridersindia",
+    "url": "https://www.instagram.com/sehgalautoridersindia/",
     "badge": "STORIES & DELIVERIES",
     "description": "Daily delivery reels, 27-year celebration highlights, new model launches, and monsoon/summer car-care tips from Pune & Lonavala."
    },
