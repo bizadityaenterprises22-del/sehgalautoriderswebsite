@@ -1,0 +1,285 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<kml xmlns="http://www.opengis.net/kml/2.2" xmlns:gx="http://www.google.com/kml/ext/2.2">
+  <Document>
+    <name>Sehgal Autoriders — 3D Aerial Network Flyover (15 Live + 4 Upcoming Hubs)</name>
+    <open>1</open>
+    <description><![CDATA[
+      <b>Sehgal Autoriders Pvt. Ltd. — Google Earth 3D Photorealistic Network Tour</b><br/>
+      15 Authorised Maruti Suzuki (Arena, NEXA, True Value, Commercial, Driving School) &amp; Hero MotoCorp (3S, Premia &amp; VIDA EV) Showrooms, Workshops &amp; Cashless Bodyshops across Pune, PCMC, Lonavala, Kamshet, Khed Shivapur &amp; Bhor.<br/>
+      <b>Central Digital Desk:</b> +91 83800 38244 · ceoservice@sehgalautoriders.com
+    ]]></description>
+
+    <Style id="sehgalFlagshipStyle">
+      <IconStyle>
+        <scale>1.3</scale>
+        <Icon><href>http://maps.google.com/mapfiles/kml/paddle/red-stars.png</href></Icon>
+      </IconStyle>
+      <LabelStyle><scale>1.1</scale></LabelStyle>
+    </Style>
+    <Style id="sehgalNexaStyle">
+      <IconStyle>
+        <scale>1.25</scale>
+        <Icon><href>http://maps.google.com/mapfiles/kml/paddle/blu-stars.png</href></Icon>
+      </IconStyle>
+    </Style>
+    <Style id="sehgalHeroStyle">
+      <IconStyle>
+        <scale>1.2</scale>
+        <Icon><href>http://maps.google.com/mapfiles/kml/paddle/ylw-stars.png</href></Icon>
+      </IconStyle>
+    </Style>
+    <Style id="sehgalUpcomingStyle">
+      <IconStyle>
+        <scale>1.15</scale>
+        <Icon><href>http://maps.google.com/mapfiles/kml/paddle/grn-circle.png</href></Icon>
+      </IconStyle>
+    </Style>
+
+    <gx:Tour>
+      <name>Play 3D Aerial Flyover — All Sehgal Showrooms &amp; Hubs</name>
+      <gx:Playlist>
+        <gx:FlyTo>
+          <gx:duration>4.5</gx:duration>
+          <gx:flyToMode>smooth</gx:flyToMode>
+          <LookAt>
+            <longitude>73.7679774</longitude><latitude>18.5114847</latitude><altitude>0</altitude>
+            <heading>42</heading><tilt>65</tilt><range>340</range>
+            <gx:altitudeMode>relativeToSeaFloor</gx:altitudeMode>
+          </LookAt>
+        </gx:FlyTo>
+        <gx:Wait><gx:duration>2.5</gx:duration></gx:Wait>
+
+        <gx:FlyTo>
+          <gx:duration>4.0</gx:duration>
+          <gx:flyToMode>smooth</gx:flyToMode>
+          <LookAt>
+            <longitude>73.829510</longitude><latitude>18.514240</latitude><altitude>0</altitude>
+            <heading>115</heading><tilt>65</tilt><range>320</range>
+            <gx:altitudeMode>relativeToSeaFloor</gx:altitudeMode>
+          </LookAt>
+        </gx:FlyTo>
+        <gx:Wait><gx:duration>2.0</gx:duration></gx:Wait>
+
+        <gx:FlyTo>
+          <gx:duration>4.5</gx:duration>
+          <gx:flyToMode>smooth</gx:flyToMode>
+          <LookAt>
+            <longitude>73.903420</longitude><latitude>18.503850</latitude><altitude>0</altitude>
+            <heading>210</heading><tilt>65</tilt><range>320</range>
+            <gx:altitudeMode>relativeToSeaFloor</gx:altitudeMode>
+          </LookAt>
+        </gx:FlyTo>
+        <gx:Wait><gx:duration>2.0</gx:duration></gx:Wait>
+
+        <gx:FlyTo>
+          <gx:duration>4.0</gx:duration>
+          <gx:flyToMode>smooth</gx:flyToMode>
+          <LookAt>
+            <longitude>73.978100</longitude><latitude>18.496400</latitude><altitude>0</altitude>
+            <heading>160</heading><tilt>64</tilt><range>380</range>
+            <gx:altitudeMode>relativeToSeaFloor</gx:altitudeMode>
+          </LookAt>
+        </gx:FlyTo>
+        <gx:Wait><gx:duration>2.0</gx:duration></gx:Wait>
+
+        <gx:FlyTo>
+          <gx:duration>4.5</gx:duration>
+          <gx:flyToMode>smooth</gx:flyToMode>
+          <LookAt>
+            <longitude>73.792400</longitude><latitude>18.647200</latitude><altitude>0</altitude>
+            <heading>75</heading><tilt>65</tilt><range>360</range>
+            <gx:altitudeMode>relativeToSeaFloor</gx:altitudeMode>
+          </LookAt>
+        </gx:FlyTo>
+        <gx:Wait><gx:duration>2.0</gx:duration></gx:Wait>
+
+        <gx:FlyTo>
+          <gx:duration>4.5</gx:duration>
+          <gx:flyToMode>smooth</gx:flyToMode>
+          <LookAt>
+            <longitude>73.858800</longitude><latitude>18.753400</latitude><altitude>0</altitude>
+            <heading>30</heading><tilt>64</tilt><range>380</range>
+            <gx:altitudeMode>relativeToSeaFloor</gx:altitudeMode>
+          </LookAt>
+        </gx:FlyTo>
+        <gx:Wait><gx:duration>2.0</gx:duration></gx:Wait>
+
+        <gx:FlyTo>
+          <gx:duration>5.0</gx:duration>
+          <gx:flyToMode>smooth</gx:flyToMode>
+          <LookAt>
+            <longitude>73.440800</longitude><latitude>18.758200</latitude><altitude>0</altitude>
+            <heading>295</heading><tilt>65</tilt><range>420</range>
+            <gx:altitudeMode>relativeToSeaFloor</gx:altitudeMode>
+          </LookAt>
+        </gx:FlyTo>
+        <gx:Wait><gx:duration>2.0</gx:duration></gx:Wait>
+
+        <gx:FlyTo>
+          <gx:duration>5.0</gx:duration>
+          <gx:flyToMode>smooth</gx:flyToMode>
+          <LookAt>
+            <longitude>73.848200</longitude><latitude>18.338900</latitude><altitude>0</altitude>
+            <heading>180</heading><tilt>65</tilt><range>380</range>
+            <gx:altitudeMode>relativeToSeaFloor</gx:altitudeMode>
+          </LookAt>
+        </gx:FlyTo>
+        <gx:Wait><gx:duration>2.0</gx:duration></gx:Wait>
+
+        <gx:FlyTo>
+          <gx:duration>4.5</gx:duration>
+          <gx:flyToMode>smooth</gx:flyToMode>
+          <LookAt>
+            <longitude>73.844500</longitude><latitude>18.148600</latitude><altitude>0</altitude>
+            <heading>145</heading><tilt>65</tilt><range>400</range>
+            <gx:altitudeMode>relativeToSeaFloor</gx:altitudeMode>
+          </LookAt>
+        </gx:FlyTo>
+      </gx:Playlist>
+    </gx:Tour>
+
+    <Folder>
+      <name>Live Showrooms, Workshops &amp; Cashless Bodyshops (15 Outlets)</name>
+      <Placemark>
+        <name>1. Bavdhan 3S Flagship — Arena Showroom, Workshop, Bodyshop &amp; True Value</name>
+        <styleUrl>#sehgalFlagshipStyle</styleUrl>
+        <description><![CDATA[
+          <b>Rating:</b> 4.6 / 5.0 (3,968 Verified Google Maps Reviews)<br/>
+          <b>Throughput:</b> 1,52,272+ Workshop Job Cards · 15,875 W2 Gate Entries<br/>
+          <b>Facilities:</b> Arena Showroom, Periodic Service, Cashless Bodyshop (#1 Bajaj Allianz), True Value Pre-Owned Hub<br/>
+          <b>Phone:</b> 08071645524 · +91 83800 38244
+        ]]></description>
+        <LookAt><longitude>73.7679774</longitude><latitude>18.5114847</latitude><altitude>0</altitude><heading>42</heading><tilt>65</tilt><range>340</range></LookAt>
+        <Point><coordinates>73.7679774,18.5114847,0</coordinates></Point>
+      </Placemark>
+
+      <Placemark>
+        <name>2. Law College Road, Erandwane — Corporate HQ, Arena Showroom &amp; Driving School</name>
+        <styleUrl>#sehgalFlagshipStyle</styleUrl>
+        <description><![CDATA[
+          <b>Rating:</b> 4.6 / 5.0 (1,850+ Reviews)<br/>
+          <b>Facilities:</b> Corporate Headquarters, Maruti Suzuki Arena Urban Flagship, Maruti Suzuki Driving School<br/>
+          <b>Phone:</b> 08062513562 · +91 83800 38244
+        ]]></description>
+        <LookAt><longitude>73.829510</longitude><latitude>18.514240</latitude><altitude>0</altitude><heading>115</heading><tilt>65</tilt><range>320</range></LookAt>
+        <Point><coordinates>73.829510,18.514240,0</coordinates></Point>
+      </Placemark>
+
+      <Placemark>
+        <name>3. Fatima Nagar (Wanowrie) — NEXA Flagship Showroom &amp; Driving School</name>
+        <styleUrl>#sehgalNexaStyle</styleUrl>
+        <description><![CDATA[
+          <b>Rating:</b> 4.6 / 5.0 (1,420+ Reviews)<br/>
+          <b>Portfolio:</b> Invicto, Grand Vitara Strong Hybrid, e VITARA Electric SUV, FRONX, Baleno, XL6, Jimny<br/>
+          <b>Phone:</b> 08062511897 · +91 83800 38244
+        ]]></description>
+        <LookAt><longitude>73.903420</longitude><latitude>18.503850</latitude><altitude>0</altitude><heading>210</heading><tilt>65</tilt><range>320</range></LookAt>
+        <Point><coordinates>73.903420,18.503850,0</coordinates></Point>
+      </Placemark>
+
+      <Placemark>
+        <name>4. Manjri (Solapur Highway) — NEXA, Commercial Fleet Hub, Workshop &amp; Bodyshop</name>
+        <styleUrl>#sehgalNexaStyle</styleUrl>
+        <description><![CDATA[
+          <b>Rating:</b> 4.5 / 5.0 (980+ Reviews)<br/>
+          <b>Throughput:</b> 42,673+ Workshop Job Cards · Super Carry S-CNG &amp; Eeco Cargo Commercial Hub<br/>
+          <b>Phone:</b> +91 78880 12800 · +91 83800 38244
+        ]]></description>
+        <LookAt><longitude>73.978100</longitude><latitude>18.496400</latitude><altitude>0</altitude><heading>160</heading><tilt>64</tilt><range>380</range></LookAt>
+        <Point><coordinates>73.978100,18.496400,0</coordinates></Point>
+      </Placemark>
+
+      <Placemark>
+        <name>5. Chinchwad MIDC &amp; PCMC — Hero MotoCorp 3S, Hero Premia, VIDA EV &amp; SSP (3 Outlets)</name>
+        <styleUrl>#sehgalHeroStyle</styleUrl>
+        <description><![CDATA[
+          <b>Rating:</b> 4.5 / 5.0 (1,150+ Reviews)<br/>
+          <b>Scale:</b> 1,01,505+ Hero Riders Network · Splendor+ XTEC, Mavrick 440, Xoom &amp; VIDA V1 EV<br/>
+          <b>Phone:</b> +91 92899 22306 · +91 83800 38244
+        ]]></description>
+        <LookAt><longitude>73.792400</longitude><latitude>18.647200</latitude><altitude>0</altitude><heading>75</heading><tilt>65</tilt><range>360</range></LookAt>
+        <Point><coordinates>73.792400,18.647200,0</coordinates></Point>
+      </Placemark>
+
+      <Placemark>
+        <name>6. Chakan (Nashik Highway) — Hero MotoCorp 3S Showroom &amp; Workshop</name>
+        <styleUrl>#sehgalHeroStyle</styleUrl>
+        <description><![CDATA[
+          <b>Rating:</b> 4.5 / 5.0 (720+ Reviews)<br/>
+          <b>Dealer Code:</b> 61299 · North Pune &amp; MIDC Industrial Two-Wheeler Hub<br/>
+          <b>Phone:</b> +91 92899 22306 · +91 83800 38244
+        ]]></description>
+        <LookAt><longitude>73.858800</longitude><latitude>18.753400</latitude><altitude>0</altitude><heading>30</heading><tilt>64</tilt><range>380</range></LookAt>
+        <Point><coordinates>73.858800,18.753400,0</coordinates></Point>
+      </Placemark>
+
+      <Placemark>
+        <name>7. Kamshet (Old Mumbai–Pune Hwy) — Arena Showroom, Service &amp; Bodyshop</name>
+        <styleUrl>#sehgalFlagshipStyle</styleUrl>
+        <description><![CDATA[
+          <b>Rating:</b> 4.5 / 5.0 (380+ Reviews) · 14,043+ Workshop Job Cards (CEA1-1)<br/>
+          <b>Phone:</b> +91 83800 38244
+        ]]></description>
+        <LookAt><longitude>73.551200</longitude><latitude>18.756500</latitude><altitude>0</altitude><heading>280</heading><tilt>65</tilt><range>380</range></LookAt>
+        <Point><coordinates>73.551200,18.756500,0</coordinates></Point>
+      </Placemark>
+
+      <Placemark>
+        <name>8. Lonavala (Waksai) — Arena &amp; NEXA Twin 3S Complex, Workshops &amp; Bodyshops</name>
+        <styleUrl>#sehgalFlagshipStyle</styleUrl>
+        <description><![CDATA[
+          <b>Rating:</b> 4.6 / 5.0 (890+ Reviews) · 48,653+ Combined Job Cards (CGA1-1 &amp; CGAN-1)<br/>
+          <b>Phone:</b> 08037394880 · 08071010473
+        ]]></description>
+        <LookAt><longitude>73.440800</longitude><latitude>18.758200</latitude><altitude>0</altitude><heading>295</heading><tilt>65</tilt><range>420</range></LookAt>
+        <Point><coordinates>73.440800,18.758200,0</coordinates></Point>
+      </Placemark>
+
+      <Placemark>
+        <name>9. Khed Shivapur (NH-48 Satara Hwy) — Arena 3S Showroom, Workshop &amp; Bodyshop</name>
+        <styleUrl>#sehgalFlagshipStyle</styleUrl>
+        <description><![CDATA[
+          <b>Rating:</b> 4.6 / 5.0 (520+ Reviews) · 6,247+ Job Cards · 1,677 W2 Gate Entries (BZK1-1)<br/>
+          <b>Phone:</b> 08071647799 · +91 83800 38244
+        ]]></description>
+        <LookAt><longitude>73.848200</longitude><latitude>18.338900</latitude><altitude>0</altitude><heading>180</heading><tilt>65</tilt><range>380</range></LookAt>
+        <Point><coordinates>73.848200,18.338900,0</coordinates></Point>
+      </Placemark>
+
+      <Placemark>
+        <name>10. Rambaug Bhor — Arena 3S Showroom, Workshop &amp; Bodyshop</name>
+        <styleUrl>#sehgalFlagshipStyle</styleUrl>
+        <description><![CDATA[
+          <b>Rating:</b> 4.6 / 5.0 (490+ Reviews) · 19,318+ Workshop Job Cards (BSV1-1)<br/>
+          <b>Phone:</b> 08071647067 · +91 83800 38244
+        ]]></description>
+        <LookAt><longitude>73.844500</longitude><latitude>18.148600</latitude><altitude>0</altitude><heading>145</heading><tilt>65</tilt><range>400</range></LookAt>
+        <Point><coordinates>73.844500,18.148600,0</coordinates></Point>
+      </Placemark>
+    </Folder>
+
+    <Folder>
+      <name>Upcoming Expansion Corridors (4 New Touchpoints)</name>
+      <Placemark>
+        <name>Upcoming 1: Hinjewadi–Wakad IT Corridor Express Sales &amp; EV Care Hub</name>
+        <styleUrl>#sehgalUpcomingStyle</styleUrl>
+        <Point><coordinates>73.738900,18.591200,0</coordinates></Point>
+      </Placemark>
+      <Placemark>
+        <name>Upcoming 2: Sinhagad Road–Dhayari Customer Touchpoint &amp; Express Service</name>
+        <styleUrl>#sehgalUpcomingStyle</styleUrl>
+        <Point><coordinates>73.809500,18.448500,0</coordinates></Point>
+      </Placemark>
+      <Placemark>
+        <name>Upcoming 3: Talegaon–Vadgaon Maval Integrated Sales &amp; Service Point</name>
+        <styleUrl>#sehgalUpcomingStyle</styleUrl>
+        <Point><coordinates>73.675200,18.735100,0</coordinates></Point>
+      </Placemark>
+      <Placemark>
+        <name>Upcoming 4: Saswad–Purandar Highway Corridor Touchpoint</name>
+        <styleUrl>#sehgalUpcomingStyle</styleUrl>
+        <Point><coordinates>74.031200,18.344800,0</coordinates></Point>
+      </Placemark>
+    </Folder>
+  </Document>
+</kml>

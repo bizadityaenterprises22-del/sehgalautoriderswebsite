@@ -2,7 +2,7 @@
 
 A public design review of Sehgal Autoriders with Arena, NEXA, Commercial and Hero journeys.
 
-Preview: https://sehgalautoriders.github.io/sehgalautoriderswebsite/
+Preview: https://sehgalautoriders.com/
 
 Booking forms demonstrate the journey; they do not send or store customer details. Customer records, staff administration, server code and credentials are not included.
 

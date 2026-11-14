@@ -89,7 +89,7 @@ const LOCATION_SEED = [
         "role": "Showroom Manager — Erandwane",
         "name": "Erandwane Sales Desk",
         "phone": "08062513562",
-        "email": "sehgalautoriders2011@gmail.com",
+        "email": "ceoservice@sehgalautoriders.com",
         "visible": true
       },
       {
@@ -97,7 +97,7 @@ const LOCATION_SEED = [
         "role": "Central Sales Escalation",
         "name": "Sales Leadership Desk",
         "phone": "7888012800",
-        "email": "sehgalautoriders2011@gmail.com",
+        "email": "ceoservice@sehgalautoriders.com",
         "visible": true
       }
     ]
@@ -128,7 +128,7 @@ const LOCATION_SEED = [
         "role": "NEXA Showroom Manager — Fatima Nagar",
         "name": "Fatima Nagar NEXA Desk",
         "phone": "7888002101",
-        "email": "sehgalautoriders2011@gmail.com",
+        "email": "ceoservice@sehgalautoriders.com",
         "visible": true
       },
       {
@@ -136,7 +136,7 @@ const LOCATION_SEED = [
         "role": "Central Sales Escalation",
         "name": "Sales Leadership Desk",
         "phone": "7888012800",
-        "email": "sehgalautoriders2011@gmail.com",
+        "email": "ceoservice@sehgalautoriders.com",
         "visible": true
       }
     ]
@@ -215,7 +215,7 @@ const LOCATION_SEED = [
         "role": "Commercial Sales & Fleet Head",
         "name": "Manjri Commercial Desk",
         "phone": "7888012800",
-        "email": "sehgalautoriders2011@gmail.com",
+        "email": "ceoservice@sehgalautoriders.com",
         "visible": true
       },
       {
@@ -262,7 +262,7 @@ const LOCATION_SEED = [
         "role": "True Value Manager — Bavdhan",
         "name": "True Value Desk",
         "phone": "08071649360",
-        "email": "sehgalautoriders2011@gmail.com",
+        "email": "ceoservice@sehgalautoriders.com",
         "visible": true
       }
     ]
@@ -530,7 +530,7 @@ const LOCATION_SEED = [
         "role": "Hero Chinchwad Service & CRM Desk",
         "name": "Hero Service Team",
         "phone": "9011601819",
-        "email": "sehgalautoriders2011@gmail.com",
+        "email": "ceoservice@sehgalautoriders.com",
         "visible": true
       }
     ]

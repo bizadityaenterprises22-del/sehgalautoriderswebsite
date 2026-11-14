@@ -1,6 +1,3 @@
-'use strict';
-/* Facts from official sources (lenders, Maruti Suzuki, IRDAI, Government of India, Global NCAP, Bharat NCAP)
-   plus verified Sehgal Autoriders operational, Vahan, Retail Finance, Wholesale Inventory, Insurance & W2 Gate-Entry Road-Care Guidebooks, updated 06-11-2026. */
 const FACTS_DATA = {
  "checkedOn": "06-11-2026",
  "sehgalSummary": {
@@ -660,12 +657,36 @@ const FACTS_DATA = {
    "bavdhanMapsUrl": "https://www.google.com/maps/place/Maruti+Suzuki+ARENA+(Sehgal+Autoriders,+Pune,+Bavdhan)/@18.5114847,73.7679774,17z/",
    "aiSummaryQuote": "People say this car dealership provides a smooth and professional car buying experience. They also highlight the excellent service and helpful, cooperative staff. Guests mention the team offers clear guidance and support throughout the process.",
    "reviewTags": [
-    { "id": "all", "label": "All Verified Reviews & Videos", "count": "10,000+" },
-    { "id": "showroom", "label": "Showroom Experience", "count": "63+" },
-    { "id": "buying", "label": "Car Buying Experience", "count": "49+" },
-    { "id": "staff", "label": "Cooperative Staff & Stars of Sehgal", "count": "44+" },
-    { "id": "bodyshop", "label": "Bodyshop & Service", "count": "32+" },
-    { "id": "repeat", "label": "Repeat Family Buyers", "count": "2nd+ Car" }
+    {
+     "id": "all",
+     "label": "All Verified Reviews & 13 Branded Videos",
+     "count": "10,000+ · 13 Videos"
+    },
+    {
+     "id": "showroom",
+     "label": "Showroom Experience",
+     "count": "63+"
+    },
+    {
+     "id": "buying",
+     "label": "Car Buying Experience",
+     "count": "49+"
+    },
+    {
+     "id": "staff",
+     "label": "Cooperative Staff & Stars of Sehgal",
+     "count": "44+"
+    },
+    {
+     "id": "bodyshop",
+     "label": "Bodyshop & Service",
+     "count": "32+"
+    },
+    {
+     "id": "repeat",
+     "label": "Repeat Family Buyers",
+     "count": "2nd+ Car"
+    }
    ],
    "featuredReviews": [
     {
@@ -674,11 +695,16 @@ const FACTS_DATA = {
      "badge": "Local Guide · 145 Reviews · 2nd Car Repeat Buyer",
      "rating": 5,
      "timeAgo": "Verified Delivery · Bavdhan Arena",
-     "tags": ["all", "buying", "repeat", "staff"],
+     "tags": [
+      "all",
+      "buying",
+      "repeat",
+      "staff"
+     ],
      "headline": "Exceptional Customer Experience at Sehgal Autoriders — Purchased Our Second Car!",
      "quote": "We recently purchased our second car from Sehgal Autoriders, and once again the experience was outstanding. The entire team was highly cooperative and guided our family smoothly from booking to delivery.",
-     "photo": "assets/google-reviews/delivery-deepti-mangesh-second-car.jpg",
-     "fullCard": "assets/google-reviews/review-full-deepti-mangesh.jpg",
+     "photo": "assets/studio-renders/delivery-celebration-deepti-mangesh-studio.jpg",
+     "fullCard": "assets/studio-renders/delivery-celebration-deepti-mangesh-studio.jpg",
      "branch": "Maruti Suzuki ARENA — Bavdhan 3S Flagship"
     },
     {
@@ -687,11 +713,16 @@ const FACTS_DATA = {
      "badge": "Verified New Car Owner · 2 Delivery Photos",
      "rating": 5,
      "timeAgo": "Verified Delivery · Bavdhan Arena",
-     "tags": ["all", "showroom", "buying", "staff"],
+     "tags": [
+      "all",
+      "showroom",
+      "buying",
+      "staff"
+     ],
      "headline": "Very Good Service and Helpful All Staff",
      "quote": "Very good service and helpful all staff..... Smooth key handover, clear documentation, Bajaj Allianz cashless insurance and complete on-time delivery.",
-     "photo": "assets/google-reviews/delivery-shivraj-kamble-bavdhan.jpg",
-     "fullCard": "assets/google-reviews/review-full-shivraj-kamble.jpg",
+     "photo": "assets/studio-renders/delivery-celebration-shivraj-kamble-studio.jpg",
+     "fullCard": "assets/studio-renders/delivery-celebration-shivraj-kamble-studio.jpg",
      "branch": "Maruti Suzuki ARENA — Bavdhan 3S Flagship"
     },
     {
@@ -700,11 +731,15 @@ const FACTS_DATA = {
      "badge": "Verified Family Delivery · 2 Photos",
      "rating": 5,
      "timeAgo": "Verified Delivery · Bavdhan Arena",
-     "tags": ["all", "buying", "showroom"],
+     "tags": [
+      "all",
+      "buying",
+      "showroom"
+     ],
      "headline": "Excellent Service & Memorable Family Delivery Celebration",
      "quote": "Excellent service! Our entire family celebrated the new car key handover at the Bavdhan delivery bay with full support from the Sehgal Autoriders team.",
-     "photo": "assets/google-reviews/delivery-aniket-poul-bavdhan.jpg",
-     "fullCard": "assets/google-reviews/review-full-aniket-poul.jpg",
+     "photo": "assets/studio-renders/delivery-celebration-aniket-poul-studio.jpg",
+     "fullCard": "assets/studio-renders/delivery-celebration-aniket-poul-studio.jpg",
      "branch": "Maruti Suzuki ARENA — Bavdhan 3S Flagship"
     },
     {
@@ -713,11 +748,15 @@ const FACTS_DATA = {
      "badge": "Local Guide · Star of Sehgal Shoutout: Vikram S",
      "rating": 5,
      "timeAgo": "Verified Review · Bavdhan Arena",
-     "tags": ["all", "showroom", "staff"],
+     "tags": [
+      "all",
+      "showroom",
+      "staff"
+     ],
      "headline": "Star of Sehgal Spotlight — Vikram S Explained Everything Patiently",
      "quote": "Good showroom. Vikram S was good. Explained everything patiently... highly recommended.",
-     "photo": "assets/google-reviews/showroom-bavdhan-arena-vikram-s.jpg",
-     "fullCard": "assets/google-reviews/review-full-ashutosh-nerlekar-vikram-s.jpg",
+     "photo": "assets/studio-renders/bavdhan-arena-3s-architectural-studio.jpg",
+     "fullCard": "assets/studio-renders/stars-of-sehgal-vikram-rohan-studio.jpg",
      "branch": "Maruti Suzuki ARENA — Bavdhan 3S Flagship"
     },
     {
@@ -726,11 +765,16 @@ const FACTS_DATA = {
      "badge": "Verified Review · Star of Sehgal Shoutout: Rohan Sir",
      "rating": 5,
      "timeAgo": "2 Weeks Ago · NEW",
-     "tags": ["all", "staff", "bodyshop", "buying"],
+     "tags": [
+      "all",
+      "staff",
+      "bodyshop",
+      "buying"
+     ],
      "headline": "Star of Sehgal Spotlight — Co-operative Executive Rohan Sir",
      "quote": "Excellent service co operative executive. thank u so much Rohan sir.",
-     "photo": "assets/google-reviews/review-full-priyanka-trivedi-rohan.jpg",
-     "fullCard": "assets/google-reviews/review-full-priyanka-trivedi-rohan.jpg",
+     "photo": "assets/studio-renders/stars-of-sehgal-vikram-rohan-studio.jpg",
+     "fullCard": "assets/studio-renders/stars-of-sehgal-vikram-rohan-studio.jpg",
      "branch": "Maruti Suzuki ARENA — Bavdhan 3S Flagship"
     },
     {
@@ -739,11 +783,15 @@ const FACTS_DATA = {
      "badge": "4.6★ Google Maps Rating Summary",
      "rating": 5,
      "timeAgo": "Live Google Maps Proof",
-     "tags": ["all", "showroom", "bodyshop"],
+     "tags": [
+      "all",
+      "showroom",
+      "bodyshop"
+     ],
      "headline": "4.6★ Across 3,968 Reviews at Bavdhan Arena Alone",
      "quote": "Backed by 2,83,000+ Maruti Suzuki workshop job cards, 1,01,505+ Hero riders, and 7 authorised cashless bodyshops across Pune, Lonavala, Kamshet, Khed Shivapur and Bhor.",
-     "photo": "assets/google-reviews/review-summary-46-star-3968-bavdhan.jpg",
-     "fullCard": "assets/google-reviews/review-summary-46-star-3968-bavdhan.jpg",
+     "photo": "assets/studio-renders/google-reviews-10000-46star-studio.jpg",
+     "fullCard": "assets/studio-renders/google-reviews-10000-46star-studio.jpg",
      "branch": "All 15 Sehgal Autoriders Showrooms & Workshops"
     }
    ]
@@ -755,9 +803,15 @@ const FACTS_DATA = {
     "title": "Happy Family Deliveries & 4.6★ (3,968+ Reviews) Showcase",
     "subtitle": "Featuring Deepti Mangesh (2nd Car Family Story), Shivraj Kamble & Aniket Poul key handovers at Bavdhan Arena.",
     "src": "assets/videos/customer-deliveries-46star-reel.mp4",
-    "poster": "assets/google-reviews/delivery-deepti-mangesh-second-car.jpg",
+    "poster": "assets/studio-renders/delivery-celebration-deepti-mangesh-studio.jpg",
+    "youtubeUrl": "https://www.youtube.com/@sehgalautoriders5087",
     "aspect": "vertical",
-    "tags": ["all", "buying", "repeat", "showroom"]
+    "tags": [
+     "all",
+     "buying",
+     "repeat",
+     "showroom"
+    ]
    },
    {
     "id": "nexa-baleno-delivery",
@@ -765,19 +819,133 @@ const FACTS_DATA = {
     "title": "NEXA Fatima Nagar — New Baleno Key Handover Celebration",
     "subtitle": "Authentic customer delivery celebration filmed at Sehgal Autoriders NEXA Fatima Nagar, watermarked with official high-res brand badge.",
     "src": "assets/videos/nexa-baleno-delivery-branded.mp4",
-    "poster": "assets/google-reviews/delivery-shivraj-kamble-bavdhan.jpg",
+    "poster": "assets/studio-renders/delivery-celebration-shivraj-kamble-studio.jpg",
+    "youtubeUrl": "https://www.youtube.com/watch?v=gQ9iXGiKoWE",
     "aspect": "vertical",
-    "tags": ["all", "buying", "showroom"]
+    "tags": [
+     "all",
+     "buying",
+     "showroom"
+    ]
+   },
+   {
+    "id": "wagonr-accessories-walkaround",
+    "queue": "Queue 02 · Maruti Suzuki Arena Walkaround",
+    "title": "New Big Wagon-R With Genuine Maruti Suzuki Accessories",
+    "subtitle": "Official @sehgalautoriders5087 showcase of the Big Wagon-R customized with genuine MSGA exterior & interior styling packages.",
+    "src": "assets/videos/wagonr-accessories-walkaround-branded.mp4",
+    "poster": "assets/videos/wagonr-walkaround-thumb.jpg",
+    "youtubeUrl": "https://www.youtube.com/watch?v=FO74T-eoDxY",
+    "aspect": "landscape",
+    "tags": [
+     "all",
+     "showroom",
+     "buying"
+    ]
    },
    {
     "id": "nexa-walkaround",
-    "queue": "Queue 02 · Showroom Walkarounds",
-    "title": "Sehgal Autoriders NEXA Showroom Experience",
-    "subtitle": "Inside our Maruti Suzuki NEXA showroom experience — watermarked and ready for unified cross-channel publishing.",
+    "queue": "Queue 02 · NEXA Showroom Walkaround",
+    "title": "Sehgal Autoriders NEXA Showroom Experience (Pune)",
+    "subtitle": "Inside our Maruti Suzuki NEXA showroom experience — watermarked with vector logo and contact bar for unified publishing.",
     "src": "assets/videos/nexa-showroom-walkaround-branded.mp4",
-    "poster": "assets/videos/wagonr-walkaround-thumb.jpg",
+    "poster": "assets/studio-renders/nexa-fatima-nagar-midnight-studio.jpg",
+    "youtubeUrl": "https://www.youtube.com/watch?v=w9ORka0yoz8",
     "aspect": "landscape",
-    "tags": ["all", "showroom"]
+    "tags": [
+     "all",
+     "showroom"
+    ]
+   },
+   {
+    "id": "hero-splendor-flex-fuel-2026",
+    "queue": "Queue 02 · Sehgal Hero Flagship Walkaround",
+    "title": "2026 Hero Splendor+ Flex Fuel (E85) Walkaround at Sehgal Hero Pune",
+    "subtitle": "Filmed live at Sehgal Autoriders Hero (Chinchwad/Pune) — India's pioneering E85 ethanol flex-fuel motorcycle showcase.",
+    "src": "assets/videos/hero-splendor-flex-fuel-2026-branded.mp4",
+    "poster": "assets/videos/hero-splendor-flex-fuel-2026-thumb.jpg",
+    "youtubeUrl": "https://www.youtube.com/watch?v=R1LISmxtMRs",
+    "aspect": "landscape",
+    "tags": [
+     "all",
+     "showroom",
+     "buying"
+    ]
+   },
+   {
+    "id": "hero-premia-vida-showroom",
+    "queue": "Queue 02 · Sehgal Hero Premia & VIDA EV",
+    "title": "2026 Hero Premia Showroom Lineup (160cc to 440cc + VIDA EV)",
+    "subtitle": "Complete premium motorcycle & electric scooter walkaround (Mavrick 440, Harley-Davidson X440, Karizma XMR, Xtreme & VIDA).",
+    "src": "assets/videos/hero-premia-vida-showroom-branded.mp4",
+    "poster": "assets/videos/hero-premia-vida-showroom-thumb.jpg",
+    "youtubeUrl": "https://www.youtube.com/watch?v=yvw-8Bd_aCY",
+    "aspect": "landscape",
+    "tags": [
+     "all",
+     "showroom",
+     "buying"
+    ]
+   },
+   {
+    "id": "hero-glamour-x125-marathi",
+    "queue": "Queue 02 · Marathi Walkaround at Sehgal Hero",
+    "title": "2025 All-New Hero Glamour X 125 — Marathi Walkaround at Sehgal Autoriders",
+    "subtitle": "Detailed Marathi feature, mileage and on-road price walkthrough filmed at Sehgal Autoriders Hero dealership in Pune.",
+    "src": "assets/videos/hero-glamour-x125-marathi-branded.mp4",
+    "poster": "assets/videos/hero-glamour-x125-marathi-thumb.jpg",
+    "youtubeUrl": "https://www.youtube.com/watch?v=sMH2kA0-5vM",
+    "aspect": "landscape",
+    "tags": [
+     "all",
+     "showroom",
+     "buying"
+    ]
+   },
+   {
+    "id": "hero-xoom-160-marathi",
+    "queue": "Queue 02 · Marathi Scooter Walkaround",
+    "title": "2025 All-New Hero Xoom 160 Maxi-Scooter — Marathi Review at Sehgal Hero",
+    "subtitle": "Exploring the liquid-cooled 156cc Hero Xoom 160 maxi-scooter at Sehgal Autoriders Pune with full Marathi commentary.",
+    "src": "assets/videos/hero-xoom-160-marathi-branded.mp4",
+    "poster": "assets/videos/hero-xoom-160-marathi-thumb.jpg",
+    "youtubeUrl": "https://www.youtube.com/watch?v=qieVukQ8BvE",
+    "aspect": "landscape",
+    "tags": [
+     "all",
+     "showroom",
+     "buying"
+    ]
+   },
+   {
+    "id": "hero-vida-v2-pro-ev",
+    "queue": "Queue 02 · VIDA Electric Mobility (Pune)",
+    "title": "Hero VIDA V2 Pro Electric Scooter Walkaround at Sehgal Autoriders",
+    "subtitle": "Removable battery architecture, fast charging, and on-road Pune range walkthrough filmed at Sehgal Hero.",
+    "src": "assets/videos/hero-vida-v2-pro-ev-branded.mp4",
+    "poster": "assets/videos/hero-vida-v2-pro-ev-thumb.jpg",
+    "youtubeUrl": "https://www.youtube.com/watch?v=aNLOU-BsBR0",
+    "aspect": "landscape",
+    "tags": [
+     "all",
+     "showroom",
+     "buying"
+    ]
+   },
+   {
+    "id": "hero-vida-vx2-plus-ev",
+    "queue": "Queue 02 · VIDA VX2 Plus EV Walkaround",
+    "title": "2025 Hero VIDA VX2 Plus Electric Scooter — Sehgal Autoriders Pune",
+    "subtitle": "Next-generation family electric scooter walkthrough at Sehgal Hero with smart TFT cluster and dual-battery flexibility.",
+    "src": "assets/videos/hero-vida-vx2-plus-ev-branded.mp4",
+    "poster": "assets/videos/hero-vida-vx2-plus-ev-thumb.jpg",
+    "youtubeUrl": "https://www.youtube.com/watch?v=1C4MC2xREvM",
+    "aspect": "landscape",
+    "tags": [
+     "all",
+     "showroom",
+     "buying"
+    ]
    },
    {
     "id": "reel-road-care",
@@ -785,9 +953,28 @@ const FACTS_DATA = {
     "title": "W2 Gate-Entry Road Care & Bajaj Allianz Cashless Claim Guide",
     "subtitle": "Highlighting our English & Marathi Car Care PDFs, Hero 2W & Vida EV Safety, and #1 Bajaj Allianz Cashless Claims.",
     "src": "assets/videos/road-care-bajaj-insurance-reel.mp4",
-    "poster": "assets/google-reviews/showroom-bavdhan-arena-vikram-s.jpg",
+    "poster": "assets/studio-renders/bavdhan-arena-3s-architectural-studio.jpg",
+    "youtubeUrl": "https://www.youtube.com/@sehgalautoriders5087",
     "aspect": "vertical",
-    "tags": ["all", "bodyshop"]
+    "tags": [
+     "all",
+     "bodyshop"
+    ]
+   },
+   {
+    "id": "autocar-dialogues-nicky-sehgal",
+    "queue": "Queue 04 · Leadership & Industry Thought Leadership",
+    "title": "Autocar Dialogues — Nicky Sehgal on Dealership Excellence & Ancillary Growth",
+    "subtitle": "Director Nicky Sehgal shares insights on customer retention, motor insurance, service trust and multi-brand scale on Autocar India.",
+    "src": "assets/videos/autocar-dialogues-nicky-sehgal-branded.mp4",
+    "poster": "assets/videos/autocar-dialogues-nicky-sehgal-thumb.jpg",
+    "youtubeUrl": "https://www.youtube.com/watch?v=fIXeAH6J6wY",
+    "aspect": "landscape",
+    "tags": [
+     "all",
+     "staff",
+     "showroom"
+    ]
    },
    {
     "id": "reel-careers-linkedin",
@@ -795,9 +982,13 @@ const FACTS_DATA = {
     "title": "Stars of Sehgal (Vikram S & Rohan) — Join Our 2,400+ Strong Team",
     "subtitle": "Employer-of-Choice LinkedIn spotlight celebrating staff praised in Google Reviews and inviting top talent to apply at ceoservice@sehgalautoriders.com.",
     "src": "assets/videos/stars-of-sehgal-careers-linkedin.mp4",
-    "poster": "assets/google-reviews/review-summary-46-star-3968-bavdhan.jpg",
+    "poster": "assets/studio-renders/google-reviews-10000-46star-studio.jpg",
+    "youtubeUrl": "https://www.linkedin.com/company/sehgal-autoriders-pvt-ltd/",
     "aspect": "vertical",
-    "tags": ["all", "staff"]
+    "tags": [
+     "all",
+     "staff"
+    ]
    }
   ],
   "socialChannels": [
@@ -899,23 +1090,176 @@ const FACTS_DATA = {
   ],
   "interactiveMapPins": {
    "currentLocations": [
-    { "id": "bavdhan-arena", "name": "Bavdhan 3S Flagship (Arena + Workshop + Bodyshop)", "corridor": "West Pune · NH-48 Bypass", "rating": "4.6★", "reviews": "3,968 Reviews", "metric": "1,52,272+ Job Cards", "x": 38, "y": 48, "phone": "08071645524", "mapUrl": "https://www.google.com/maps/place/Maruti+Suzuki+ARENA+(Sehgal+Autoriders,+Pune,+Bavdhan)/@18.5114847,73.7679774,17z/" },
-    { "id": "erandwane-arena", "name": "Law College Road, Erandwane (Corporate HQ & Arena)", "corridor": "Central Pune", "rating": "4.6★", "reviews": "1,850+ Reviews", "metric": "Flagship Urban Showroom & Driving School", "x": 48, "y": 50, "phone": "08062513562", "mapUrl": "https://www.google.com/maps/search/?api=1&query=Sehgal+Autoriders+Law+College+Road+Erandwane+Pune" },
-    { "id": "bavdhan-true-value", "name": "Bavdhan True Value Pre-Owned & Exchange Hub", "corridor": "West Pune", "rating": "4.6★", "reviews": "640+ Reviews", "metric": "553+ Exchanges in FY26-27 YTD", "x": 41, "y": 53, "phone": "08071649360", "mapUrl": "https://www.google.com/maps/search/?api=1&query=Maruti+Suzuki+True+Value+Sehgal+Autoriders+Bavdhan+Pune" },
-    { "id": "fatima-nagar-nexa", "name": "Fatima Nagar NEXA Flagship (Wanowrie)", "corridor": "East / South-East Pune", "rating": "4.6★", "reviews": "1,420+ Reviews", "metric": "NEXA Flagship & Driving School", "x": 62, "y": 54, "phone": "08062511897", "mapUrl": "https://www.google.com/maps/search/?api=1&query=NEXA+Sehgal+Autoriders+Fatima+Nagar+Pune" },
-    { "id": "manjri-hub", "name": "Manjri NEXA, Commercial & Workshop Hub", "corridor": "East Pune · Solapur Hwy", "rating": "4.5★", "reviews": "980+ Reviews", "metric": "42,673+ Job Cards · Fleet Hub", "x": 74, "y": 52, "phone": "7888012800", "mapUrl": "https://www.google.com/maps/search/?api=1&query=Sehgal+Autoriders+Manjri+Pune" },
-    { "id": "chinchwad-hero", "name": "Chinchwad MIDC Hero 3S, Premia & PCMC SSP (3 Outlets)", "corridor": "PCMC Industrial Belt", "rating": "4.5★", "reviews": "1,150+ Reviews", "metric": "1,01,505+ Hero Riders Network", "x": 44, "y": 32, "phone": "9289922306", "mapUrl": "https://www.google.com/maps/search/?api=1&query=Sehgal+Autoriders+Hero+Chinchwad+MIDC+Pune" },
-    { "id": "chakan-hero", "name": "Chakan Hero 3S Showroom & Workshop", "corridor": "North Pune · Nashik Hwy", "rating": "4.5★", "reviews": "720+ Reviews", "metric": "MIDC & Highway 2W Hub (61299)", "x": 54, "y": 18, "phone": "9289922306", "mapUrl": "https://www.google.com/maps/search/?api=1&query=Sehgal+Autoriders+Hero+Chakan+Pune" },
-    { "id": "kamshet-arena", "name": "Kamshet Arena Showroom & Service Workshop", "corridor": "Maval · Old Mumbai-Pune Hwy", "rating": "4.5★", "reviews": "380+ Reviews", "metric": "14,043+ Workshop Job Cards", "x": 25, "y": 28, "phone": "8380038244", "mapUrl": "https://www.google.com/maps/search/?api=1&query=Sehgal+Autoriders+Kamshet" },
-    { "id": "lonavala-waksai", "name": "Lonavala (Waksai) Arena & NEXA 3S Twin Complex", "corridor": "Lonavala · Mumbai-Pune Hwy", "rating": "4.6★", "reviews": "890+ Reviews", "metric": "48,653+ Combined Job Cards", "x": 14, "y": 22, "phone": "08037394880", "mapUrl": "https://www.google.com/maps/search/?api=1&query=Sehgal+Autoriders+Waksai+Lonavala" },
-    { "id": "khed-shivapur", "name": "Khed Shivapur Arena 3S (NH-48 Satara Highway)", "corridor": "South Pune · NH-48", "rating": "4.6★", "reviews": "520+ Reviews", "metric": "6,247+ Workshop Job Cards", "x": 52, "y": 72, "phone": "08071647799", "mapUrl": "https://www.google.com/maps/search/?api=1&query=Sehgal+Autoriders+Khed+Shivapur" },
-    { "id": "rambaug-bhor", "name": "Rambaug Bhor Arena 3S Showroom & Workshop", "corridor": "Bhor & Velhe Corridor", "rating": "4.6★", "reviews": "490+ Reviews", "metric": "19,318+ Workshop Job Cards", "x": 45, "y": 86, "phone": "08071647067", "mapUrl": "https://www.google.com/maps/search/?api=1&query=Sehgal+Autoriders+Rambaug+Bhor" }
+    {
+     "id": "bavdhan-arena",
+     "name": "Bavdhan 3S Flagship (Arena + Workshop + Bodyshop)",
+     "corridor": "West Pune · NH-48 Bypass",
+     "rating": "4.6★",
+     "reviews": "3,968 Reviews",
+     "metric": "1,52,272+ Job Cards",
+     "x": 38,
+     "y": 48,
+     "phone": "08071645524",
+     "mapUrl": "https://www.google.com/maps/place/Maruti+Suzuki+ARENA+(Sehgal+Autoriders,+Pune,+Bavdhan)/@18.5114847,73.7679774,17z/"
+    },
+    {
+     "id": "erandwane-arena",
+     "name": "Law College Road, Erandwane (Corporate HQ & Arena)",
+     "corridor": "Central Pune",
+     "rating": "4.6★",
+     "reviews": "1,850+ Reviews",
+     "metric": "Flagship Urban Showroom & Driving School",
+     "x": 48,
+     "y": 50,
+     "phone": "08062513562",
+     "mapUrl": "https://www.google.com/maps/search/?api=1&query=Sehgal+Autoriders+Law+College+Road+Erandwane+Pune"
+    },
+    {
+     "id": "bavdhan-true-value",
+     "name": "Bavdhan True Value Pre-Owned & Exchange Hub",
+     "corridor": "West Pune",
+     "rating": "4.6★",
+     "reviews": "640+ Reviews",
+     "metric": "553+ Exchanges in FY26-27 YTD",
+     "x": 41,
+     "y": 53,
+     "phone": "08071649360",
+     "mapUrl": "https://www.google.com/maps/search/?api=1&query=Maruti+Suzuki+True+Value+Sehgal+Autoriders+Bavdhan+Pune"
+    },
+    {
+     "id": "fatima-nagar-nexa",
+     "name": "Fatima Nagar NEXA Flagship (Wanowrie)",
+     "corridor": "East / South-East Pune",
+     "rating": "4.6★",
+     "reviews": "1,420+ Reviews",
+     "metric": "NEXA Flagship & Driving School",
+     "x": 62,
+     "y": 54,
+     "phone": "08062511897",
+     "mapUrl": "https://www.google.com/maps/search/?api=1&query=NEXA+Sehgal+Autoriders+Fatima+Nagar+Pune"
+    },
+    {
+     "id": "manjri-hub",
+     "name": "Manjri NEXA, Commercial & Workshop Hub",
+     "corridor": "East Pune · Solapur Hwy",
+     "rating": "4.5★",
+     "reviews": "980+ Reviews",
+     "metric": "42,673+ Job Cards · Fleet Hub",
+     "x": 74,
+     "y": 52,
+     "phone": "7888012800",
+     "mapUrl": "https://www.google.com/maps/search/?api=1&query=Sehgal+Autoriders+Manjri+Pune"
+    },
+    {
+     "id": "chinchwad-hero",
+     "name": "Chinchwad MIDC Hero 3S, Premia & PCMC SSP (3 Outlets)",
+     "corridor": "PCMC Industrial Belt",
+     "rating": "4.5★",
+     "reviews": "1,150+ Reviews",
+     "metric": "1,01,505+ Hero Riders Network",
+     "x": 44,
+     "y": 32,
+     "phone": "9289922306",
+     "mapUrl": "https://www.google.com/maps/search/?api=1&query=Sehgal+Autoriders+Hero+Chinchwad+MIDC+Pune"
+    },
+    {
+     "id": "chakan-hero",
+     "name": "Chakan Hero 3S Showroom & Workshop",
+     "corridor": "North Pune · Nashik Hwy",
+     "rating": "4.5★",
+     "reviews": "720+ Reviews",
+     "metric": "MIDC & Highway 2W Hub (61299)",
+     "x": 54,
+     "y": 18,
+     "phone": "9289922306",
+     "mapUrl": "https://www.google.com/maps/search/?api=1&query=Sehgal+Autoriders+Hero+Chakan+Pune"
+    },
+    {
+     "id": "kamshet-arena",
+     "name": "Kamshet Arena Showroom & Service Workshop",
+     "corridor": "Maval · Old Mumbai-Pune Hwy",
+     "rating": "4.5★",
+     "reviews": "380+ Reviews",
+     "metric": "14,043+ Workshop Job Cards",
+     "x": 25,
+     "y": 28,
+     "phone": "8380038244",
+     "mapUrl": "https://www.google.com/maps/search/?api=1&query=Sehgal+Autoriders+Kamshet"
+    },
+    {
+     "id": "lonavala-waksai",
+     "name": "Lonavala (Waksai) Arena & NEXA 3S Twin Complex",
+     "corridor": "Lonavala · Mumbai-Pune Hwy",
+     "rating": "4.6★",
+     "reviews": "890+ Reviews",
+     "metric": "48,653+ Combined Job Cards",
+     "x": 14,
+     "y": 22,
+     "phone": "08037394880",
+     "mapUrl": "https://www.google.com/maps/search/?api=1&query=Sehgal+Autoriders+Waksai+Lonavala"
+    },
+    {
+     "id": "khed-shivapur",
+     "name": "Khed Shivapur Arena 3S (NH-48 Satara Highway)",
+     "corridor": "South Pune · NH-48",
+     "rating": "4.6★",
+     "reviews": "520+ Reviews",
+     "metric": "6,247+ Workshop Job Cards",
+     "x": 52,
+     "y": 72,
+     "phone": "08071647799",
+     "mapUrl": "https://www.google.com/maps/search/?api=1&query=Sehgal+Autoriders+Khed+Shivapur"
+    },
+    {
+     "id": "rambaug-bhor",
+     "name": "Rambaug Bhor Arena 3S Showroom & Workshop",
+     "corridor": "Bhor & Velhe Corridor",
+     "rating": "4.6★",
+     "reviews": "490+ Reviews",
+     "metric": "19,318+ Workshop Job Cards",
+     "x": 45,
+     "y": 86,
+     "phone": "08071647067",
+     "mapUrl": "https://www.google.com/maps/search/?api=1&query=Sehgal+Autoriders+Rambaug+Bhor"
+    }
    ],
    "upcomingLocations": [
-    { "id": "upcoming-hinjewadi-wakad", "name": "Hinjewadi–Wakad IT Corridor Express Sales & EV Care Hub", "corridor": "West Pune IT & Metro Growth Belt", "eta": "Upcoming Expansion · VIP Pre-Booking Open", "highlights": "Dedicated corporate leasing, e VITARA / Smart Hybrid test-drive lounge & express pick-up/drop for Hinjewadi Phase 1–3.", "x": 33, "y": 38 },
-    { "id": "upcoming-sinhagad-dhayari", "name": "Sinhagad Road–Dhayari Customer Touchpoint & Express Service", "corridor": "South-West Pune Residential Belt", "eta": "Upcoming Expansion · VIP Pre-Booking Open", "highlights": "Fast-track periodic service, Bajaj Allianz cashless claim drop-off & Arena/True Value doorstep evaluations.", "x": 43, "y": 62 },
-    { "id": "upcoming-talegaon-maval", "name": "Talegaon–Vadgaon Maval Integrated Sales & Service Point", "corridor": "Maval Industrial & Residential Corridor", "eta": "Upcoming Expansion · VIP Pre-Booking Open", "highlights": "Bridging Chinchwad/Chakan and Kamshet/Lonavala with dedicated S-CNG, Commercial & Two-Wheeler support.", "x": 34, "y": 24 },
-    { "id": "upcoming-saswad-purandar", "name": "Saswad–Purandar Highway Corridor Touchpoint", "corridor": "South-East Pune Growth Corridor", "eta": "Upcoming Expansion · VIP Pre-Booking Open", "highlights": "Extending Fatima Nagar & Manjri coverage for Arena, Commercial Super Carry/Eeco & rural finance.", "x": 70, "y": 68 }
+    {
+     "id": "upcoming-hinjewadi-wakad",
+     "name": "Hinjewadi–Wakad IT Corridor Express Sales & EV Care Hub",
+     "corridor": "West Pune IT & Metro Growth Belt",
+     "eta": "Upcoming Expansion · VIP Pre-Booking Open",
+     "highlights": "Dedicated corporate leasing, e VITARA / Smart Hybrid test-drive lounge & express pick-up/drop for Hinjewadi Phase 1–3.",
+     "x": 33,
+     "y": 38
+    },
+    {
+     "id": "upcoming-sinhagad-dhayari",
+     "name": "Sinhagad Road–Dhayari Customer Touchpoint & Express Service",
+     "corridor": "South-West Pune Residential Belt",
+     "eta": "Upcoming Expansion · VIP Pre-Booking Open",
+     "highlights": "Fast-track periodic service, Bajaj Allianz cashless claim drop-off & Arena/True Value doorstep evaluations.",
+     "x": 43,
+     "y": 62
+    },
+    {
+     "id": "upcoming-talegaon-maval",
+     "name": "Talegaon–Vadgaon Maval Integrated Sales & Service Point",
+     "corridor": "Maval Industrial & Residential Corridor",
+     "eta": "Upcoming Expansion · VIP Pre-Booking Open",
+     "highlights": "Bridging Chinchwad/Chakan and Kamshet/Lonavala with dedicated S-CNG, Commercial & Two-Wheeler support.",
+     "x": 34,
+     "y": 24
+    },
+    {
+     "id": "upcoming-saswad-purandar",
+     "name": "Saswad–Purandar Highway Corridor Touchpoint",
+     "corridor": "South-East Pune Growth Corridor",
+     "eta": "Upcoming Expansion · VIP Pre-Booking Open",
+     "highlights": "Extending Fatima Nagar & Manjri coverage for Arena, Commercial Super Carry/Eeco & rural finance.",
+     "x": 70,
+     "y": 68
+    }
    ]
   },
   "linkedinEmployerBrand": {
@@ -926,17 +1270,75 @@ const FACTS_DATA = {
    "tagline": "Pune & Maval’s Premier Automotive Dealership Group Since 1998 · 2,400+ Strong Team · 15 Showrooms & Workshops · 10,000+ Google Reviews (4.6★)",
    "aboutCopy": "Founded with a group heritage dating back to 1988, Sehgal Autoriders Pvt. Ltd. is Pune, PCMC, Maval and Bhor’s most trusted multi-brand automotive dealership group. Across 15 state-of-the-art showrooms, workshops and bodyshops representing Maruti Suzuki (Arena, NEXA, True Value, Commercial, Driving School) and Hero MotoCorp (including Hero Premia & VIDA EV), our 2,400+ professionals deliver over 3,815+ new cars and 1,00,000+ workshop & two-wheeler experiences annually. Rated 4.6★ across 10,000+ Google Maps reviews (with 3,968+ reviews at Bavdhan Arena alone), we invest in OEM-certified training academies, transparent incentives, 'Stars of Sehgal' monthly customer-review awards, and direct leadership mentorship.",
    "starsOfSehgal": [
-    { "name": "Vikram S", "role": "Relationship Executive · Bavdhan Arena", "recognition": "Praised by Local Guide Ashutosh Nerlekar (5★): 'Vikram S was good. Explained everything patiently... highly recommended.'" },
-    { "name": "Rohan", "role": "Customer Experience Executive · Bavdhan Arena", "recognition": "Praised by Priyanka Trivedi (5★): 'Excellent service co operative executive. thank u so much Rohan sir.'" },
-    { "name": "Swapnil Gunjal, Amruta Magdum, Satish Mane & Yogesh Patil", "role": "Workshop & Customer Care Leadership (AWM · CCM · WM · GM Service)", "recognition": "Leading 2,83,000+ Maruti Suzuki workshop visits and 4.6★ service satisfaction under CEO Service Ravi Pimperkar." },
-    { "name": "Manish Takwale, Sarika Tupere, Sachin Kumbhar & Vivek Raut", "role": "Insurance (#1 Bajaj Allianz) & Finance (#1 HDFC / SBI) Leadership", "recognition": "Powering 15,047+ Maruti policies (43.2% Bajaj Allianz new-car share) and #1 HDFC Bank retail & corporate leasing." }
+    {
+     "name": "Vikram S",
+     "role": "Relationship Executive · Bavdhan Arena",
+     "recognition": "Praised by Local Guide Ashutosh Nerlekar (5★): 'Vikram S was good. Explained everything patiently... highly recommended.'"
+    },
+    {
+     "name": "Rohan",
+     "role": "Customer Experience Executive · Bavdhan Arena",
+     "recognition": "Praised by Priyanka Trivedi (5★): 'Excellent service co operative executive. thank u so much Rohan sir.'"
+    },
+    {
+     "name": "Swapnil Gunjal, Amruta Magdum, Satish Mane & Yogesh Patil",
+     "role": "Workshop & Customer Care Leadership (AWM · CCM · WM · GM Service)",
+     "recognition": "Leading 2,83,000+ Maruti Suzuki workshop visits and 4.6★ service satisfaction under CEO Service Ravi Pimperkar."
+    },
+    {
+     "name": "Manish Takwale, Sarika Tupere, Sachin Kumbhar & Vivek Raut",
+     "role": "Insurance (#1 Bajaj Allianz) & Finance (#1 HDFC / SBI) Leadership",
+     "recognition": "Powering 15,047+ Maruti policies (43.2% Bajaj Allianz new-car share) and #1 HDFC Bank retail & corporate leasing."
+    }
    ],
    "openRoles": [
-    { "title": "Relationship Manager / Senior Sales Executive (Arena · NEXA · Commercial)", "locations": "Bavdhan, Law College Rd, Fatima Nagar, Manjri, Lonavala, Khed Shivapur, Bhor", "perks": "Industry-best retail + finance + insurance incentives · OEM certification" },
-    { "title": "Service Advisor, Works Manager & Cashless Bodyshop Estimator", "locations": "Bavdhan, Lonavala, Manjri, Bhor, Kamshet, Khed Shivapur", "perks": "High workshop throughput (2.83L+ job cards) · Bajaj Allianz & MI cashless corridor" },
-    { "title": "MSIL & Hero MotoCorp Certified Master Technician & EV Specialist (e VITARA / VIDA)", "locations": "All 7 Maruti Suzuki & 2 Hero Workshops", "perks": "OEM Academy training · High-voltage EV & S-CNG diagnostic certification" },
-    { "title": "Motor Insurance Renewal & Retail Car Finance Executive (Bajaj Allianz / HDFC / SBI)", "locations": "Law College Rd, Bavdhan, Fatima Nagar, Manjri", "perks": "97.1% own-renewal retention corridor · Structured performance rewards" },
-    { "title": "Digital Marketing, Hyperlocal Portal & Video Content Specialist", "locations": "Central Digital Desk — Law College Rd & Bavdhan", "perks": "Manage unified social studio, 8 Hyperlocal portals & daily delivery reels" }
+    {
+     "title": "Relationship Manager / Senior Sales Executive (Arena · NEXA · Commercial)",
+     "locations": "Bavdhan, Law College Rd, Fatima Nagar, Manjri, Lonavala, Khed Shivapur, Bhor",
+     "perks": "Industry-best retail + finance + insurance incentives · OEM certification"
+    },
+    {
+     "title": "Service Advisor, Works Manager & Cashless Bodyshop Estimator",
+     "locations": "Bavdhan, Lonavala, Manjri, Bhor, Kamshet, Khed Shivapur",
+     "perks": "High workshop throughput (2.83L+ job cards) · Bajaj Allianz & MI cashless corridor"
+    },
+    {
+     "title": "MSIL & Hero MotoCorp Certified Master Technician & EV Specialist (e VITARA / VIDA)",
+     "locations": "All 7 Maruti Suzuki & 2 Hero Workshops",
+     "perks": "OEM Academy training · High-voltage EV & S-CNG diagnostic certification"
+    },
+    {
+     "title": "Motor Insurance Renewal & Retail Car Finance Executive (Bajaj Allianz / HDFC / SBI)",
+     "locations": "Law College Rd, Bavdhan, Fatima Nagar, Manjri",
+     "perks": "97.1% own-renewal retention corridor · Structured performance rewards"
+    },
+    {
+     "title": "Digital Marketing, Hyperlocal Portal & Video Content Specialist",
+     "locations": "Central Digital Desk — Law College Rd & Bavdhan",
+     "perks": "Manage unified social studio, 8 Hyperlocal portals & daily delivery reels"
+    }
+   ],
+   "officialWebsite": "https://sehgalautoriders.com/",
+   "industry": "Automotive / Retail Motor Vehicles (Maruti Suzuki & Hero MotoCorp Authorised Dealership Group)",
+   "companySize": "1,001–5,000 employees (2,400+ active team across 15 Pune, PCMC, Maval & Bhor locations)",
+   "headquarters": "Plot No. 82/2, Law College Road, Erandwane & No. 51, Mumbai-Pune Bypass Road, Bavdhan, Pune 411004",
+   "showcasePages": [
+    {
+     "name": "Sehgal Autoriders — Maruti Suzuki ARENA & True Value",
+     "focus": "Bavdhan 3S Flagship (3,968+ Reviews · 4.6★), Law College Rd, Lonavala, Kamshet, Khed Shivapur, Bhor & True Value Exchange"
+    },
+    {
+     "name": "Sehgal Autoriders — NEXA, e VITARA & Corporate Leasing",
+     "focus": "Fatima Nagar & Lonavala East NEXA Flagships, Manjri Hub, Grand Vitara Strong Hybrid & e VITARA Electric"
+    },
+    {
+     "name": "Sehgal Autoriders — Hero MotoCorp, Hero Premia & VIDA EV",
+     "focus": "Chinchwad MIDC (10307), Hero Premia (17057), PCMC SSP (23490) & Chakan (61299) — 1.01 Lakh+ Riders"
+    },
+    {
+     "name": "Sehgal Autoriders — #1 Bajaj Allianz Insurance, #1 HDFC Finance & 7 Service Hubs",
+     "focus": "15,047+ Maruti & 5,652+ Hero policies (43.2% Bajaj Allianz New-Car Share) & 2.83 Lakh+ Workshop Job Cards"
+    }
    ]
   },
   "hyperlocalPortals": [
@@ -1012,6 +1414,27 @@ const FACTS_DATA = {
     "phone": "08071649360",
     "webId": "1598"
    }
+  ],
+  "officialDomain": "https://sehgalautoriders.com/",
+  "enterpriseApps": [
+   {
+    "name": "Official Corporate Website & Digital Hub",
+    "domain": "sehgalautoriders.com",
+    "url": "https://sehgalautoriders.com/",
+    "role": "Maruti Suzuki (Arena · NEXA · Commercial · True Value · Service) & Hero MotoCorp Flagship Website, 3D Showroom, Google Earth 3D & W2 Win-Back Hub"
+   },
+   {
+    "name": "Sehgal Hero Enterprise App (Android · iPhone · Windows · Web)",
+    "domain": "app.sehgalautoriders.com",
+    "url": "https://app.sehgalautoriders.com/",
+    "role": "Hero MotoCorp Sales, Workshop Holdup, SMR & PSF Calling, 3-Segment Insurance Renewal CRM & Parts Portal"
+   },
+   {
+    "name": "Sehgal Maruti Enterprise App (Golden Stack · 114 Modules)",
+    "domain": "maruti.sehgalautoriders.com/app",
+    "url": "https://maruti.sehgalautoriders.com/app/",
+    "role": "Maruti Suzuki Arena, NEXA & Commercial Operations, SMR/PSF/Insurance Calling, All-India HR & Parts Finder"
+   }
   ]
  },
  "csr": {},
@@ -1020,7 +1443,7 @@ const FACTS_DATA = {
   "subheadline": "Sent automatically with every W2 Gate Entry & Workshop Reception email at Sehgal Autoriders — now available online with Hero MotoCorp Two-Wheeler, Scooter & Electric Vehicle (e VITARA & VIDA) safety guidelines as part of our Corporate Social Responsibility.",
   "w2MailInfo": {
    "subjectExample": "Greetings From Maruti Suzuki - Sehgal Autoriders Pvt Ltd - <RegNo> - <Model>",
-   "sender": "sehgalautoriders2011@gmail.com",
+   "sender": "ceoservice@sehgalautoriders.com",
    "trigger": "Automated on every incoming vehicle Gate Entry & Reception Entry across Sehgal Autoriders workshops",
    "feedbackFormUrl": "https://forms.gle/TXwLzt3U5G2y5E659"
   },
@@ -1260,4 +1683,620 @@ const FACTS_DATA = {
    ]
   }
  }
+};
+
+window.SEHGAL_W2_INTERCEPT = {
+  "generatedAt": "07-11-2026",
+  "workbookFile": "assets/reports/Sehgal Customer Review and W2 Win Back Intelligence Nov 2026.xlsx",
+  "kpis": {
+    "totalW2GateEntries": 22299,
+    "bavdhanW2GateEntries": 15917,
+    "uniqueGateVehicles": 15339,
+    "totalW2ReceptionEntries": 3954,
+    "totalW2Complaints": 5316,
+    "totalW2PudAndPdi": 1462,
+    "totalServiceToBodyshopLeads": 783,
+    "totalWhatsappLeads": 1730,
+    "totalDissatisfiedCrossMatched": 3153,
+    "dissatisfiedMovedToCompetitor": 612,
+    "totalSpineCompetitorDefections": 22810,
+    "dueVsDoneOtherDealerNov2026": 6974,
+    "bodyshopOnePanelFreeTargets": 500
+  },
+  "sampleWinBackTargets": [
+    {
+      "Source Channel": "Maruti DExC PSF Complaint (Oct-Nov 2026)",
+      "Branch Code": "SEHGAL AUTORIDERS PVT. LTD.",
+      "Customer Name": "PRAGATI TOURS AND TRAVELS",
+      "Mobile Number": "9766677413",
+      "Registration Number": "MH12YQ3260",
+      "Model": "NEW ERTIGA",
+      "Department": "Periodic Service",
+      "Rating or Disposition": "Call Connected",
+      "Customer Voice / Feedback": "Service / Billing / Quality Follow-up Required",
+      "Sehgal Workshop Visits": 10,
+      "Sehgal Bodyshop Visits": 0,
+      "W2 Gate Entries": 6,
+      "W2 Reception Entries": 0,
+      "Last Sehgal Visit Date": "27-Sep-2026",
+      "Months Since Last Use": 2,
+      "Insurance Partner": "Maruti Insurance / Bajaj Allianz",
+      "Retention Status": "Moved to Competitor Dealer",
+      "Competitor Dealer Code": "Competitor W2 Dealer (Due vs Done)",
+      "Competitor Visit Date": "",
+      "Recommended Win-Back Offer": "20% Service Labour Waiver + Complimentary Genuine Maruti Accessories Gift + Free Pick-Up and Drop"
+    },
+    {
+      "Source Channel": "Maruti DExC PSF Complaint (Oct-Nov 2026)",
+      "Branch Code": "SEHGAL AUTORIDERS PVT. LTD.",
+      "Customer Name": "EKNATH DEVKAR",
+      "Mobile Number": "9765414950",
+      "Registration Number": "MH14KW8020",
+      "Model": "NEW ERTIGA",
+      "Department": "Periodic Service",
+      "Rating or Disposition": "Call Connected",
+      "Customer Voice / Feedback": "Service / Billing / Quality Follow-up Required",
+      "Sehgal Workshop Visits": 8,
+      "Sehgal Bodyshop Visits": 0,
+      "W2 Gate Entries": 0,
+      "W2 Reception Entries": 0,
+      "Last Sehgal Visit Date": "22-Sep-2026",
+      "Months Since Last Use": 2,
+      "Insurance Partner": "Maruti Insurance / Bajaj Allianz",
+      "Retention Status": "Moved to Competitor Dealer",
+      "Competitor Dealer Code": "Competitor W2 Dealer (Due vs Done)",
+      "Competitor Visit Date": "",
+      "Recommended Win-Back Offer": "20% Service Labour Waiver + Complimentary Genuine Maruti Accessories Gift + Free Pick-Up and Drop"
+    },
+    {
+      "Source Channel": "Maruti DExC PSF Complaint (Oct-Nov 2026)",
+      "Branch Code": "SEHGAL AUTORIDERS PVT. LTD.",
+      "Customer Name": "MAULI TOURS AND TRAVELS",
+      "Mobile Number": "",
+      "Registration Number": "MH12YQ7525",
+      "Model": "Dazzling New Dzire",
+      "Department": "Periodic Service",
+      "Rating or Disposition": "Call Connected",
+      "Customer Voice / Feedback": "Service / Billing / Quality Follow-up Required",
+      "Sehgal Workshop Visits": 4,
+      "Sehgal Bodyshop Visits": 0,
+      "W2 Gate Entries": 0,
+      "W2 Reception Entries": 0,
+      "Last Sehgal Visit Date": "24-Sep-2026",
+      "Months Since Last Use": 1,
+      "Insurance Partner": "Maruti Insurance / Bajaj Allianz",
+      "Retention Status": "Moved to Competitor Dealer",
+      "Competitor Dealer Code": "1901-2",
+      "Competitor Visit Date": "2026-07-24",
+      "Recommended Win-Back Offer": "20% Service Labour Waiver + Complimentary Genuine Maruti Accessories Gift + Free Pick-Up and Drop"
+    },
+    {
+      "Source Channel": "Maruti DExC PSF Complaint (Oct-Nov 2026)",
+      "Branch Code": "SEHGAL AUTORIDERS PVT. LTD.",
+      "Customer Name": "MAHENDR A UTTAM ATKARI",
+      "Mobile Number": "9421887400",
+      "Registration Number": "MH12TD8135",
+      "Model": "WagonR",
+      "Department": "Periodic Service",
+      "Rating or Disposition": "Call Connected",
+      "Customer Voice / Feedback": "Service / Billing / Quality Follow-up Required",
+      "Sehgal Workshop Visits": 17,
+      "Sehgal Bodyshop Visits": 0,
+      "W2 Gate Entries": 1,
+      "W2 Reception Entries": 0,
+      "Last Sehgal Visit Date": "01-Oct-2026",
+      "Months Since Last Use": 1,
+      "Insurance Partner": "Maruti Insurance / Bajaj Allianz",
+      "Retention Status": "Moved to Competitor Dealer",
+      "Competitor Dealer Code": "Competitor W2 Dealer (Due vs Done)",
+      "Competitor Visit Date": "",
+      "Recommended Win-Back Offer": "20% Service Labour Waiver + Complimentary Genuine Maruti Accessories Gift + Free Pick-Up and Drop"
+    },
+    {
+      "Source Channel": "Maruti DExC PSF Complaint (Oct-Nov 2026)",
+      "Branch Code": "SEHGAL AUTORIDERS PVT. LTD.",
+      "Customer Name": "ANJALI TOURS AND TRAVELS",
+      "Mobile Number": "9763091848",
+      "Registration Number": "MH12WX5588",
+      "Model": "DZIRE",
+      "Department": "Bodyshop",
+      "Rating or Disposition": "Call Connected",
+      "Customer Voice / Feedback": "Service / Billing / Quality Follow-up Required",
+      "Sehgal Workshop Visits": 17,
+      "Sehgal Bodyshop Visits": 0,
+      "W2 Gate Entries": 3,
+      "W2 Reception Entries": 0,
+      "Last Sehgal Visit Date": "27-Sep-2026",
+      "Months Since Last Use": 1,
+      "Insurance Partner": "nan",
+      "Retention Status": "Moved to Competitor Dealer",
+      "Competitor Dealer Code": "Competitor W2 Dealer (Due vs Done)",
+      "Competitor Visit Date": "",
+      "Recommended Win-Back Offer": "1 Panel Free Dent and Paint at Sehgal Authorised Bodyshop + Priority Bajaj Allianz Cashless Claim"
+    },
+    {
+      "Source Channel": "Maruti DExC PSF Complaint (Oct-Nov 2026)",
+      "Branch Code": "SEHGAL AUTORIDERS PVT. LTD.",
+      "Customer Name": "SHIV SWAMI TOURS AND TRAVELS",
+      "Mobile Number": "",
+      "Registration Number": "MH12YQ7851",
+      "Model": "NEW ERTIGA",
+      "Department": "Periodic Service",
+      "Rating or Disposition": "Call Connected",
+      "Customer Voice / Feedback": "Service / Billing / Quality Follow-up Required",
+      "Sehgal Workshop Visits": 8,
+      "Sehgal Bodyshop Visits": 0,
+      "W2 Gate Entries": 2,
+      "W2 Reception Entries": 0,
+      "Last Sehgal Visit Date": "17-Sep-2026",
+      "Months Since Last Use": 2,
+      "Insurance Partner": "Maruti Insurance / Bajaj Allianz",
+      "Retention Status": "Moved to Competitor Dealer",
+      "Competitor Dealer Code": "Competitor W2 Dealer (Due vs Done)",
+      "Competitor Visit Date": "",
+      "Recommended Win-Back Offer": "20% Service Labour Waiver + Complimentary Genuine Maruti Accessories Gift + Free Pick-Up and Drop"
+    },
+    {
+      "Source Channel": "Maruti DExC PSF Complaint (Oct-Nov 2026)",
+      "Branch Code": "SEHGAL AUTORIDERS PVT. LTD.",
+      "Customer Name": "CHAKRADHAR RANGNATH ADKAR",
+      "Mobile Number": "",
+      "Registration Number": "MH14MQ4215",
+      "Model": "NEW BREZZA",
+      "Department": "Periodic Service",
+      "Rating or Disposition": "Call Connected",
+      "Customer Voice / Feedback": "Service / Billing / Quality Follow-up Required",
+      "Sehgal Workshop Visits": 3,
+      "Sehgal Bodyshop Visits": 0,
+      "W2 Gate Entries": 0,
+      "W2 Reception Entries": 0,
+      "Last Sehgal Visit Date": "28-Sep-2026",
+      "Months Since Last Use": 2,
+      "Insurance Partner": "Maruti Insurance / Bajaj Allianz",
+      "Retention Status": "Moved to Competitor Dealer",
+      "Competitor Dealer Code": "1901-1",
+      "Competitor Visit Date": "2025-10-23",
+      "Recommended Win-Back Offer": "20% Service Labour Waiver + Complimentary Genuine Maruti Accessories Gift + Free Pick-Up and Drop"
+    },
+    {
+      "Source Channel": "Maruti DExC PSF Complaint (Oct-Nov 2026)",
+      "Branch Code": "SEHGAL AUTORIDERS PVT. LTD.",
+      "Customer Name": "VISHRAM VINAYAKRAO PALNITKAR",
+      "Mobile Number": "9665020111",
+      "Registration Number": "MH12TN6371",
+      "Model": "BALENO",
+      "Department": "Bodyshop",
+      "Rating or Disposition": "Call Connected",
+      "Customer Voice / Feedback": "Service / Billing / Quality Follow-up Required",
+      "Sehgal Workshop Visits": 7,
+      "Sehgal Bodyshop Visits": 0,
+      "W2 Gate Entries": 0,
+      "W2 Reception Entries": 0,
+      "Last Sehgal Visit Date": "28-Sep-2026",
+      "Months Since Last Use": 2,
+      "Insurance Partner": "Maruti Insurance / Bajaj Allianz",
+      "Retention Status": "Moved to Competitor Dealer",
+      "Competitor Dealer Code": "Competitor W2 Dealer (Due vs Done)",
+      "Competitor Visit Date": "",
+      "Recommended Win-Back Offer": "1 Panel Free Dent and Paint at Sehgal Authorised Bodyshop + Priority Bajaj Allianz Cashless Claim"
+    },
+    {
+      "Source Channel": "Maruti DExC PSF Complaint (Oct-Nov 2026)",
+      "Branch Code": "SEHGAL AUTORIDERS PVT. LTD.",
+      "Customer Name": "AVISHKAR TOURS AND TRAVELS",
+      "Mobile Number": "8007411557",
+      "Registration Number": "MH12YQ5260",
+      "Model": "NEW ERTIGA",
+      "Department": "Periodic Service",
+      "Rating or Disposition": "Call Connected",
+      "Customer Voice / Feedback": "Service / Billing / Quality Follow-up Required",
+      "Sehgal Workshop Visits": 15,
+      "Sehgal Bodyshop Visits": 0,
+      "W2 Gate Entries": 8,
+      "W2 Reception Entries": 0,
+      "Last Sehgal Visit Date": "28-Sep-2026",
+      "Months Since Last Use": 1,
+      "Insurance Partner": "Maruti Insurance / Bajaj Allianz",
+      "Retention Status": "Moved to Competitor Dealer",
+      "Competitor Dealer Code": "Competitor W2 Dealer (Due vs Done)",
+      "Competitor Visit Date": "",
+      "Recommended Win-Back Offer": "20% Service Labour Waiver + Complimentary Genuine Maruti Accessories Gift + Free Pick-Up and Drop"
+    },
+    {
+      "Source Channel": "Maruti DExC PSF Complaint (Oct-Nov 2026)",
+      "Branch Code": "SEHGAL AUTORIDERS PVT. LTD.",
+      "Customer Name": "GAIKWAD TOURS AND TRAVELS",
+      "Mobile Number": "",
+      "Registration Number": "MH12ZU1304",
+      "Model": "Dazzling New Dzire",
+      "Department": "Periodic Service",
+      "Rating or Disposition": "Call Connected",
+      "Customer Voice / Feedback": "Service / Billing / Quality Follow-up Required",
+      "Sehgal Workshop Visits": 5,
+      "Sehgal Bodyshop Visits": 0,
+      "W2 Gate Entries": 0,
+      "W2 Reception Entries": 0,
+      "Last Sehgal Visit Date": "03-Oct-2026",
+      "Months Since Last Use": 1,
+      "Insurance Partner": "Maruti Insurance / Bajaj Allianz",
+      "Retention Status": "Moved to Competitor Dealer",
+      "Competitor Dealer Code": "Competitor W2 Dealer (Due vs Done)",
+      "Competitor Visit Date": "",
+      "Recommended Win-Back Offer": "20% Service Labour Waiver + Complimentary Genuine Maruti Accessories Gift + Free Pick-Up and Drop"
+    },
+    {
+      "Source Channel": "Maruti DExC PSF Complaint (Oct-Nov 2026)",
+      "Branch Code": "SEHGAL AUTORIDERS PVT. LTD.",
+      "Customer Name": "SAURABH DILIP JAHAGIRDAR",
+      "Mobile Number": "9420179917",
+      "Registration Number": "MH12SQ3843",
+      "Model": "WagonR",
+      "Department": "Periodic Service",
+      "Rating or Disposition": "Call Connected",
+      "Customer Voice / Feedback": "Service / Billing / Quality Follow-up Required",
+      "Sehgal Workshop Visits": 11,
+      "Sehgal Bodyshop Visits": 0,
+      "W2 Gate Entries": 0,
+      "W2 Reception Entries": 0,
+      "Last Sehgal Visit Date": "05-Oct-2026",
+      "Months Since Last Use": 1,
+      "Insurance Partner": "Maruti Insurance / Bajaj Allianz",
+      "Retention Status": "Moved to Competitor Dealer",
+      "Competitor Dealer Code": "Competitor W2 Dealer (Due vs Done)",
+      "Competitor Visit Date": "",
+      "Recommended Win-Back Offer": "20% Service Labour Waiver + Complimentary Genuine Maruti Accessories Gift + Free Pick-Up and Drop"
+    },
+    {
+      "Source Channel": "Maruti DExC PSF Complaint (Oct-Nov 2026)",
+      "Branch Code": "SEHGAL AUTORIDERS PVT. LTD.",
+      "Customer Name": "SWARAJ TOURS AND TRAVELS",
+      "Mobile Number": "9082440781",
+      "Registration Number": "MH14NE0356",
+      "Model": "Dazzling New Dzire",
+      "Department": "Periodic Service",
+      "Rating or Disposition": "Call Connected",
+      "Customer Voice / Feedback": "Service / Billing / Quality Follow-up Required",
+      "Sehgal Workshop Visits": 4,
+      "Sehgal Bodyshop Visits": 0,
+      "W2 Gate Entries": 0,
+      "W2 Reception Entries": 0,
+      "Last Sehgal Visit Date": "05-Oct-2026",
+      "Months Since Last Use": 1,
+      "Insurance Partner": "Maruti Insurance / Bajaj Allianz",
+      "Retention Status": "Moved to Competitor Dealer",
+      "Competitor Dealer Code": "Competitor W2 Dealer (Due vs Done)",
+      "Competitor Visit Date": "",
+      "Recommended Win-Back Offer": "20% Service Labour Waiver + Complimentary Genuine Maruti Accessories Gift + Free Pick-Up and Drop"
+    }
+  ],
+  "sampleBodyshopTargets": [
+    {
+      "Source Channel": "Maruti DExC PSF Complaint (Oct-Nov 2026)",
+      "Branch Code": "SEHGAL AUTORIDERS PVT. LTD.",
+      "Customer Name": "SHREYANVI TOURS AND TRAVELS",
+      "Mobile Number": "",
+      "Registration Number": "MH12ZE1338",
+      "Model": "NEW ERTIGA",
+      "Department": "Bodyshop",
+      "Rating or Disposition": "Call Connected",
+      "Customer Voice / Feedback": "Service / Billing / Quality Follow-up Required",
+      "Sehgal Workshop Visits": 6,
+      "Sehgal Bodyshop Visits": 0,
+      "W2 Gate Entries": 3,
+      "W2 Reception Entries": 0,
+      "Last Sehgal Visit Date": "24-Sep-2026",
+      "Months Since Last Use": 1,
+      "Insurance Partner": "nan",
+      "Retention Status": "Active / Recoverable at Sehgal",
+      "Competitor Dealer Code": "nan",
+      "Competitor Visit Date": "",
+      "Recommended Win-Back Offer": "1 Panel Free Dent and Paint at Sehgal Authorised Bodyshop + Priority Bajaj Allianz Cashless Claim"
+    },
+    {
+      "Source Channel": "Maruti DExC PSF Complaint (Oct-Nov 2026)",
+      "Branch Code": "SEHGAL AUTORIDERS PVT. LTD.",
+      "Customer Name": "SURESH WAGHMODE",
+      "Mobile Number": "",
+      "Registration Number": "MH12SL4221",
+      "Model": "DZIRE",
+      "Department": "Bodyshop",
+      "Rating or Disposition": "Call Connected",
+      "Customer Voice / Feedback": "Service / Billing / Quality Follow-up Required",
+      "Sehgal Workshop Visits": 30,
+      "Sehgal Bodyshop Visits": 0,
+      "W2 Gate Entries": 1,
+      "W2 Reception Entries": 1,
+      "Last Sehgal Visit Date": "30-Sep-2026",
+      "Months Since Last Use": 2,
+      "Insurance Partner": "Maruti Insurance / Bajaj Allianz",
+      "Retention Status": "Active / Recoverable at Sehgal",
+      "Competitor Dealer Code": "7R01-1",
+      "Competitor Visit Date": "2022-09-29",
+      "Recommended Win-Back Offer": "1 Panel Free Dent and Paint at Sehgal Authorised Bodyshop + Priority Bajaj Allianz Cashless Claim"
+    },
+    {
+      "Source Channel": "Maruti DExC PSF Complaint (Oct-Nov 2026)",
+      "Branch Code": "SEHGAL AUTORIDERS PVT. LTD.",
+      "Customer Name": "ANJALI TOURS AND TRAVELS",
+      "Mobile Number": "9763091848",
+      "Registration Number": "MH12WX5588",
+      "Model": "DZIRE",
+      "Department": "Bodyshop",
+      "Rating or Disposition": "Call Connected",
+      "Customer Voice / Feedback": "Service / Billing / Quality Follow-up Required",
+      "Sehgal Workshop Visits": 17,
+      "Sehgal Bodyshop Visits": 0,
+      "W2 Gate Entries": 3,
+      "W2 Reception Entries": 0,
+      "Last Sehgal Visit Date": "27-Sep-2026",
+      "Months Since Last Use": 1,
+      "Insurance Partner": "nan",
+      "Retention Status": "Moved to Competitor Dealer",
+      "Competitor Dealer Code": "Competitor W2 Dealer (Due vs Done)",
+      "Competitor Visit Date": "",
+      "Recommended Win-Back Offer": "1 Panel Free Dent and Paint at Sehgal Authorised Bodyshop + Priority Bajaj Allianz Cashless Claim"
+    },
+    {
+      "Source Channel": "Maruti DExC PSF Complaint (Oct-Nov 2026)",
+      "Branch Code": "SEHGAL AUTORIDERS PVT. LTD.",
+      "Customer Name": "CHINTAMANI TOURS AND TRAVELS",
+      "Mobile Number": "",
+      "Registration Number": "MH12VT8931",
+      "Model": "DZIRE",
+      "Department": "Bodyshop",
+      "Rating or Disposition": "Call Connected",
+      "Customer Voice / Feedback": "Service / Billing / Quality Follow-up Required",
+      "Sehgal Workshop Visits": 1,
+      "Sehgal Bodyshop Visits": 0,
+      "W2 Gate Entries": 0,
+      "W2 Reception Entries": 0,
+      "Last Sehgal Visit Date": "23-Sep-2026",
+      "Months Since Last Use": 2,
+      "Insurance Partner": "Maruti Insurance / Bajaj Allianz",
+      "Retention Status": "Active / Recoverable at Sehgal",
+      "Competitor Dealer Code": "CSH2-S1",
+      "Competitor Visit Date": "2025-03-26",
+      "Recommended Win-Back Offer": "1 Panel Free Dent and Paint at Sehgal Authorised Bodyshop + Priority Bajaj Allianz Cashless Claim"
+    },
+    {
+      "Source Channel": "Maruti DExC PSF Complaint (Oct-Nov 2026)",
+      "Branch Code": "SEHGAL AUTORIDERS PVT. LTD.",
+      "Customer Name": "SHREYAS NARAYAN HENDRE",
+      "Mobile Number": "",
+      "Registration Number": "MH14MV8287",
+      "Model": "VICTORIS",
+      "Department": "Bodyshop",
+      "Rating or Disposition": "Call Connected",
+      "Customer Voice / Feedback": "Service / Billing / Quality Follow-up Required",
+      "Sehgal Workshop Visits": 2,
+      "Sehgal Bodyshop Visits": 0,
+      "W2 Gate Entries": 0,
+      "W2 Reception Entries": 0,
+      "Last Sehgal Visit Date": "28-Sep-2026",
+      "Months Since Last Use": 2,
+      "Insurance Partner": "Maruti Insurance / Bajaj Allianz",
+      "Retention Status": "Active / Recoverable at Sehgal",
+      "Competitor Dealer Code": "1987-1",
+      "Competitor Visit Date": "2026-04-16",
+      "Recommended Win-Back Offer": "1 Panel Free Dent and Paint at Sehgal Authorised Bodyshop + Priority Bajaj Allianz Cashless Claim"
+    },
+    {
+      "Source Channel": "Maruti DExC PSF Complaint (Oct-Nov 2026)",
+      "Branch Code": "SEHGAL AUTORIDERS PVT. LTD.",
+      "Customer Name": "VISHRAM VINAYAKRAO PALNITKAR",
+      "Mobile Number": "9665020111",
+      "Registration Number": "MH12TN6371",
+      "Model": "BALENO",
+      "Department": "Bodyshop",
+      "Rating or Disposition": "Call Connected",
+      "Customer Voice / Feedback": "Service / Billing / Quality Follow-up Required",
+      "Sehgal Workshop Visits": 7,
+      "Sehgal Bodyshop Visits": 0,
+      "W2 Gate Entries": 0,
+      "W2 Reception Entries": 0,
+      "Last Sehgal Visit Date": "28-Sep-2026",
+      "Months Since Last Use": 2,
+      "Insurance Partner": "Maruti Insurance / Bajaj Allianz",
+      "Retention Status": "Moved to Competitor Dealer",
+      "Competitor Dealer Code": "Competitor W2 Dealer (Due vs Done)",
+      "Competitor Visit Date": "",
+      "Recommended Win-Back Offer": "1 Panel Free Dent and Paint at Sehgal Authorised Bodyshop + Priority Bajaj Allianz Cashless Claim"
+    },
+    {
+      "Source Channel": "Maruti DExC PSF Complaint (Oct-Nov 2026)",
+      "Branch Code": "SEHGAL AUTORIDERS",
+      "Customer Name": "SUNIL DAMU RATHOD",
+      "Mobile Number": "",
+      "Registration Number": "MH12VZ0495",
+      "Model": "NEW SWIFT",
+      "Department": "Bodyshop",
+      "Rating or Disposition": "Call Connected",
+      "Customer Voice / Feedback": "Service / Billing / Quality Follow-up Required",
+      "Sehgal Workshop Visits": 2,
+      "Sehgal Bodyshop Visits": 0,
+      "W2 Gate Entries": 0,
+      "W2 Reception Entries": 0,
+      "Last Sehgal Visit Date": "30-Sep-2026",
+      "Months Since Last Use": 2,
+      "Insurance Partner": "Maruti Insurance / Bajaj Allianz",
+      "Retention Status": "Active / Recoverable at Sehgal",
+      "Competitor Dealer Code": "1912-S1",
+      "Competitor Visit Date": "2026-07-07",
+      "Recommended Win-Back Offer": "1 Panel Free Dent and Paint at Sehgal Authorised Bodyshop + Priority Bajaj Allianz Cashless Claim"
+    },
+    {
+      "Source Channel": "Maruti DExC PSF Complaint (Oct-Nov 2026)",
+      "Branch Code": "SEHGAL AUTORIDERS PVT. LTD.",
+      "Customer Name": "MUKUL KISHORE SINGH",
+      "Mobile Number": "",
+      "Registration Number": "CG10AP4426",
+      "Model": "CIAZ",
+      "Department": "Bodyshop",
+      "Rating or Disposition": "Call Connected",
+      "Customer Voice / Feedback": "Service / Billing / Quality Follow-up Required",
+      "Sehgal Workshop Visits": 4,
+      "Sehgal Bodyshop Visits": 0,
+      "W2 Gate Entries": 2,
+      "W2 Reception Entries": 0,
+      "Last Sehgal Visit Date": "02-Oct-2026",
+      "Months Since Last Use": 1,
+      "Insurance Partner": "Maruti Insurance / Bajaj Allianz",
+      "Retention Status": "Active / Recoverable at Sehgal",
+      "Competitor Dealer Code": "nan",
+      "Competitor Visit Date": "",
+      "Recommended Win-Back Offer": "1 Panel Free Dent and Paint at Sehgal Authorised Bodyshop + Priority Bajaj Allianz Cashless Claim"
+    }
+  ],
+  "sampleReviews": [
+    {
+      "Platform": "Google Maps (Bavdhan Arena 3S)",
+      "Branch": "1913-1 Bavdhan Arena",
+      "Customer Name": "Deepti Mangesh",
+      "Mobile Number": "Verified Local Guide (145 Reviews)",
+      "Registration Number": "MH12XX5083 (2nd Car Family Repeat)",
+      "Model": "Maruti Suzuki Brezza / Arena",
+      "Rating": 5,
+      "Sentiment": "Happy Advocate (2nd Car Repeat Buyer)",
+      "Review Summary": "Purchased our second car from Sehgal Autoriders; entire team was highly cooperative from booking to delivery.",
+      "Sehgal Visits": 6,
+      "W2 Gate and Reception Entries": 4,
+      "Retention Status": "Active Loyal Family Advocate",
+      "Recommended Action": "Stars of Sehgal VIP Fast-Track Bay + Repeat Family Referral Accessories Voucher"
+    },
+    {
+      "Platform": "Google Maps (Bavdhan Arena 3S)",
+      "Branch": "1913-1 Bavdhan Arena",
+      "Customer Name": "Shivraj Kamble",
+      "Mobile Number": "Verified Delivery Owner",
+      "Registration Number": "Verified Bavdhan Delivery",
+      "Model": "Maruti Suzuki Arena",
+      "Rating": 5,
+      "Sentiment": "Happy Advocate",
+      "Review Summary": "Very good service and helpful all staff. Smooth ceremonial key handover.",
+      "Sehgal Visits": 3,
+      "W2 Gate and Reception Entries": 2,
+      "Retention Status": "Active First-Year Owner",
+      "Recommended Action": "Complimentary First Free Inspection Reminder + W2 Road-Care PDF Pack"
+    },
+    {
+      "Platform": "Google Maps (Bavdhan Arena 3S)",
+      "Branch": "1913-1 Bavdhan Arena",
+      "Customer Name": "Aniket Poul",
+      "Mobile Number": "Verified Family Delivery",
+      "Registration Number": "Verified Bavdhan Delivery",
+      "Model": "Maruti Suzuki Arena",
+      "Rating": 5,
+      "Sentiment": "Happy Advocate",
+      "Review Summary": "Excellent service! Family delivery celebration at Bavdhan flagship.",
+      "Sehgal Visits": 2,
+      "W2 Gate and Reception Entries": 2,
+      "Retention Status": "Active First-Year Owner",
+      "Recommended Action": "Stars of Sehgal Welcome Kit + Priority Periodic Service Slot"
+    },
+    {
+      "Platform": "Google Maps (Bavdhan Arena 3S)",
+      "Branch": "1913-1 Bavdhan Arena",
+      "Customer Name": "Ashutosh Nerlekar",
+      "Mobile Number": "Local Guide",
+      "Registration Number": "Verified Showroom Visitor",
+      "Model": "Maruti Suzuki Arena",
+      "Rating": 5,
+      "Sentiment": "Happy Advocate (Praised Vikram S)",
+      "Review Summary": "Good showroom. Vikram S was good. Explained everything patiently, highly recommended.",
+      "Sehgal Visits": 2,
+      "W2 Gate and Reception Entries": 1,
+      "Retention Status": "Active Promoter",
+      "Recommended Action": "Star of Sehgal Award Credit to Vikram S + VIP Test Drive Follow-Up"
+    },
+    {
+      "Platform": "Google Maps (Bavdhan Arena 3S)",
+      "Branch": "1913-1 Bavdhan Arena",
+      "Customer Name": "Priyanka Trivedi",
+      "Mobile Number": "Verified Reviewer",
+      "Registration Number": "Verified Bavdhan Customer",
+      "Model": "Maruti Suzuki Arena",
+      "Rating": 5,
+      "Sentiment": "Happy Advocate (Praised Rohan)",
+      "Review Summary": "Excellent service, co-operative executive. Thank you so much Rohan sir.",
+      "Sehgal Visits": 3,
+      "W2 Gate and Reception Entries": 2,
+      "Retention Status": "Active Promoter",
+      "Recommended Action": "Star of Sehgal Award Credit to Rohan + Priority Service Privilege"
+    },
+    {
+      "Platform": "W2 Portal Google Review Capture",
+      "Branch": "1913-1 (nan)",
+      "Customer Name": "Ravi pimperkar",
+      "Mobile Number": "8888869529",
+      "Registration Number": "MH14JU4065",
+      "Model": "WAGONR",
+      "Rating": 5,
+      "Sentiment": "Happy Advocate",
+      "Review Summary": "Satisfaction: Excellent | NPS: 10 | SA: nan",
+      "Sehgal Visits": 5,
+      "W2 Gate and Reception Entries": 5,
+      "Retention Status": "Moved to Competitor Dealer",
+      "Recommended Action": "20% Service Labour Waiver + Free MSGA Gift to Win Back"
+    },
+    {
+      "Platform": "W2 Portal Google Review Capture",
+      "Branch": "BSV1-1 (kiran misal)",
+      "Customer Name": "kishor shedage",
+      "Mobile Number": "9168924105",
+      "Registration Number": "MH12UJ4105",
+      "Model": "NEW ERTIGA",
+      "Rating": 5,
+      "Sentiment": "Happy Advocate",
+      "Review Summary": "Satisfaction: Excellent | NPS: 10 | SA: kiran misal",
+      "Sehgal Visits": 19,
+      "W2 Gate and Reception Entries": 1,
+      "Retention Status": "Active Sehgal Customer",
+      "Recommended Action": "VIP Fast-Track Bay + Bajaj Allianz Renewal Quote"
+    },
+    {
+      "Platform": "W2 Portal Google Review Capture",
+      "Branch": "BSV1-1 (kiran misal)",
+      "Customer Name": "BHAGAVAN EKNATH BHANDE",
+      "Mobile Number": "9850465398",
+      "Registration Number": "MH12UF2522",
+      "Model": "WAGONR",
+      "Rating": 5,
+      "Sentiment": "Happy Advocate",
+      "Review Summary": "Satisfaction: Excellent | NPS: 10 | SA: kiran misal",
+      "Sehgal Visits": 25,
+      "W2 Gate and Reception Entries": 1,
+      "Retention Status": "Moved to Competitor Dealer",
+      "Recommended Action": "20% Service Labour Waiver + Free MSGA Gift to Win Back"
+    },
+    {
+      "Platform": "W2 Portal Google Review Capture",
+      "Branch": "1913-1 (Yogesh patil)",
+      "Customer Name": "Yohi",
+      "Mobile Number": "8888881351",
+      "Registration Number": "MH09FB7373",
+      "Model": "NEW SWIFT",
+      "Rating": 5,
+      "Sentiment": "Happy Advocate",
+      "Review Summary": "Satisfaction: Excellent | NPS: 10 | SA: Yogesh patil",
+      "Sehgal Visits": 42,
+      "W2 Gate and Reception Entries": 1,
+      "Retention Status": "Moved to Competitor Dealer",
+      "Recommended Action": "20% Service Labour Waiver + Free MSGA Gift to Win Back"
+    },
+    {
+      "Platform": "W2 Portal Google Review Capture",
+      "Branch": "1913-1 (YOGESH CHAVAN)",
+      "Customer Name": "Kavita pawar",
+      "Mobile Number": "9820663859",
+      "Registration Number": "MH12FG4577",
+      "Model": "Maruti Suzuki",
+      "Rating": 5,
+      "Sentiment": "Happy Advocate",
+      "Review Summary": "Satisfaction: Excellent | NPS: 10 | SA: YOGESH CHAVAN",
+      "Sehgal Visits": 1,
+      "W2 Gate and Reception Entries": 1,
+      "Retention Status": "Active Sehgal Customer",
+      "Recommended Action": "VIP Fast-Track Bay + Bajaj Allianz Renewal Quote"
+    }
+  ]
 };

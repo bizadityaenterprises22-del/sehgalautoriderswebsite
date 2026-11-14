@@ -332,6 +332,7 @@ function renderReviewAndVideoGrid(tagId) {
           <p class="muted">${esc(v.subtitle)}</p>
           <div class="actions">
             <a class="button small outline" href="${esc(v.src)}" download>Download Branded MP4 ↗</a>
+            ${v.youtubeUrl ? `<a class="button small teal" href="${esc(v.youtubeUrl)}" target="_blank" rel="noopener noreferrer">Source / YouTube ↗</a>` : ''}
           </div>
         </article>`).join('')}
       </div>
@@ -504,9 +505,11 @@ function linkedinEmployerBrandSection() {
         <img src="assets/social-kit/linkedin-cover-2256x382.png" alt="Sehgal Autoriders Pvt. Ltd. Official LinkedIn Employer Cover Banner" loading="lazy">
       </div>
       <div class="panel section-tight">
-        <p class="eyebrow">OFFICIAL LINKEDIN “ABOUT US” EMPLOYER POSITIONING (OWNED BY CEOSERVICE@SEHGALAUTORIDERS.COM)</p>
+        <p class="eyebrow">OFFICIAL LINKEDIN “ABOUT US” EMPLOYER POSITIONING (OWNED BY CEOSERVICE@SEHGALAUTORIDERS.COM · SEHGALAUTORIDERS.COM)</p>
         <h3>${esc(li.tagline || '')}</h3>
         <p class="muted">${esc(li.aboutCopy || '')}</p>
+        <p class="meta" style="margin-top:10px"><b>Website:</b> <a class="text-link" href="https://sehgalautoriders.com/" target="_blank" rel="noopener">https://sehgalautoriders.com/</a> · <b>Industry:</b> ${esc(li.industry || 'Automotive Dealership Group')} · <b>Company Size:</b> ${esc(li.companySize || '1,001–5,000 employees')} · <b>Master Careers Desk:</b> <a class="text-link" href="mailto:ceoservice@sehgalautoriders.com">ceoservice@sehgalautoriders.com</a></p>
+        ${(li.showcasePages || []).length ? `<div class="tiles four section-tight">${li.showcasePages.map(sp => `<article class="tile"><span class="partner-badge teal-badge">LINKEDIN SHOWCASE</span><h4>${esc(sp.name)}</h4><p class="muted">${esc(sp.focus)}</p></article>`).join('')}</div>` : ''}
       </div>
       <div class="section-tight">
         <h3>🌟 “Stars of Sehgal” — Customer Review Recognition Wall</h3>
@@ -630,6 +633,7 @@ function digitalEcosystemStrip() {
   const dp = FACTS.digitalPresence || {};
   const socials = dp.socialChannels || [];
   const portals = dp.hyperlocalPortals || [];
+  const eApps = dp.enterpriseApps || [];
   return `<section class="section wash" id="digital-ecosystem">
   <div class="container">
     <div class="section-heading">
@@ -666,17 +670,34 @@ function digitalEcosystemStrip() {
         </article>`).join('')}
       </div>
     </div>
+    ${eApps.length ? `<div class="panel section-tight">
+      <div class="section-heading">
+        <div><p class="eyebrow">UNIFIED SEHGALAUTORIDERS.COM ENTERPRISE DOMAIN ARCHITECTURE</p><h3>Official Website, Sehgal Hero App & Sehgal Maruti App on sehgalautoriders.com</h3></div>
+        <p class="muted">Every Sehgal Autoriders digital surface and staff/customer app is unified on our own domain <b>sehgalautoriders.com</b>.</p>
+      </div>
+      <div class="tiles three">
+        ${eApps.map(a => `<article class="tile">
+          <span class="partner-badge gold">${esc(a.domain)}</span>
+          <h4>${esc(a.name)}</h4>
+          <p class="muted">${esc(a.role)}</p>
+          <div class="actions"><a class="button small teal" href="${esc(a.url)}" target="_blank" rel="noopener noreferrer">Open ${esc(a.domain)} ↗</a></div>
+        </article>`).join('')}
+      </div>
+    </div>` : ''}
   </div>
 </section>`;
 }
 
 function digitalPresencePage() {
   return page(
-    'Sehgal Autoriders — Unified Online Presence, 10,000+ Google Reviews & Interactive Map',
-    'Centralized under ceoservice@sehgalautoriders.com & WhatsApp Business (+91 83800 38244) — featuring our 4.6★ (10,000+ Google Maps Reviews) Video Studio, Interactive Current & Upcoming Locations Map, Employer-of-Choice LinkedIn Hub, and 8 Maruti Suzuki Hyperlocal Portals.',
-    'UNIFIED DIGITAL IDENTITY · 4.6★ (10,000+ REVIEWS) · CAREERS & MAP'
+    'Sehgal Autoriders — Unified Online Presence, 3D Live Showroom, Google Earth 3D & W2 Win-Back Hub',
+    'Centralized under ceoservice@sehgalautoriders.com & WhatsApp Business (+91 83800 38244) — featuring our Interactive 3D Live Showroom (NVIDIA H100/A100 Decluttered Pipeline), Google Earth 3D Aerial Flyover, W2 Portal (22,299 Gate Entries) Review Cross-Intercept Win-Back Engine, 4.6★ (10,000+ Google Reviews) Video Studio, Employer-of-Choice LinkedIn Hub, and 8 Hyperlocal Portals.',
+    'UNIFIED DIGITAL IDENTITY · 3D LIVE SHOWROOM · H100/A100 · GOOGLE EARTH 3D · W2 WIN-BACK'
   ) +
     sehgalPowerStrip() +
+    sehgal3DLiveShowroomAndH100Section() +
+    googleEarth3DAerialAndMapsSection() +
+    w2ReviewCrossInterceptWinBackSection() +
     digitalEcosystemStrip() +
     googleReviewsAndVideosHub() +
     interactiveNetworkMapSection() +
@@ -732,7 +753,7 @@ function w2GateEntryPdfPackSection() {
         <p class="eyebrow">W2 PORTAL GATE ENTRY & RECEPTION KNOWLEDGE PACK · ENGLISH · मराठी · INSURANCE · EV</p>
         <h2>Official Customer Vehicle & Insurance Guidebooks (PDF Downloads)</h2>
       </div>
-      <p class="muted">Automatically sent with every incoming vehicle’s Gate Entry and Workshop Reception welcome mail from <b>sehgalautoriders2011@gmail.com</b> — now available for instant download anytime.</p>
+      <p class="muted">Automatically sent with every incoming vehicle’s Gate Entry and Workshop Reception welcome mail from <b>ceoservice@sehgalautoriders.com</b> — now available for instant download anytime.</p>
     </div>
     <div class="pdf-pack-grid">
       ${pdfs.map(p => `<article class="tile pdf-card">
@@ -1043,4 +1064,698 @@ document.addEventListener('click', e => {
 const EXTRA_ROUTES = {compare: comparePage, insurance: insurancePage, spares: sparesPage, safety: safetyPage, csr: csrPage, 'road-care': roadCarePage, guidebooks: roadCarePage, 'digital-presence': digitalPresencePage, digital: digitalPresencePage};
 document.addEventListener('input', e => { if (e.target.closest('#finance-form')) updateLenders(); if (e.target.closest('#ncb-form')) updateNcb(); });
 document.addEventListener('change', e => { if (e.target.closest('#finance-form')) updateLenders(); if (e.target.closest('#ncb-form')) updateNcb(); });
-const AFTER_RENDER = [updateLenders, updateNcb];
+
+/* === r7: Interactive 3D Live Showroom, NVIDIA H100/A100 Pipeline, Google Earth 3D Flyover & W2 Review Win-Back Hub === */
+let active3DSceneId = 'bavdhan-arena';
+let active3DLightMode = 'daylight';
+let active3DAutoOrbit = true;
+let active3DAudioOn = false;
+let active3DHotspotIdx = 0;
+let active3DYaw = 0.35;
+let active3DZoom = 1.0;
+let activeEarthBranchIdx = 0;
+let activeWinBackTab = 'defected';
+let sehgalAudioCtx = null;
+let sehgalAudioOsc = null;
+let sehgalAudioGain = null;
+
+const SEHGAL_3D_SCENES = {
+  'bavdhan-arena': {
+    id: 'bavdhan-arena',
+    badge: '3D SCENE 01 · BAVDHAN 3S FLAGSHIP (NH-48 BYPASS)',
+    name: 'Bavdhan Arena 3S Architectural Hall & Ceremonial Delivery Bay',
+    subtitle: '4.6 / 5.0 (3,968 Google Reviews) · 1,52,272+ Workshop Job Cards · 15,917 W2 Gate Entries · Spotless Glass-Curtain Showroom Stage',
+    studioRender: 'assets/studio-renders/bavdhan-arena-3s-architectural-studio.jpg',
+    vehicles: [
+      { name: 'Maruti Suzuki Brezza', tag: '#1 Compact SUV · 674+ Retails', img: 'assets/vehicles/brezza-catalogue.png', xOff: 0, zOff: 0.18, color: '#e1262c' },
+      { name: 'New-Gen Swift (Z-Series)', tag: '453+ Retails · Petrol & S-CNG', img: 'assets/vehicles/swift.webp', xOff: -0.58, zOff: -0.15, color: '#3b82f6' },
+      { name: 'Maruti Suzuki Ertiga S-CNG', tag: '806+ Retails · 7-Seater MPV', img: 'assets/vehicles/ertiga.png', xOff: 0.58, zOff: -0.15, color: '#10b981' }
+    ],
+    hotspots: [
+      { title: 'W2 Digital Gate & Reception Desk', desc: '15,917 Bavdhan W2 Gate Entries — automatically triggers English, Marathi & Insurance PDFs to customer email & WhatsApp.' },
+      { title: 'Ceremonial Key Handover & 5-Star Review Bay', desc: 'Neat, studio-lit delivery bay where families celebrate 1st & 2nd repeat car handovers (rated 4.6/5 across 3,968 reviews).' },
+      { title: '#1 Bajaj Allianz Cashless & HDFC/SBI Finance Lounge', desc: '43.2% new-car Bajaj Allianz insurance share + instant HDFC Bank (995 loans) & SBI (631 loans) sanction desk.' },
+      { title: 'Authorised Service & 1-Panel-Free Bodyshop Corridor', desc: 'Direct elevator/corridor to 1,52,272+ job-card workshop & cashless paint booth.' }
+    ]
+  },
+  'fatima-nagar-nexa': {
+    id: 'fatima-nagar-nexa',
+    badge: '3D SCENE 02 · FATIMA NAGAR & LONAVALA NEXA STUDIO',
+    name: 'NEXA Midnight Monochrome Studio & Hybrid/EV Lounge',
+    subtitle: '4.6 / 5.0 (2,310+ Combined NEXA Reviews) · Invicto Strong Hybrid, Grand Vitara, Born-Electric e VITARA & FRONX',
+    studioRender: 'assets/studio-renders/nexa-fatima-nagar-midnight-studio.jpg',
+    vehicles: [
+      { name: 'NEXA Grand Vitara Hybrid', tag: 'Strong Hybrid & ALLGRIP SUV', img: 'assets/vehicles/grand-vitara.webp', xOff: 0, zOff: 0.18, color: '#94a3b8' },
+      { name: 'NEXA Invicto Flagship MPV', tag: '2.0L Intelligent Electric Hybrid', img: 'assets/vehicles/invicto.webp', xOff: -0.58, zOff: -0.15, color: '#cbd5e1' },
+      { name: 'NEXA FRONX Turbo & S-CNG', tag: '567+ Retails · Coupe SUV', img: 'assets/vehicles/fronx.webp', xOff: 0.58, zOff: -0.15, color: '#60a5fa' }
+    ],
+    hotspots: [
+      { title: 'NEXA Monochrome Hospitality Concierge', desc: 'Dedicated Relationship Managers, acoustic lounge & digital tablet configurator at Fatima Nagar & Lonavala.' },
+      { title: 'Born-Electric e VITARA & Strong Hybrid Zone', desc: 'Interactive high-voltage battery & regenerative braking showcase with official Guide 13B charging tips.' },
+      { title: 'NEXA Ceremonial Delivery Turntable', desc: 'Spotlight-framed key handover stage featured in our official NEXA Baleno & Grand Vitara delivery reels.' },
+      { title: 'Corporate Leasing & HDFC/ICICI Priority Desk', desc: 'Tailored executive leasing and zero-depreciation cashless motor insurance.' }
+    ]
+  },
+  'manjri-commercial': {
+    id: 'manjri-commercial',
+    badge: '3D SCENE 03 · MANJRI COMMERCIAL, NEXA & FLEET HUB',
+    name: 'Manjri Solapur Highway — Commercial, Fleet & S-CNG Studio',
+    subtitle: '42,673+ Manjri Workshop Job Cards · 71.5% Factory S-CNG Share · Super Carry, Eeco Cargo & Tour Fleet Hub',
+    studioRender: 'assets/studio-renders/manjri-commercial-fleet-studio.jpg',
+    vehicles: [
+      { name: 'Maruti Suzuki Eeco & Cargo', tag: '374+ Retails · High-Payload S-CNG', img: 'assets/vehicles/eeco.png', xOff: 0, zOff: 0.18, color: '#f59e0b' },
+      { name: 'WagonR & Tour H3 S-CNG', tag: '1,028+ Retails · #1 Volume Leader', img: 'assets/vehicles/wagonr.png', xOff: -0.58, zOff: -0.15, color: '#38bdf8' },
+      { name: 'Ertiga & Tour M Fleet', tag: '806+ Retails · Intercity MPV', img: 'assets/vehicles/ertiga.png', xOff: 0.58, zOff: -0.15, color: '#10b981' }
+    ],
+    hotspots: [
+      { title: '71.5% Factory S-CNG Fleet Advisory Desk', desc: 'Complete TCO & ROI calculators for Pune/Solapur Highway logistics, staff transport and fleet operators.' },
+      { title: 'HDFC, SBI & Cholamandalam Commercial Finance Bay', desc: 'Multi-unit fleet sanctions and working-capital inventory support.' },
+      { title: 'Express Fleet Periodic Service & Bodyshop Bay', desc: '42,673+ job cards completed at Manjri with priority turnaround for commercial operators.' },
+      { title: 'Bajaj Allianz & PSU (New India) Fleet Insurance Desk', desc: 'Instant cashless fleet renewals and endorsement support.' }
+    ]
+  },
+  'precision-service': {
+    id: 'precision-service',
+    badge: '3D SCENE 04 · 9 AUTHORISED WORKSHOPS & 7 CASHLESS BODYSHOPS',
+    name: 'Spotless Precision Service & #1 Bajaj Allianz Cashless Bodyshop Bay',
+    subtitle: '2,83,912+ Maruti Suzuki Job Cards · 1,01,505+ Hero Riders · AI Decluttered Architectural Workshop View',
+    studioRender: 'assets/studio-renders/precision-service-bodyshop-studio.jpg',
+    vehicles: [
+      { name: 'Cashless Bodyshop & Paint Booth', tag: '1 Panel Free Win-Back Eligible', img: 'assets/vehicles/grand-vitara.webp', xOff: 0, zOff: 0.18, color: '#10b981' },
+      { name: 'Express Periodic Service Bay', tag: '20% Labour Waiver Win-Back', img: 'assets/vehicles/fronx.webp', xOff: -0.58, zOff: -0.15, color: '#3b82f6' },
+      { name: 'W2 Gate Entry & Road-Care Bay', tag: '22,299 W2 Gate Entries Tracked', img: 'assets/vehicles/swift.webp', xOff: 0.58, zOff: -0.15, color: '#f59e0b' }
+    ],
+    hotspots: [
+      { title: '1 Panel Free Dent & Paint Win-Back Booth', desc: 'Dedicated OEM temperature-controlled paint booth offering 1 Panel Free dent/paint to bring back bodyshop customers.' },
+      { title: '#1 Bajaj Allianz & Maruti Insurance Cashless Desk', desc: '15,047+ Maruti policies & 97.1% own-renewal retention with zero-hassle survey & cashless claim settlement.' },
+      { title: '20% Service Labour Waiver + Free MSGA Gift Counter', desc: 'Dedicated win-back desk for customers returning from competitor workshops.' },
+      { title: 'W2 Gate Entry & Anonymous Feedback Resolution Desk', desc: 'Direct line to Swapnil Gunjal (AWM), Amruta Magdum (CCM), Satish Mane (WM) & Yogesh Patil (GM Service).' }
+    ]
+  }
+};
+
+const SEHGAL_EARTH_BRANCHES = [
+  { id: 'bavdhan', name: '1. Bavdhan 3S Flagship (Arena + Workshop + Bodyshop + True Value)', coords: '18.5114847,73.7679774', query: 'Maruti+Suzuki+ARENA+Sehgal+Autoriders+Pune+Bavdhan', rating: '4.6★ (3,968 Reviews)', stats: '1,52,272+ Job Cards · 15,917 W2 Gate Entries', tilt: '65° 3D Tilt · Range 340m' },
+  { id: 'erandwane', name: '2. Law College Road, Erandwane (Corporate HQ + Arena + Driving School)', coords: '18.514240,73.829510', query: 'Sehgal+Autoriders+Law+College+Road+Erandwane+Pune', rating: '4.6★ (1,850+ Reviews)', stats: 'Corporate Headquarters · Urban Flagship', tilt: '65° 3D Tilt · Range 320m' },
+  { id: 'fatima-nagar', name: '3. Fatima Nagar NEXA Flagship & Driving School (Wanowrie)', coords: '18.503850,73.903420', query: 'NEXA+Sehgal+Autoriders+Fatima+Nagar+Pune', rating: '4.6★ (1,420+ Reviews)', stats: 'NEXA Midnight Studio · Invicto & Grand Vitara', tilt: '65° 3D Tilt · Range 320m' },
+  { id: 'manjri', name: '4. Manjri (Solapur Hwy) — NEXA, Commercial Fleet Hub & Workshop', coords: '18.496400,73.978100', query: 'Sehgal+Autoriders+Manjri+Pune', rating: '4.5★ (980+ Reviews)', stats: '42,673+ Job Cards · Super Carry & Eeco Hub', tilt: '64° 3D Tilt · Range 380m' },
+  { id: 'chinchwad-hero', name: '5. Chinchwad MIDC & PCMC — Hero 3S, Premia & VIDA EV (3 Outlets)', coords: '18.647200,73.792400', query: 'Sehgal+Autoriders+Hero+Chinchwad+MIDC+Pune', rating: '4.5★ (1,150+ Reviews)', stats: '1,01,505+ Hero Riders · VIDA EV Hub', tilt: '65° 3D Tilt · Range 360m' },
+  { id: 'chakan-hero', name: '6. Chakan (Nashik Hwy) — Hero MotoCorp 3S Showroom & Workshop', coords: '18.753400,73.858800', query: 'Sehgal+Autoriders+Hero+Chakan+Pune', rating: '4.5★ (720+ Reviews)', stats: 'Dealer Code 61299 · MIDC 2W Hub', tilt: '64° 3D Tilt · Range 380m' },
+  { id: 'kamshet', name: '7. Kamshet — Arena Showroom, Workshop & Bodyshop', coords: '18.756500,73.551200', query: 'Sehgal+Autoriders+Kamshet', rating: '4.5★ (380+ Reviews)', stats: '14,043+ Job Cards (CEA1-1)', tilt: '65° 3D Tilt · Range 380m' },
+  { id: 'lonavala', name: '8. Lonavala (Waksai) — Arena & NEXA Twin 3S Complex', coords: '18.758200,73.440800', query: 'Sehgal+Autoriders+Waksai+Lonavala', rating: '4.6★ (890+ Reviews)', stats: '48,653+ Combined Job Cards', tilt: '65° 3D Tilt · Range 420m' },
+  { id: 'khed-shivapur', name: '9. Khed Shivapur (NH-48 Satara Hwy) — Arena 3S Showroom & Workshop', coords: '18.338900,73.848200', query: 'Sehgal+Autoriders+Khed+Shivapur', rating: '4.6★ (520+ Reviews)', stats: '6,247+ Job Cards · 1,677 W2 Gate Entries', tilt: '65° 3D Tilt · Range 380m' },
+  { id: 'bhor', name: '10. Rambaug Bhor — Arena 3S Showroom, Workshop & Bodyshop', coords: '18.148600,73.844500', query: 'Sehgal+Autoriders+Rambaug+Bhor', rating: '4.6★ (490+ Reviews)', stats: '19,318+ Job Cards (BSV1-1)', tilt: '65° 3D Tilt · Range 400m' }
+];
+
+function toggleShowroomAudio() {
+  active3DAudioOn = !active3DAudioOn;
+  try {
+    if (active3DAudioOn) {
+      const AudioContextClass = window.AudioContext || window.webkitAudioContext;
+      if (!sehgalAudioCtx && AudioContextClass) {
+        sehgalAudioCtx = new AudioContextClass();
+      }
+      if (sehgalAudioCtx) {
+        if (sehgalAudioCtx.state === 'suspended') sehgalAudioCtx.resume();
+        sehgalAudioOsc = sehgalAudioCtx.createOscillator();
+        sehgalAudioGain = sehgalAudioCtx.createGain();
+        sehgalAudioOsc.type = 'sine';
+        sehgalAudioOsc.frequency.setValueAtTime(174, sehgalAudioCtx.currentTime); // Warm acoustic lounge chord root
+        sehgalAudioGain.gain.setValueAtTime(0.018, sehgalAudioCtx.currentTime);
+        sehgalAudioOsc.connect(sehgalAudioGain);
+        sehgalAudioGain.connect(sehgalAudioCtx.destination);
+        sehgalAudioOsc.start();
+      }
+    } else if (sehgalAudioOsc) {
+      sehgalAudioOsc.stop();
+      sehgalAudioOsc.disconnect();
+      sehgalAudioOsc = null;
+    }
+  } catch (e) {}
+  const btn = document.querySelector('#toggle-3d-audio-btn');
+  if (btn) {
+    btn.textContent = active3DAudioOn ? '🔊 Spatial Showroom Audio: ON' : '🔈 Spatial Showroom Audio: OFF';
+    btn.classList.toggle('active', active3DAudioOn);
+  }
+}
+
+function sehgal3DLiveShowroomAndH100Section() {
+  const sc = SEHGAL_3D_SCENES[active3DSceneId] || SEHGAL_3D_SCENES['bavdhan-arena'];
+  const hs = sc.hotspots[active3DHotspotIdx] || sc.hotspots[0];
+  return `<section class="section" id="sehgal-3d-showroom">
+    <div class="container">
+      <div class="section-heading">
+        <div>
+          <p class="eyebrow">3D LIVE ARCHITECTURAL SHOWROOM STAGE · NVIDIA HOPPER H100 & AMPERE A100 PIPELINE</p>
+          <h2>Interactive 3D Showroom Experience — Spotless, Studio-Lit & Clutter-Free.</h2>
+        </div>
+        <div class="actions">
+          <a class="button small teal" href="assets/earth/Sehgal_H100_A100_3D_Showroom_and_Earth_Pipeline.ipynb" download>Download H100/A100 3D Pipeline (.ipynb) ↗</a>
+          <a class="button small outline" href="https://wa.me/918380038244?text=Hello%20Sehgal%20Autoriders%2C%20I%20explored%20your%203D%20Live%20Showroom%20and%20would%20like%20to%20book%20a%20visit%20or%20test%20drive." target="_blank" rel="noopener noreferrer">Book VIP Showroom Visit ↗</a>
+        </div>
+      </div>
+
+      <div class="chips scene-3d-tabs" role="tablist" aria-label="3D Showroom Environments">
+        ${Object.values(SEHGAL_3D_SCENES).map(s => `<button type="button" class="chip ${active3DSceneId === s.id ? 'active' : ''}" data-3d-scene="${esc(s.id)}">${esc(s.name.split('—')[0].trim())}</button>`).join('')}
+      </div>
+
+      <div class="showroom-3d-stage-wrap" id="showroom-3d-stage-wrap">
+        <div class="showroom-3d-canvas-box">
+          <canvas id="sehgal-3d-canvas" width="1120" height="580" aria-label="Interactive 3D Sehgal Autoriders Showroom Stage"></canvas>
+          <div class="showroom-3d-hud-top">
+            <span class="partner-badge gold">${esc(sc.badge)}</span>
+            <span class="partner-badge teal-badge">H100 FP8 + A100 DECLUTTERED · ZERO MESSY FLOORS</span>
+          </div>
+          <div class="showroom-3d-controls">
+            <button type="button" class="ctrl-3d-btn" data-3d-action="orbit-left" title="Orbit Left">⟲ Orbit Left</button>
+            <button type="button" class="ctrl-3d-btn" data-3d-action="orbit-right" title="Orbit Right">⟳ Orbit Right</button>
+            <button type="button" class="ctrl-3d-btn ${active3DAutoOrbit ? 'active' : ''}" data-3d-action="toggle-orbit">${active3DAutoOrbit ? '⏸ Auto-Orbit: ON' : '▶ Auto-Orbit: OFF'}</button>
+            <button type="button" class="ctrl-3d-btn" data-3d-action="light-mode">💡 Lighting: ${esc(active3DLightMode.toUpperCase())}</button>
+            <button type="button" class="ctrl-3d-btn ${active3DAudioOn ? 'active' : ''}" id="toggle-3d-audio-btn" data-3d-action="toggle-audio">${active3DAudioOn ? '🔊 Spatial Showroom Audio: ON' : '🔈 Spatial Showroom Audio: OFF'}</button>
+          </div>
+        </div>
+
+        <div class="showroom-3d-sidebar">
+          <div class="panel">
+            <p class="eyebrow">ACTIVE 3D ARCHITECTURAL STAGE</p>
+            <h3 id="sc-3d-title">${esc(sc.name)}</h3>
+            <p class="muted" id="sc-3d-sub">${esc(sc.subtitle)}</p>
+            <img id="sc-3d-preview-img" src="${esc(sc.studioRender)}" alt="${esc(sc.name)}" class="studio-render-thumb" loading="lazy">
+          </div>
+          <div class="panel">
+            <p class="eyebrow">INTERACTIVE 3D SPATIAL HOTSPOTS (CLICK TO INSPECT)</p>
+            <div class="hotspot-3d-list" id="hotspot-3d-list">
+              ${sc.hotspots.map((h, idx) => `<button type="button" class="hotspot-3d-btn ${active3DHotspotIdx === idx ? 'active' : ''}" data-3d-hotspot="${idx}">
+                <b>0${idx + 1}. ${esc(h.title)}</b>
+                <small>${esc(h.desc)}</small>
+              </button>`).join('')}
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="panel section-tight">
+        <div class="section-heading">
+          <div>
+            <p class="eyebrow">HOW WE USE NVIDIA HOPPER H100 & AMPERE A100 GPUS + GOOGLE EARTH 3D</p>
+            <h3>Ultimate GPU Rendering Architecture for a Spotless, World-Class Dealership Digital Presence</h3>
+          </div>
+          <a class="button small outline" href="assets/earth/Sehgal_H100_A100_3D_Showroom_and_Earth_Pipeline.ipynb" download>Open Colab GPU Notebook ↗</a>
+        </div>
+        <div class="tiles four">
+          <article class="tile">
+            <span class="partner-badge gold">STAGE 01 · A100 80GB HBM2e</span>
+            <h4>AI Showroom Decluttering (SAM-2 + Flux Inpainting)</h4>
+            <p class="muted">Automatically strips out workshop floor stains, parked street traffic, scaffolding, and background clutter from raw showroom/delivery photos and videos so <b>only neat, spotless architectural glass and polished floors</b> appear online.</p>
+          </article>
+          <article class="tile">
+            <span class="partner-badge teal-badge">STAGE 02 · HOPPER H100 FP8</span>
+            <h4>3D Gaussian Splatting (gsplat & Splatfacto-Big)</h4>
+            <p class="muted">Uses H100 FP8 Tensor Cores & GLOMAP camera pose estimation to convert multi-angle showroom walkaround videos into real-time 60fps 3D Gaussian Splats with realistic specular car-paint and floor reflections.</p>
+          </article>
+          <article class="tile">
+            <span class="partner-badge teal-badge">STAGE 03 · GOOGLE EARTH 3D</span>
+            <h4>Photorealistic 3D Tiles & Aerial Flyover Fusion</h4>
+            <p class="muted">Combines our Google Earth & Google Maps 3D subscriptions (65° architectural camera tilt) with 3D corridor pins across all 15 live showrooms/workshops and 4 upcoming Pune/Maval expansion hubs.</p>
+          </article>
+          <article class="tile">
+            <span class="partner-badge gold">STAGE 04 · A100 / H100 AUDIO-VIDEO</span>
+            <h4>Real-ESRGAN 4K60 Video & Spatial Audio Mastering</h4>
+            <p class="muted">Upscales customer delivery reels (Deepti Mangesh, Shivraj Kamble, Aniket Poul & NEXA Baleno handovers) to crisp 4K60 with master vector watermarks and clean showroom acoustic ambience.</p>
+          </article>
+        </div>
+      </div>
+    </div>
+  </section>`;
+}
+
+let sehgal3DAnimFrame = null;
+const loaded3DVehicleImages = {};
+
+function init3DShowroomCanvas() {
+  const canvas = document.querySelector('#sehgal-3d-canvas');
+  if (!canvas) return;
+  const ctx = canvas.getContext('2d');
+  if (!ctx) return;
+
+  // Preload vehicle images for all scenes
+  Object.values(SEHGAL_3D_SCENES).forEach(sc => {
+    sc.vehicles.forEach(v => {
+      if (!loaded3DVehicleImages[v.img]) {
+        const im = new Image();
+        im.src = v.img;
+        loaded3DVehicleImages[v.img] = im;
+      }
+    });
+  });
+
+  let isDragging = false;
+  let lastX = 0;
+  canvas.onmousedown = e => { isDragging = true; lastX = e.clientX; active3DAutoOrbit = false; };
+  window.addEventListener('mouseup', () => { isDragging = false; });
+  canvas.onmousemove = e => {
+    if (!isDragging) return;
+    const dx = e.clientX - lastX;
+    lastX = e.clientX;
+    active3DYaw += dx * 0.008;
+  };
+
+  if (sehgal3DAnimFrame) cancelAnimationFrame(sehgal3DAnimFrame);
+
+  function renderFrame() {
+    if (!document.body.contains(canvas)) return;
+    const w = canvas.width;
+    const h = canvas.height;
+    const sc = SEHGAL_3D_SCENES[active3DSceneId] || SEHGAL_3D_SCENES['bavdhan-arena'];
+
+    if (active3DAutoOrbit) {
+      active3DYaw += 0.0045;
+    }
+
+    const horizon = Math.floor(h * 0.56);
+
+    // 1. Background sky/ceiling gradient by light mode
+    const skyGrad = ctx.createLinearGradient(0, 0, 0, horizon);
+    const flrGrad = ctx.createLinearGradient(0, horizon, 0, h);
+    let accentHex = '#e1262c';
+    if (active3DLightMode === 'midnight' || active3DSceneId === 'fatima-nagar-nexa') {
+      skyGrad.addColorStop(0, '#050811');
+      skyGrad.addColorStop(1, '#131d31');
+      flrGrad.addColorStop(0, '#182236');
+      flrGrad.addColorStop(1, '#070b14');
+      accentHex = '#38bdf8';
+    } else if (active3DLightMode === 'golden') {
+      skyGrad.addColorStop(0, '#161224');
+      skyGrad.addColorStop(1, '#3b2838');
+      flrGrad.addColorStop(0, '#2e2436');
+      flrGrad.addColorStop(1, '#0e0b16');
+      accentHex = '#eab308';
+    } else {
+      skyGrad.addColorStop(0, '#0b1930');
+      skyGrad.addColorStop(1, '#1b3b6b');
+      flrGrad.addColorStop(0, '#22334d');
+      flrGrad.addColorStop(1, '#0c1322');
+      accentHex = '#e1262c';
+    }
+
+    ctx.fillStyle = skyGrad;
+    ctx.fillRect(0, 0, w, horizon);
+    ctx.fillStyle = flrGrad;
+    ctx.fillRect(0, horizon, w, h - horizon);
+
+    // 2. Rotating 3D architectural glass curtain mullions & ceiling light beams
+    const numPillars = 12;
+    ctx.save();
+    for (let i = 0; i < numPillars; i++) {
+      const ang = (i / numPillars) * Math.PI * 2 + active3DYaw * 0.6;
+      const sx = w / 2 + Math.sin(ang) * (w * 0.46);
+      const depth = Math.cos(ang);
+      if (depth > -0.4) {
+        ctx.strokeStyle = `rgba(255,255,255,${0.06 + (depth + 1) * 0.05})`;
+        ctx.lineWidth = 2;
+        ctx.beginPath();
+        ctx.moveTo(sx, 28);
+        ctx.lineTo(sx, horizon);
+        ctx.stroke();
+      }
+    }
+
+    // 3. 3D Turntable Floor Rings & Perspective Radial Grid
+    const cx = w / 2;
+    const cy = horizon + Math.floor((h - horizon) * 0.46);
+    const rx = Math.floor(w * 0.39 * active3DZoom);
+    const ry = Math.floor((h - horizon) * 0.36 * active3DZoom);
+
+    for (let rFactor of [1.18, 1.0, 0.72, 0.42]) {
+      ctx.beginPath();
+      ctx.ellipse(cx, cy, rx * rFactor, ry * rFactor, 0, 0, Math.PI * 2);
+      ctx.strokeStyle = rFactor === 1.0 ? accentHex : 'rgba(255,255,255,0.12)';
+      ctx.lineWidth = rFactor === 1.0 ? 3 : 1.5;
+      ctx.stroke();
+    }
+
+    for (let i = 0; i < 16; i++) {
+      const a = (i / 16) * Math.PI * 2 + active3DYaw;
+      const x1 = cx + Math.cos(a) * (rx * 0.25);
+      const y1 = cy + Math.sin(a) * (ry * 0.25);
+      const x2 = cx + Math.cos(a) * (rx * 1.18);
+      const y2 = cy + Math.sin(a) * (ry * 1.18);
+      ctx.beginPath();
+      ctx.moveTo(x1, y1);
+      ctx.lineTo(x2, y2);
+      ctx.strokeStyle = 'rgba(255,255,255,0.09)';
+      ctx.lineWidth = 1;
+      ctx.stroke();
+    }
+
+    //Horizon laser line
+    ctx.strokeStyle = accentHex;
+    ctx.lineWidth = 2.5;
+    ctx.beginPath();
+    ctx.moveTo(0, horizon);
+    ctx.lineTo(w, horizon);
+    ctx.stroke();
+
+    // 4. Project & depth-sort 3D Vehicle Pods on the turntable
+    const projected = sc.vehicles.map((v, idx) => {
+      const baseAngle = idx * ((Math.PI * 2) / sc.vehicles.length) + active3DYaw;
+      const worldX = Math.sin(baseAngle) * 0.62;
+      const worldZ = Math.cos(baseAngle) * 0.62;
+      const scale = (0.78 + (worldZ + 0.65) * 0.34) * active3DZoom;
+      const screenX = cx + worldX * (w * 0.42);
+      const screenY = cy + worldZ * (ry * 0.72);
+      return { v, idx, worldZ, scale, screenX, screenY };
+    }).sort((a, b) => a.worldZ - b.worldZ);
+
+    projected.forEach(item => {
+      const { v, scale, screenX, screenY } = item;
+      const cardW = Math.floor(310 * scale);
+      const cardH = Math.floor(185 * scale);
+      const x = Math.floor(screenX - cardW / 2);
+      const y = Math.floor(screenY - cardH);
+
+      // Floor shadow glow
+      ctx.save();
+      ctx.beginPath();
+      ctx.ellipse(screenX, screenY + 6, cardW * 0.48, 16 * scale, 0, 0, Math.PI * 2);
+      ctx.fillStyle = 'rgba(0,0,0,0.55)';
+      ctx.fill();
+
+      // Framed glass showcase pod
+      ctx.fillStyle = 'rgba(12, 22, 40, 0.92)';
+      ctx.strokeStyle = v.color || accentHex;
+      ctx.lineWidth = 2.2;
+      ctx.beginPath();
+      if (ctx.roundRect) {
+        ctx.roundRect(x, y, cardW, cardH, 14);
+      } else {
+        ctx.rect(x, y, cardW, cardH);
+      }
+      ctx.fill();
+      ctx.stroke();
+
+      const im = loaded3DVehicleImages[v.img];
+      if (im && im.complete && im.naturalWidth > 0) {
+        const pad = 8;
+        const imgH = Math.floor(cardH - 48 * scale);
+        ctx.drawImage(im, x + pad, y + pad, cardW - pad * 2, imgH);
+      }
+
+      ctx.fillStyle = '#ffffff';
+      ctx.font = `bold ${Math.max(11, Math.floor(14 * scale))}px "Segoe UI", sans-serif`;
+      ctx.fillText(v.name, x + 12, y + cardH - Math.floor(22 * scale));
+
+      ctx.fillStyle = '#93c5fd';
+      ctx.font = `${Math.max(10, Math.floor(11.5 * scale))}px "Segoe UI", sans-serif`;
+      ctx.fillText(v.tag, x + 12, y + cardH - Math.floor(7 * scale));
+      ctx.restore();
+    });
+
+    // 5. Render Active 3D Hotspot Callout Banner at top-left of stage
+    const hs = sc.hotspots[active3DHotspotIdx] || sc.hotspots[0];
+    ctx.save();
+    ctx.fillStyle = 'rgba(9, 16, 30, 0.88)';
+    ctx.strokeStyle = 'rgba(238, 178, 46, 0.85)';
+    ctx.lineWidth = 1.5;
+    if (ctx.roundRect) {
+      ctx.beginPath();
+      ctx.roundRect(24, 58, 520, 68, 12);
+      ctx.fill();
+      ctx.stroke();
+    }
+    ctx.fillStyle = '#eeb22e';
+    ctx.font = 'bold 13px "Segoe UI", sans-serif';
+    ctx.fillText(`ACTIVE 3D HOTSPOT 0${active3DHotspotIdx + 1}: ${hs.title.toUpperCase()}`, 38, 80);
+    ctx.fillStyle = '#e2e8f0';
+    ctx.font = '12.5px "Segoe UI", sans-serif';
+    ctx.fillText(hs.desc.slice(0, 78) + (hs.desc.length > 78 ? '…' : ''), 38, 104);
+    ctx.restore();
+
+    sehgal3DAnimFrame = requestAnimationFrame(renderFrame);
+  }
+
+  renderFrame();
+}
+
+function googleEarth3DAerialAndMapsSection() {
+  const b = SEHGAL_EARTH_BRANCHES[activeEarthBranchIdx] || SEHGAL_EARTH_BRANCHES[0];
+  const embedUrl = `https://maps.google.com/maps?q=${b.query}&t=k&z=18&ie=UTF8&iwloc=&output=embed`;
+  const earthWebUrl = `https://earth.google.com/web/search/${b.query}`;
+  return `<section class="section wash" id="google-earth-3d-flyover">
+    <div class="container">
+      <div class="section-heading">
+        <div>
+          <p class="eyebrow">GOOGLE EARTH 3D & GOOGLE MAPS SATELLITE SUBSCRIPTION HUB · 15 LIVE + 4 UPCOMING HUBS</p>
+          <h2>Live 3D Satellite Aerial View & Google Earth 3D Network Flyover.</h2>
+        </div>
+        <div class="actions">
+          <a class="button small teal" href="assets/earth/Sehgal-Autoriders-3D-Network-Flyover.kml" download>Download Google Earth 3D Tour (.kml) ↗</a>
+          <a class="button small outline" id="earth-web-launch-btn" href="${esc(earthWebUrl)}" target="_blank" rel="noopener noreferrer">Open in Google Earth 3D Web ↗</a>
+        </div>
+      </div>
+
+      <div class="earth-3d-layout">
+        <div class="earth-3d-Selector panel">
+          <h4>Select Showroom / Workshop for 3D Aerial View</h4>
+          <p class="muted">Powered by our Google Earth & Maps 3D coordinates (65° architectural tilt).</p>
+          <div class="pin-quick-list">
+            ${SEHGAL_EARTH_BRANCHES.map((item, idx) => `<button type="button" class="pin-list-btn ${activeEarthBranchIdx === idx ? 'active' : ''}" data-earth-branch="${idx}">
+              🌍 <b>${esc(item.name)}</b>
+              <small>${esc(item.rating)} · ${esc(item.stats)}</small>
+            </button>`).join('')}
+          </div>
+        </div>
+
+        <div class="earth-3d-viewport panel">
+          <div class="section-heading" style="margin-bottom:12px">
+            <div>
+              <span class="partner-badge gold" id="earth-branch-tilt">${esc(b.tilt)}</span>
+              <h3 id="earth-branch-title" style="margin:6px 0 2px">${esc(b.name)}</h3>
+              <p class="muted" id="earth-branch-stats" style="margin:0">${esc(b.rating)} · ${esc(b.stats)} · GPS: ${esc(b.coords)}</p>
+            </div>
+            <div class="actions">
+              <a class="button small teal" id="earth-branch-gmaps" href="https://www.google.com/maps/search/?api=1&query=${esc(b.query)}" target="_blank" rel="noopener noreferrer">Directions on Google Maps ↗</a>
+            </div>
+          </div>
+          <div class="earth-iframe-wrap">
+            <iframe id="earth-3d-iframe" src="${esc(embedUrl)}" width="100%" height="440" style="border:0;border-radius:14px" allowfullscreen loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="Sehgal Autoriders Google Earth 3D Satellite View"></iframe>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>`;
+}
+
+function renderWinBackTableRows(tabId) {
+  const data = window.SEHGAL_W2_INTERCEPT || {};
+  if (tabId === 'reviews') {
+    const rows = data.sampleReviews || [];
+    return `<div class="table-wrap">
+      <table>
+        <thead>
+          <tr>
+            <th>Platform & Source</th>
+            <th>Branch</th>
+            <th>Customer Name</th>
+            <th>Vehicle / Model</th>
+            <th>Rating & Sentiment</th>
+            <th>Sehgal Visits / W2 Gate</th>
+            <th>Review / Feedback Summary</th>
+            <th>Recommended Action</th>
+          </tr>
+        </thead>
+        <tbody>
+          ${rows.map(r => `<tr>
+            <td><b>${esc(r['Platform'] || '')}</b></td>
+            <td>${esc(r['Branch'] || '')}</td>
+            <td>${esc(r['Customer Name'] || '')}</td>
+            <td>${esc(r['Registration Number'] || '')} · ${esc(r['Model'] || '')}</td>
+            <td><span class="partner-badge ${Number(r['Rating']) >= 4 ? 'teal-badge' : 'gold'}">${esc(r['Rating'])}★ · ${esc(r['Sentiment'] || '')}</span></td>
+            <td>${esc(r['Sehgal Visits'] || 1)} Visits · ${esc(r['W2 Gate and Reception Entries'] || 1)} W2 Entries</td>
+            <td>${esc(r['Review Summary'] || '')}</td>
+            <td><b>${esc(r['Recommended Action'] || '')}</b></td>
+          </tr>`).join('')}
+        </tbody>
+      </table>
+    </div>`;
+  }
+
+  const list = tabId === 'bodyshop' ? (data.sampleBodyshopTargets || []) : (data.sampleWinBackTargets || []);
+  return `<div class="table-wrap">
+    <table>
+      <thead>
+        <tr>
+          <th>Registration & Model</th>
+          <th>Customer Name & Mobile</th>
+          <th>Source & Branch</th>
+          <th>Sehgal Visits & W2 Gate</th>
+          <th>Months Since Last Use</th>
+          <th>Insurance Partner</th>
+          <th>Defection / Retention Status</th>
+          <th>Tailored Win-Back Offer & Dispatch</th>
+        </tr>
+      </thead>
+      <tbody>
+        ${list.map(r => {
+          const reg = r['Registration Number'] || '';
+          const cname = r['Customer Name'] || 'Valued Customer';
+          const offer = r['Recommended Win-Back Offer'] || '20% Service Labour Waiver + Free MSGA Gift';
+          const waMsg = `Hello ${cname} (${reg}), greetings from CEO Service Desk at Sehgal Autoriders (+91 83800 38244). As a valued customer with ${r['Sehgal Workshop Visits'] || 1}+ visits with us, we have reserved a special privilege for your ${r['Model'] || 'Maruti Suzuki'}: ${offer}. Reply to book your priority slot.`;
+          return `<tr>
+            <td><b>${esc(reg)}</b><br><small>${esc(r['Model'] || '')} (${esc(r['Department'] || '')})</small></td>
+            <td><b>${esc(cname)}</b><br><small>${esc(r['Mobile Number'] ? '+91 ' + r['Mobile Number'] : 'Verified DMS Contact')}</small></td>
+            <td>${esc(r['Source Channel'] || '')}<br><small>${esc(r['Branch Code'] || '')}</small></td>
+            <td><b>${esc(r['Sehgal Workshop Visits'] || 1)} DMS Visits</b><br><small>${esc(r['W2 Gate Entries'] || 0)} Gate · ${esc(r['W2 Reception Entries'] || 0)} Reception</small></td>
+            <td>${esc(r['Months Since Last Use'] || 1)} Months<br><small>Last: ${esc(r['Last Sehgal Visit Date'] || '-')}</small></td>
+            <td>${esc(r['Insurance Partner'] || 'Bajaj Allianz / MI')}</td>
+            <td><span class="partner-badge gold">${esc(r['Retention Status'] || '')}</span><br><small>${esc(r['Competitor Dealer Code'] || '')}</small></td>
+            <td>
+              <b>${esc(offer)}</b><br>
+              <a class="text-link" href="https://wa.me/918380038244?text=${encodeURIComponent(waMsg)}" target="_blank" rel="noopener noreferrer">Dispatch Offer via WhatsApp ↗</a>
+            </td>
+          </tr>`;
+        }).join('')}
+      </tbody>
+    </table>
+  </div>`;
+}
+
+function w2ReviewCrossInterceptWinBackSection() {
+  const data = window.SEHGAL_W2_INTERCEPT || {};
+  const k = data.kpis || {
+    totalW2GateEntries: 22299,
+    bavdhanW2GateEntries: 15917,
+    uniqueGateVehicles: 15339,
+    totalW2ReceptionEntries: 3954,
+    totalW2Complaints: 5316,
+    totalW2PudAndPdi: 1462,
+    totalDissatisfiedCrossMatched: 3153,
+    dissatisfiedMovedToCompetitor: 612,
+    totalSpineCompetitorDefections: 22810,
+    bodyshopOnePanelFreeTargets: 500
+  };
+
+  return `<section class="section" id="w2-review-winback-hub">
+    <div class="container">
+      <div class="section-heading">
+        <div>
+          <p class="eyebrow">W2 PORTAL (22,299 GATE ENTRIES · 15,917 BAVDHAN) & GOOGLE REVIEW CROSS-INTERCEPT ENGINE</p>
+          <h2>Customer Review, Visit Frequency, Competitor Defection & Win-Back Command Center.</h2>
+        </div>
+        <div class="actions">
+          <a class="button small teal" href="assets/reports/Sehgal Customer Review and W2 Win Back Intelligence Nov 2026.xlsx" download>Download Full 6-Sheet Win-Back Excel (.xlsx) ↗</a>
+          <a class="button small outline" href="https://wa.me/918380038244?text=Hello%20Sehgal%20Autoriders%20Win-Back%20Desk%2C%20please%20activate%20the%201-Panel-Free%20Bodyshop%20and%2020%25%20Service%20Waiver%20campaign." target="_blank" rel="noopener noreferrer">Launch Win-Back Campaign (+91 83800 38244) ↗</a>
+        </div>
+      </div>
+
+      <div class="tiles four">
+        <article class="tile">
+          <span class="partner-badge teal-badge">W2 GATE ENTRY DATABASE</span>
+          <h3>22,299 Gate Entries</h3>
+          <p class="muted"><b>15,917 at Bavdhan Flagship</b> (12,340 Bavdhan + 3,535 1913-1) across <b>15,339 unique vehicles</b> & 14,737 mobile numbers from <code>ceoservice@sehgalautoriders.com</code> Drive.</p>
+        </article>
+        <article class="tile">
+          <span class="partner-badge teal-badge">W2 RECEPTION, PDI & COMPLAINTS</span>
+          <h3>3,954 Reception · 5,316 Logs</h3>
+          <p class="muted"><b>3,954 Reception entries</b>, <b>5,316 W2 interaction logs</b>, <b>1,084 Pick-Up & Drop</b> entries, <b>378 PDI entries</b> & <b>783 Service-to-Bodyshop</b> leads cross-matched.</p>
+        </article>
+        <article class="tile">
+          <span class="partner-badge gold">COMPETITOR DEFECTION SPINE</span>
+          <h3>3,153 Dissatisfied · 612 Defected</h3>
+          <p class="muted">Cross-checked against <b>16.95M West-2 job cards</b> (<code>spine.parquet</code>) & <b>6,974 Nov 2026 Due-vs-Done at Other Dealer</b> records to pinpoint who moved out after rating us.</p>
+        </article>
+        <article class="tile">
+          <span class="partner-badge gold">TAILORED WIN-BACK OFFERS</span>
+          <h3>1 Panel Free & Free MSGA</h3>
+          <p class="muted"><b>500 Bodyshop targets</b> queued for <b>1 Panel Free Dent & Paint + Bajaj Allianz Cashless</b>; Service defectors queued for <b>20% Labour Waiver + Free Accessories Gift</b>.</p>
+        </article>
+      </div>
+
+      <div class="panel section-tight">
+        <div class="section-heading">
+          <div>
+            <p class="eyebrow">LIVE CROSS-INTERCEPT COHORTS · VERIFIED REGISTRATION NUMBERS, VISIT COUNTS & WIN-BACK OFFERS</p>
+            <h3>Filter Customers by Competitor Defection, Bodyshop 1-Panel-Free Eligibility & Review Sentiment</h3>
+          </div>
+          <div class="chips">
+            <button type="button" class="chip ${activeWinBackTab === 'defected' ? 'active' : ''}" data-winback-tab="defected">1. Defected to Competitor (20% Waiver + Free MSGA Gift)</button>
+            <button type="button" class="chip ${activeWinBackTab === 'bodyshop' ? 'active' : ''}" data-winback-tab="bodyshop">2. Bodyshop 1 Panel Free Dent & Paint Targets</button>
+            <button type="button" class="chip ${activeWinBackTab === 'reviews' ? 'active' : ''}" data-winback-tab="reviews">3. Google Maps & W2 Gate-Mail Reviews</button>
+          </div>
+        </div>
+        <div id="winback-table-container">${renderWinBackTableRows(activeWinBackTab)}</div>
+      </div>
+    </div>
+  </section>`;
+}
+
+document.addEventListener('click', e => {
+  const scBtn = e.target.closest('[data-3d-scene]');
+  if (scBtn) {
+    active3DSceneId = scBtn.getAttribute('data-3d-scene');
+    active3DHotspotIdx = 0;
+    const wrap = document.querySelector('#sehgal-3d-showroom');
+    if (wrap) {
+      wrap.outerHTML = sehgal3DLiveShowroomAndH100Section();
+      init3DShowroomCanvas();
+    }
+    return;
+  }
+
+  const hsBtn = e.target.closest('[data-3d-hotspot]');
+  if (hsBtn) {
+    active3DHotspotIdx = Number(hsBtn.getAttribute('data-3d-hotspot') || 0);
+    document.querySelectorAll('[data-3d-hotspot]').forEach((b, idx) => b.classList.toggle('active', idx === active3DHotspotIdx));
+    active3DYaw += 0.45;
+    return;
+  }
+
+  const actBtn = e.target.closest('[data-3d-action]');
+  if (actBtn) {
+    const act = actBtn.getAttribute('data-3d-action');
+    if (act === 'orbit-left') { active3DAutoOrbit = false; active3DYaw -= 0.35; }
+    else if (act === 'orbit-right') { active3DAutoOrbit = false; active3DYaw += 0.35; }
+    else if (act === 'toggle-orbit') {
+      active3DAutoOrbit = !active3DAutoOrbit;
+      actBtn.textContent = active3DAutoOrbit ? '⏸ Auto-Orbit: ON' : '▶ Auto-Orbit: OFF';
+      actBtn.classList.toggle('active', active3DAutoOrbit);
+    } else if (act === 'light-mode') {
+      const modes = ['daylight', 'midnight', 'golden'];
+      active3DLightMode = modes[(modes.indexOf(active3DLightMode) + 1) % modes.length];
+      actBtn.textContent = `💡 Lighting: ${active3DLightMode.toUpperCase()}`;
+    } else if (act === 'toggle-audio') {
+      toggleShowroomAudio();
+    }
+    return;
+  }
+
+  const earthBtn = e.target.closest('[data-earth-branch]');
+  if (earthBtn) {
+    activeEarthBranchIdx = Number(earthBtn.getAttribute('data-earth-branch') || 0);
+    const b = SEHGAL_EARTH_BRANCHES[activeEarthBranchIdx] || SEHGAL_EARTH_BRANCHES[0];
+    document.querySelectorAll('[data-earth-branch]').forEach((el, i) => el.classList.toggle('active', i === activeEarthBranchIdx));
+    const iframe = document.querySelector('#earth-3d-iframe');
+    if (iframe) iframe.src = `https://maps.google.com/maps?q=${b.query}&t=k&z=18&ie=UTF8&iwloc=&output=embed`;
+    const tEl = document.querySelector('#earth-branch-title');
+    if (tEl) tEl.textContent = b.name;
+    const sEl = document.querySelector('#earth-branch-stats');
+    if (sEl) sEl.textContent = `${b.rating} · ${b.stats} · GPS: ${b.coords}`;
+    const tiltEl = document.querySelector('#earth-branch-tilt');
+    if (tiltEl) tiltEl.textContent = b.tilt;
+    const gEl = document.querySelector('#earth-branch-gmaps');
+    if (gEl) gEl.href = `https://www.google.com/maps/search/?api=1&query=${b.query}`;
+    const ewEl = document.querySelector('#earth-web-launch-btn');
+    if (ewEl) ewEl.href = `https://earth.google.com/web/search/${b.query}`;
+    return;
+  }
+
+  const wbBtn = e.target.closest('[data-winback-tab]');
+  if (wbBtn) {
+    activeWinBackTab = wbBtn.getAttribute('data-winback-tab') || 'defected';
+    document.querySelectorAll('[data-winback-tab]').forEach(el => el.classList.toggle('active', el.getAttribute('data-winback-tab') === activeWinBackTab));
+    const box = document.querySelector('#winback-table-container');
+    if (box) box.innerHTML = renderWinBackTableRows(activeWinBackTab);
+  }
+});
+
+const AFTER_RENDER = [updateLenders, updateNcb, init3DShowroomCanvas];
